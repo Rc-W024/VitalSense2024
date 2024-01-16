@@ -1,0 +1,2 @@
+function [retCode, boardHandle, pBuffer, pViewBuffer, pError] = AlazarHyperDisp(boardHandle, pBuffer, bufferSize, pViewBuffer, viewBufferSize, numOfPixels, option, channelSelect, record, transferOffset, pError)
+[retCode, boardHandle, pBuffer, pViewBuffer, pError] = calllib('ATSApi', 'AlazarHyperDisp', boardHandle, pBuffer, bufferSize, pViewBuffer, viewBufferSize, numOfPixels, option, channelSelect, record, transferOffset, pError);

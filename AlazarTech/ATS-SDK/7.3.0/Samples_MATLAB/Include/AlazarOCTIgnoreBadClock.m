@@ -1,0 +1,2 @@
+function [retCode, boardHandle, pTriggerCycleTime, pTriggerPulseWidth] = AlazarOCTIgnoreBadClock(boardHandle, enable, goodClockDuration, badClockDuration, pTriggerCycleTime, pTriggerPulseWidth)
+[retCode, boardHandle, pTriggerCycleTime, pTriggerPulseWidth] = calllib('ATSApi', 'AlazarOCTIgnoreBadClock', boardHandle, enable, goodClockDuration, badClockDuration, pTriggerCycleTime, pTriggerPulseWidth);

@@ -1,0 +1,2 @@
+function [retCode, dspHandle, pBytesPerOutputRecord] = AlazarFFTSetup(dspHandle, inputChannelMask, recordLength_samples, fftLength_samples, outputFormat, footer, reserved, pBytesPerOutputRecord)
+[retCode, dspHandle, pBytesPerOutputRecord] = calllib('ATSApi', 'AlazarFFTSetup', dspHandle, inputChannelMask, recordLength_samples, fftLength_samples, outputFormat, footer, reserved, pBytesPerOutputRecord);
