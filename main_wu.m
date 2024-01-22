@@ -6,7 +6,7 @@
 clear;
 close all;
 % ADD path to AlazarTech mfiles for the recording
-addpath('C:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\Include')
+addpath('X:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\Include') % 'X': local disk
 
 
 %-----------------------------------------RECORDING and PROCESSING CONFIGS----------------------------------------------
