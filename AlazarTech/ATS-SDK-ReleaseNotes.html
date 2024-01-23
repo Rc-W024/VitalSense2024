@@ -1,0 +1,383 @@
+<h1>Release Notes</h1>
+<h2>Introduction</h2>
+<p>The AlazarTech SDK allows you to create applications that configure and acquire
+data from AlazarTech PCI/PCIe digitizer boards using functions exported by
+AlazarTech device drivers. It includes: a programmer's guide and reference
+manual, header and library files, and sample code. Installation The ATS-SDK for
+Windows requires a PC running 32- or 64-bit versions of Windows 2000 or later
+with about 40 MB of free disk space.</p>
+<p>To install the ATS-SDK, double-click on the ATS-SDK setup program and follow its
+instructions. By default, the setup program creates a directory named
+&quot;C:\AlazarTech\ATS-SDK&lt;Version&gt;&quot;, and installs all ATS-SDK files to this
+directory.</p>
+<p>To uninstall the ATS-SDK, open the &quot;Add and Remove Programs&quot; Control Panel
+applet, select the ATS-SDK, and click on the &quot;Uninstall&quot; button.</p>
+<h2>Sample programs</h2>
+<p>The ATS-SDK for Windows includes sample code for the following programming
+environments:</p>
+<ul>
+<li>C/C++ samples for Microsoft Visual C++ 6, Visual C++ 2008 or later.</li>
+<li>C# samples for Microsoft Visual C # 2008 or later.</li>
+<li>MATLAB samples for MATLAB R2006a or later.</li>
+<li>VB samples for Microsoft Visual Basic 6.</li>
+</ul>
+<p>You must install the drivers for your AlazarTech digitizer board on your
+computer to run the sample programs.</p>
+<p>You should connect a 1 KHz, +/-500 mV signal (1 Vpp) to CH A of your digitizer
+before running the sample programs. If a digitizer requires a trigger input, the
+sample code configures it to trigger when a signal connected to CH A rises above
+0V. If a trigger input is required but no trigger signal is supplied, the sample
+code will report an acquisition timeout error.</p>
+<h1>Change Log</h1>
+<p>This file lists all the important changes to ATS-SDK</p>
+<h2>[7.3.0] - 2019-05-17</h2>
+<h3>Added</h3>
+<ul>
+<li>ATS9637 code samples</li>
+</ul>
+<h2>[7.2.4] - 2019-01-22</h2>
+<h3>Added</h3>
+<ul>
+<li>ATS9130 code samples</li>
+<li>Traditional AutoDMA code samples for ATS9120</li>
+</ul>
+<h2>[7.2.3] - 2018-12-20</h2>
+<h3>Removed</h3>
+<ul>
+<li>Support for LabVIEW 7.1. The oldest supported LabVIEW version is now 2009.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Issue in the Makefile of the code samples where the ordering of options passed
+to the compiler is not correct. This can cause &quot;undefined references&quot; errors
+with some compilers.</li>
+<li>Issue with AlazarInputControlEx.vi where the &quot;call library node&quot; function
+would emit the following error: &quot;The function name specified for this node
+cannot be found in the library&quot;</li>
+<li>AlazarDSPGetModules calls in MATLAB code samples. Some places used <code>0</code> in lieu
+of <code>libpointer</code>s, which would cause some versions of MATLAB to not run code
+samples correctly.</li>
+<li>Issue with LabVIEW code samples where running on-FPGA applications with
+LabVIEW 2018 would cause &quot;error 1097&quot; messages.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Sign installer with 256-bit signature.</li>
+</ul>
+<h2>[7.2.2] - 2018-09-26</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Remove double &quot;index&quot; entry in the manual</li>
+<li>Erroneous supported external trigger ranges for ATS310 and ATS330</li>
+</ul>
+<h2>[7.2.1] - 2018-06-19</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Issue where the buffer layout wasn't documented properly in some MATLAB code
+samples.</li>
+<li>LabVIEW code samples for ATS9120</li>
+<li>MATLAB code samples default values for ATS9120</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Various modifications in the ATS-SDK guide.</li>
+</ul>
+<h2>[7.2.0] - 2018-03-26</h2>
+<h3>Changed</h3>
+<ul>
+<li>Rename sample files to a meaningful name</li>
+<li>Reformatted the SDK guide</li>
+<li>Update AlazarSysInfo code sample with latest boards</li>
+<li>Make BinToText8 cross-platform</li>
+<li>Make BinToText16 cross-platform</li>
+<li>Call AlazarAllocBufferU16Ex and U8Ex instead of valloc</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>Python support for DIS DSP module</li>
+<li>Code samples for ATS9120 and ATS9371</li>
+<li>Missing functions in the Python wrapper</li>
+<li>In AlazarApi.cs, error codes added (603, 604, 609)</li>
+<li>In AlazarApi.cs, board types added (AXI8870, ATS9637, ATS9120, ATS9371)</li>
+<li>In AlazarApi.cs and AlazarDSP.cs, functions removed and added to match API</li>
+<li>Samples in CSharp: different clock configuration for each board type</li>
+<li>Samples in CSharp: NPT_Scan, AR_Volts, NPT_Volts, TR_Volts</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Issue with the number of samples allocated and written in on-FPGA mode in
+Labview.</li>
+<li>Issue in Python code samples where <code>DMABuffer</code> memory would leak.</li>
+<li>Issue in Python code samples where data files would be opened in text mode.
+This could lead to corrupt data written to disk on some versions of Python.</li>
+<li>Type of HANDLE in ATSApi Python wrapper</li>
+<li>Encoding of file name in CreateStreamFile.vi</li>
+</ul>
+<h2>[7.1.5] - 2016-08-10</h2>
+<h3>Changed</h3>
+<ul>
+<li>Requires driver v5.10.14 or above</li>
+<li>Move input range to 1V for ATS9416 in code samples</li>
+<li>Set input coupling to DC for ATS9626 in code samples</li>
+<li>Make default sample rate used in samples codes the highest possible</li>
+<li>Use Hanning windows as default for FFT sample codes</li>
+<li>Replaced call to <code>AlazarInputControl()</code> with <code>AlazarInputControlEx()</code> in all
+code samples in C, MATLAB, Python, and C#</li>
+</ul>
+<h3>Added</h3>
+<ul>
+<li>Doxygen documentation</li>
+<li><code>AlazarDSPGetParameterU32()</code>, a generic interface to retrieve U32-typed DSP parameters</li>
+<li>FFT background subtraction feature, with the following functions:</li>
+<li><code>AlazarFFTGetMaxTriggerRepeatRate()</code> to get the maximum trigger repeat rate
+that the FFT engine can support without overflow</li>
+<li><code>AlazarFFTSetScalingAndSlicing()</code> to set internal scaling and slicing
+parameters in the FFT module</li>
+<li>Sample VIs for ATS9350, ATS9351, ATS9360, and ATS9373 for on FPGA FFT, for all
+3 output formats (U8, U16, and float)</li>
+<li>AlazarDSPGetBufferU8/U16/Float.vi and AlazarDSPGetNextBufferU8/U16/Float.vi</li>
+<li>MATLAB sample code for NPT Master/Slave mode for all board types</li>
+<li>on-FPGA FFT sample codes for MATLAB, Python and C#, for supported boards
+(ATS9350, ATS9351, ATS9360 and ATS9373)</li>
+<li>on-FPGA FFT sample codes for C, for ATS9351</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li>Non-exported functions <code>AlazarWrite()</code> and <code>AlazarCoprocessorDownloadBuffer()</code>
+from AlazarApi.h</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Bug in on FPGA FFT VIs to use DSP handle wherever required</li>
+<li>Bug in &quot;Continuous streaming&quot; and &quot;Triggered streaming&quot; VIs in setting records
+per buffer and record count</li>
+<li>Bug in python code samples concerning the data type for boards above 8-bit
+being derived wrong</li>
+<li>Error in channels definition in AlazarDefs.m</li>
+<li>Bug in generating <code>Average</code> and <code>AverageMultithreaded</code> sample codes in C.</li>
+<li>Bug in generating <code>Samples_C/ATS9440/DualPort/CS_LSB</code></li>
+</ul>
+<h2>[7.1.4] - 2016-01-08</h2>
+<h3>Added</h3>
+<ul>
+<li>Function to extract NPT footer</li>
+</ul>
+<h2>[7.1.3] - 2015-11-03</h2>
+<h3>Changed</h3>
+<ul>
+<li>Update the DMABuffer Python API to use ctypes</li>
+</ul>
+<h2>[7.1.2] - 2015-10-16</h2>
+<h3>Added</h3>
+<ul>
+<li>OCT Ignore Bad Clock feature</li>
+</ul>
+<h2>[7.1.1] - 2015-10-6</h2>
+<h3>Added</h3>
+<ul>
+<li>Document AlazarFFTSetWindowFunction</li>
+<li>on-FPGA FFT LabVIEW code sample</li>
+</ul>
+<h2>[7.1.0] - 2015-09-23</h2>
+<h3>Added</h3>
+<ul>
+<li>AlazarDSP module for on-FPGA FFT support</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Error in Python samples that caused <code>AlazarAbortCapture()</code> not to be called</li>
+</ul>
+<h2>[7.0.0] - 2015-08-11</h2>
+<h3>Added</h3>
+<ul>
+<li>LabVIEW support to ATS-SDK</li>
+<li>Support for ATS9373 and ATS9416</li>
+<li><code>AlazarConfigureLSB()</code> documentation</li>
+<li>Data packing and DES support and documentation</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Various small changes in the documentation</li>
+</ul>
+<h2>[6.2.0] - 2015-03-02</h2>
+<h3>Added</h3>
+<ul>
+<li>Code samples for ATS9373, ATS9360 and remove ATS9360_FIFO</li>
+<li>External Clock Issues for OCT Applications section to guide.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Update 10Mhz PLL documentation for ATS9416, ATS9373 and AXI9870.</li>
+<li>Move ATS9350/ATS9351 Advanced 10MHz PLL under Advanced Topics in guide.</li>
+<li>Update External Trigger Data Source in guide.</li>
+<li>Move <code>AlazarSetTriggerOperationForScanning()</code> under Advanced Topics in guide.</li>
+<li>Update <code>AlazarBeforeAsyncRead()</code> with new board's information.</li>
+<li>Move board-specific data to guide's appendix and make references to that section.</li>
+<li>Update <code>AlazarInputControl()</code> and add <code>AlazarInputControlEx()</code>.</li>
+</ul>
+<h3>Removed</h3>
+<ul>
+<li>Remove Visual Basic 6 documentation and code samples.</li>
+</ul>
+<h2>[6.1.0] - 2013-02-11</h2>
+<h3>Added</h3>
+<ul>
+<li>Support for ATS9360-FIFO.</li>
+<li><code>AlazarAllocBufferU8()</code>, <code>AlazarAllocBuffer16()</code>, <code>AlazarFreeBufferU8()</code>, and
+<code>AlazarFreeBufferU16()</code> to allocate page aligned buffers.</li>
+<li><code>GET_FPGA_TEMPERATURE</code> to <code>AlazarGetParameter()</code> to read current FPGA
+temperature of PCIe digitizers.</li>
+<li>&quot;Advanced 10 MHz PLL&quot; mode to ATS-SDK Guide.</li>
+<li><code>AlazarConfigureRecordAverage()</code> for FPGA record average with the ATS9870 with FPGA 180 or above.</li>
+<li><code>AlazarCoprocessorDownload()</code>, <code>AlazarCoprocessorRegisterWrite()</code>, and
+<code>AlazarCoprocessorRegisterRead()</code> for ATS962x user FPGA control.</li>
+<li><code>ApiNotSupportedInQuadChannelMode</code>, <code>ApiFileIoError</code>, and
+<code>ApiInvalidClockFrequency</code> to ATS-SDK error reference, and move error
+reference after function reference.</li>
+<li>A glossary section to ATS-SDK Guide.</li>
+<li><code>STOS_OPTION_DEFER_START_CAPTURE</code> constant to  MATLAB, C# and VB SDKs.</li>
+<li>brief instructions for C++/CLI and VB.NET developers to access ATSApi.dll
+though a reference to AlazarApiNet.dll.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Update MATLAB samples to call <code>AlazarAllocBufferUx</code> and <code>AlazarFreeBufferUx</code>
+to ensure buffer alignment requirements are satisfied.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Bug in MATLAB samples that caused &quot;Undefined function or method
+AlazarErrorToText ...&quot; errors.</li>
+</ul>
+<h2>[6.0.4] - 2012-07-24</h2>
+<h3>Added</h3>
+<ul>
+<li>Support for ATS9625 and ATS9626</li>
+<li><code>AlazarGetBoardRevision()</code> to return PCB revision of PCIE digitizers.</li>
+<li><code>PACK_MODE</code>, <code>GET_CHANNELS_PER_BOARD</code>, <code>EXT_TRIGGER_IMPEDANCE</code>, and
+<code>GET_CPF_DEVICE</code> parameters for <code>AlazarGetParameter()</code>.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Update ATS9440 MATLAB AutoDMA samples to add <code>ADMA_INTERLEAVE_SAMPLES</code> flag by
+default.</li>
+</ul>
+<h2>[6.0.3] - 2011-06-16</h2>
+<h3>Added</h3>
+<ul>
+<li>Support for the ATS9351 and ATS9850.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Update ATS-SDK Guide section 3.3.4 AsyncRead to fix a typo where the
+BytesToRead parameter was repeated.</li>
+</ul>
+<h2>[6.0.2] - 2011-04-28</h2>
+<h3>Changed</h3>
+<ul>
+<li>Update MATLAB sample code to add support for 32- and 64-bit MATLAB 2009a and
+later.</li>
+<li>Update ATS-SDK Guide section 2.3.4 &quot;AUX I/O&quot; for the ATS9440.</li>
+<li>Update ATS-SDK Guide section 2.3.4.5 &quot;Digital input&quot; to fix an error
+describing the AUX I/O digital input configuration.</li>
+</ul>
+<h2>[6.0.1] - 2011-02-07</h2>
+<h3>Added</h3>
+<ul>
+<li>Single- and multi-threaded C/C++ samples that demonstrate how to average
+data from continuous and no-pretrigger dual-ported AutoDMA mode streaming
+acquisitions.</li>
+<li>C/C++ projects for Microsoft Visual C++ Express 2008 and later that target
+32-bit platforms only. Note that projects with &quot;_x64&quot; in their filenames
+support both 32- and 64-bit built targets, but require build tools that
+support 64-bit cross-compilation, such as Visual C++ Professional 2008 and
+later. Visual C++ Express editions do not include 64-bit cross-compilers, so
+will fail to open these projects.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Modify all C/C++ projects to generate output .exe files whose filenames have
+the same base as the project name. For example, AcqToDisk.vcproj generates
+AcqToDisk.exe. Visual C++ Express 2010 generates a warning otherwise.</li>
+</ul>
+<h2>[6.0.0] - 2011-01-24</h2>
+<h3>Added</h3>
+<ul>
+<li>MATLAB sample programs.</li>
+</ul>
+<h2>[5.8.4] - 2010-12-14</h2>
+<h3>Added</h3>
+<ul>
+<li>Support for ATS9440</li>
+<li><code>AlazarSetTriggerOperationForScanning()</code> and <code>AlazarConfigureSampleSkipping()</code>
+API functions.</li>
+<li>VB6 sample programs, and update single-ported samples programs to simplify
+code.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Move release history to release notes file.</li>
+</ul>
+<h2>[5.8.3] - 2010-08-18</h2>
+<h3>Added</h3>
+<ul>
+<li>Support for ATS9325.</li>
+<li><code>AlazarSetClockSwitchOver()</code> to configure dummy clock.</li>
+<li><code>EEC_MODE</code> to parameter to <code>AlazarGetParameter()</code> and <code>AlazarSetParameter()</code>.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Update <code>AlazarConfigureAuxIO()</code> description in function reference.</li>
+<li>Expand description of <code>AlazarSetCaptureClock()</code> decimation parameter in
+section 2.3.1.4 &quot;10 MHz PLL&quot;.</li>
+<li>Expand description of <code>AlazarInputControl()</code> to include board specific input
+ranges.</li>
+</ul>
+<h2>[5.8.2] - 2010-05-28</h2>
+<h3>Changed</h3>
+<ul>
+<li>Update ATS-SDK Guide to add section describing buffer size and alignment
+requirements.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Lib files to include API functions added with 5.8.1 release.</li>
+<li>Error in <code>AlazarSetExternalClockLevel()</code> description in function reference.</li>
+</ul>
+<h2>[5.8.1] - 2010-05-12</h2>
+<h3>Added</h3>
+<ul>
+<li>C# sample programs</li>
+<li>The following API functions: <code>AlazarForceTriggerEnable()</code>,
+<code>AlazarSetExternalClockLevel()</code>.</li>
+<li>The following <code>AlazarGetParameter()</code> values to AlazarCmd.h:
+<code>GET_ASYNC_BUFFERS_PENDING</code>, <code>GET_ASYNC_BUFFERS_PENDING_FULL</code> and
+<code>GET_ASYNC_BUFFERS_PENDING_EMPTY</code></li>
+<li><code>AUX_OUT_TRIGGER_ENABLE</code> to <code>AlazarConfigureAuxIO()</code>.</li>
+</ul>
+<h2>[5.8.0] - 2010-01-21</h2>
+<h3>Added</h3>
+<ul>
+<li>Support for ATS9350.</li>
+<li>The following API functions: <code>AlazarConfigureAuxIO()</code>,
+<code>AlazarCreateStreamFile()</code>, <code>AlazarErrorToText()</code>, <code>AlazarReadEx()</code>.</li>
+<li>The following AlazarSetParameter values: <code>SET_SINGLE_CHANNEL_MODE</code>.</li>
+<li>The following AlazarGetParameter values: <code>GET_SAMPLES_PER_TIMESTAMP_CLOCK</code>,
+<code>GET_RECORDS_CAPTURED</code>.</li>
+<li>The following AlazarGetParameterUL values: <code>GET_MAX_PRETRIGGER_SAMPLES</code></li>
+</ul>
+<h3>Deprecated</h3>
+<ul>
+<li>Synchronous AutoDMA acquisition functions including: <code>AlazarStartAutoDMA()</code>,
+<code>AlazarGetNexBuffer()</code>, <code>AlazarAbortAutoDma()</code>, and
+<code>AlazarGetAutoDMAHeaderTimeStamp()</code>.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Update SDK documentation and sample code.</li>
+</ul>
+<h2>[5.6.0] - 2008-06-01</h2>
+<h3>Added</h3>
+<ul>
+<li>ATS-SDK 5.6.0 release</li>
+</ul>
