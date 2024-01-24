@@ -21,5 +21,6 @@ ATS-SDK is a Windows and Linux compatible software development kit created by *A
 - **Phase C:** Final heart waveform parameters extraction
 
 ### 3. Main Outcomes
-- Pulse repetition interval, Heartbeat rate, Detection of abnormalities
-- Blood pressure waveform
+- Pulse repetition interval, heartbeat rate, abnormalities detection
+- Peaks and periods estimation, blood pressure waveform reconstruction
+
