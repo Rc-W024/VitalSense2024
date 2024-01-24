@@ -27,9 +27,9 @@ openAsVariable = true;          % FALSE open as .bin file, used as only one chan
 saveAsVariable = true;          % FALSE save as .bin file, used as only one channel mode; not used anymore
 %------------------------------------------------Directory-Settings-----------------------------------------------------
 % Search in folder for open existing measurement, or
-Open_strFolder = 'D:\UPC\THzRadar\Radar_Measurement\data\*.mat'; 
+Open_strFolder = 'X:\XXX\...\*.mat'; % !customize your path!
 % Select folder to save measurement
-Save_strFolder = "D:\UPC\THzRadar\Radar_Measurement\data\20231230\";
+Save_strFolder = "X:\XXX\...\"; % !customize your path!
 %-----------------------------------------------------------------------------------------------------------------------
 % Search peak in chirp x:
 searchInMeasure = 30; % 
