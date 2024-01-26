@@ -24,3 +24,7 @@ ATS-SDK is a Windows and Linux compatible software development kit created by *A
 - Pulse repetition interval, heartbeat rate, abnormalities detection
 - Peaks and periods estimation, blood pressure waveform reconstruction
 
+## Overall Result
+![res_RW](https://github.com/Rc-W024/VitalSense2024/assets/97808991/a2a44f71-5296-4cbf-9087-9ff5fb01cbea)
+
+![image](https://github.com/Rc-W024/VitalSense2024/assets/97808991/1929f887-c017-4c2f-9f9b-bc1a33455a5a)
