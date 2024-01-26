@@ -25,7 +25,7 @@ phasePlot=figure('Name',titleText,'NumberTitle','off');
         ylabel('Magnitude (dB)')
         grid on
         ax=gca;
-        ax.YAxis(1).Color=[0, 0.4470, 0.7410];
+        ax.YAxis(1).Color=[0,0.4470,0.7410];
     end
 end
 
