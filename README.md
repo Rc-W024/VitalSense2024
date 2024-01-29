@@ -1,7 +1,7 @@
 # VitalSense2024
 Vital sensing based on 120 GHz FMCW RSoC for biometrics and situation awareness.
 
-Paper: On the Feasibility of Vital Sensing with Radar System-on-Chip for Novel Modality Biometrics
+Paper: On the Feasibility of Vital Sensing with Radar System-on-Chip for Novel Modality Biometrics (In Preparation)
 
 ## Files for Hardware...
 **Radar measurement:** `AlazarTech`
