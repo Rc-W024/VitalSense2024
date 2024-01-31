@@ -3,7 +3,14 @@ Vital sensing based on 120 GHz FMCW RSoC for biometrics and situation awareness.
 
 Paper: On the Feasibility of Vital Sensing with Radar System-on-Chip for Novel Modality Biometrics (*In Preparation*)
 
-## Files for Hardware...
+## RSoC
+### FMCW radar
+<p>
+<img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/3beb8c87-0072-419f-b07b-6c7b5c18d968" width=300 />
+<img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/ca2eb4d2-b0ea-477c-aa1b-ac01321f8663" width=350 />
+</p>
+
+### Files for hardware...
 **Radar measurement:** `AlazarTech`
 
 ATS-SDK is a Windows and Linux compatible software development kit created by *AlazarTech* to allow users to programmatically control and acquire data from its line of waveform digitizers, which fully supports for C/C++ and C# (Visual Studio or GCC), MATLAB, LabVIEW and Python environments. In this case, we complete the project based on **MATLAB**.
