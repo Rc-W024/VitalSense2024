@@ -3,11 +3,11 @@ Vital sensing based on 120 GHz FMCW RSoC for biometrics and situation awareness.
 
 Paper: On the Feasibility of Vital Sensing with Radar System-on-Chip for Novel Modality Biometrics (*In Preparation*)
 
-## RSoC
-### FMCW radar
+## Radar System-on-Chip (RSoC)
+### THz FMCW Radar
 <p>
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/3beb8c87-0072-419f-b07b-6c7b5c18d968" width=300 />
-<img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/ca2eb4d2-b0ea-477c-aa1b-ac01321f8663" width=330 />
+<img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/ca2eb4d2-b0ea-477c-aa1b-ac01321f8663" width=320 />
 </p>
 
 ### Files for hardware...
