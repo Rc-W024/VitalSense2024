@@ -1,9 +1,9 @@
 # VitalSense2024
-Vital signal processing based on 120 GHz FMCW RSoC for biometrics and situation awareness.
+Vital signal processing based on 120 GHz FMCW Radar System-on-Chip (RSoC) for biometrics and situation awareness.
 
 Paper: On the Feasibility of Vital Sensing with Radar System-on-Chip for Novel Modality Biometrics (*In Preparation*)
 
-## Radar System-on-Chip (RSoC)
+## RSoC
 ### Terahertz FMCW Radar by CommSensLab-UPC
 <p>
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/3beb8c87-0072-419f-b07b-6c7b5c18d968" width=300 />
