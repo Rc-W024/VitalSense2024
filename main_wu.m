@@ -491,7 +491,7 @@ legend('Heartbeat detection','Identified pulse','Cardiac signal')
 % calcu heart rate of the subject
 bpm=round(length(locs_hsig)/(length(sig)*T_frame/60));
 % printing...
-fprintf('The detected heart rate of the subject is: %d bpm.\n',bpm);
+fprintf('The detected heart rate of the subject is: %d bpm. (by detected peaks)\n',bpm);
 
 % Reproduction of blood pressure waveform
 % find the locs...
@@ -527,6 +527,10 @@ ylabel('Amplidute (mm)')
 grid on
 % set(gca,'xtick',[],'xticklabel',[]);
 % set(gca,'ytick',[],'yticklabel',[]);
+
+% calcu bpm based on T of peaks 
+bpm_T=round(1/(length(BP)*T_frame)*60);
+fprintf('The detected heart rate of the subject is: %d bpm. (by cardiac period)\n',bpm_T);
 
 % End the timer
 toc
