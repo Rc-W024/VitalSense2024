@@ -42,6 +42,6 @@ ATS-SDK is a Windows and Linux compatible software development kit created by *A
 ![resText1](https://github.com/Rc-W024/VitalSense2024/assets/97808991/f34fafae-a686-434a-b56d-eab5f2407198)
 
 ### Case 2: with ECG signal
-![resECG](https://github.com/Rc-W024/VitalSense2024/assets/97808991/4ca37f67-99fb-46d4-ba15-54404e912c40)
+![resECG](https://github.com/Rc-W024/VitalSense2024/assets/97808991/3c7970f4-7c09-45ab-824e-5003c21c4699)
 
 ![resText2](https://github.com/Rc-W024/VitalSense2024/assets/97808991/e021cc33-615b-4abf-9f9b-39b862ce1224)
