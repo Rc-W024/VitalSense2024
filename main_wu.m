@@ -75,8 +75,8 @@ if useExistingFile==true % open existing measurement
         fitxer=strcat(Open_pathname,Open_filename); % concatenate strings horizontally
         if twoChannelMode==true
             % CHA Radar = beatingTone_time + CHB EGC = ECGSignal
-            load(fitxer,'data','beatingTone_time','ButtonSignal')
-            ECGSignal=ButtonSignal;
+            load(fitxer,'data','beatingTone_time','ECGSignal')
+            %ECGSignal=ButtonSignal;
         else
             % only radar signal beatingTone_time
             load(fitxer,'data','beatingTone_time')
