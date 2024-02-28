@@ -522,7 +522,7 @@ if twoChannelMode==true
     legend('Heartbeat detection','Identified pulse','Cardiac signal');
     
     % peaks detection based on ECG signal
-    [amp_ecg,locs_ecg]=findpeaks((double(decimatedECGSignal-2^15)/2^16)*voltageRangeChannelB,Radar.t_frame,'MinPeakDistance',minpeakdist_d*T_frame,'MinPeakProminence',3e-05);
+    [amp_ecg,locs_ecg]=findpeaks((double(decimatedECGSignal-2^15)/2^16)*voltageRangeChannelB,Radar.t_frame,'MinPeakDistance',minpeakdist_d*T_frame,'MinPeakProminence',2e-05);
     % plot ECG signal...
     subplot(length(LocFinder.locs_positive)*2+1,1,length(LocFinder.locs_positive)*2+1);
     plot(Radar.t_frame,(double(decimatedECGSignal-2^15)/2^16)*voltageRangeChannelB,'g',locs_ecg,amp_ecg,'rv','LineWidth',1.3);
