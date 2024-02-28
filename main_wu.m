@@ -1,19 +1,12 @@
 % MAIN function for RECORDING and READING recorded data as well as further 
 % processing for VitalSense by the radar @UPC CommSensLab
 % VitalSense 2024 for biometrics and biomedical applications
-% 08/11/2023 Wu Ruochen (since 15/03/2023)
+% 08/11/2023 Wu Ruochen for v2.0 (since 15/03/2023)
 
 clear;
 close all;
 % ADD path to AlazarTech mfiles for the recording
 addpath('C:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\Include')
-
-% % Figure parameter settings
-% set(groot,'defaultLineLineWidth',1)
-% set(groot,'defaultAxesFontName','Times New Roman')
-% set(groot,'defaultAxesFontSize',10)
-% set(groot,'defaultAxesLabelFontSizeMultiplier',1)
-% set(groot,'defaultFigurePosition',[600 500 400 300])
 
 
 %-----------------------------------------RECORDING and PROCESSING CONFIGS----------------------------------------------
@@ -74,9 +67,8 @@ if useExistingFile==true % open existing measurement
         [Open_filename,Open_pathname]=uigetfile(Open_strFolder,'Select file');
         fitxer=strcat(Open_pathname,Open_filename); % concatenate strings horizontally
         if twoChannelMode==true
-            % CHA Radar = beatingTone_time + CHB EGC = ECGSignal
+            % CHA Radar = beatingTone_time + CHB ECG = ECGSignal
             load(fitxer,'data','beatingTone_time','ECGSignal')
-            %ECGSignal=ButtonSignal; % ButtonSignal: !!ONLY USED IN CASES OF 20240214!!
         else
             % only radar signal beatingTone_time
             load(fitxer,'data','beatingTone_time')
@@ -493,14 +485,21 @@ hsig2=2*(hsig1*(max(abs(sig))/max(abs(hsig1))));
 % signal shifting to eliminate delay
 hsig=circshift(hsig2,fix(-length(filC)/2));
 % peaks (cardiac pulse) detection
-minpeakdist_d=length(filC)-50;
+minpeakdist_d=round(length(filC)*0.8);
 [amp_hsig0,locs_hsig0]=findpeaks(hsig(1:len_sig),Radar.t_frame,'MinPeakDistance',minpeakdist_d*T_frame,'MinPeakProminence',0.05);
 % final minimum prominence setting based on average of the prominence of peaks to eliminate false alarms 
-minprom_d=floor(mean(amp_hsig0)*10)/10; % round toward 0 to one decimal place
-[amp_hsig_test,locs_hsig_test]=findpeaks(hsig(1:len_sig),Radar.t_frame,'MinPeakDistance',minpeakdist_d*T_frame,'MinPeakProminence',minprom_d);
+minprom_d=(floor(mean(amp_hsig0)*10)/10)*0.8; % round toward 0 to one decimal place & 20% of threshold
 
-% Results evaluation to get the optimal parameters
-if length(locs_hsig_test)<18
+if minprom_d==0
+    minprom_d=0.05; % use the default prominence setting
+end
+
+% Results verification to get the optimal parameters
+[amp_hsig_test,locs_hsig_test]=findpeaks(hsig(1:len_sig),Radar.t_frame,'MinPeakDistance',minpeakdist_d*T_frame,'MinPeakProminence',minprom_d);
+% mean dispersion of the detected peak amplitudes
+amp_std=std(amp_hsig_test);
+% minimum prominence parameters determination
+if amp_std>0.5
     amp_hsig=amp_hsig0;
     locs_hsig=locs_hsig0;
     minprom_d=0.05; % use the default prominence setting
