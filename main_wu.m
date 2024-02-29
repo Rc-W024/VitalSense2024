@@ -6,7 +6,7 @@
 clear;
 close all;
 % ADD path to AlazarTech mfiles for the recording
-addpath('C:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\Include')
+addpath('X:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\Include') % ONLY used in the measurement tasks
 
 
 %-----------------------------------------RECORDING and PROCESSING CONFIGS----------------------------------------------
@@ -27,9 +27,9 @@ openAsVariable = true;          % FALSE open as .bin file, used as only one chan
 saveAsVariable = true;          % FALSE save as .bin file, used as only one channel mode; not used anymore
 %------------------------------------------------Directory-Settings-----------------------------------------------------
 % Search in folder for open existing measurement, or
-Open_strFolder = 'D:\UPC\THzRadar\Radar_Measurement\data\*.mat'; 
+Open_strFolder = 'X:\...\data\*.mat'; % set the path of the file
 % Select folder to save measurement
-Save_strFolder = "D:\UPC\THzRadar\Radar_Measurement\data\20240223\";
+Save_strFolder = "X:\...\data\...\"; % used in the measurement tasks
 %-----------------------------------------------------------------------------------------------------------------------
 % Search peak in chirp x:
 searchInMeasure = 30; % 
