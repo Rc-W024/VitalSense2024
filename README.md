@@ -20,6 +20,8 @@ ATS-SDK is a Windows and Linux compatible software development kit created by *A
 ## Algorithm
 **MAIN FILE:** [`main_wu.m`](https://github.com/Rc-W024/VitalSense2024/blob/main/main_wu.m)
 
+Be sure to check the parameter settings and read the relevant comments before running!
+
 **Available dataset:** Vital Signals Database - *acquired by CommSensLab (Dept. of Signal Theory and Communications)* (Non-public)
 
 ### 1. Signal Preprocessing
