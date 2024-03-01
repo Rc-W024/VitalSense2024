@@ -348,7 +348,6 @@ sig1=circshift(sig1_0,fix(-length(fil0)/2));
 len_sig=length(sig); % length of sig
 minpeakdist=150; % minimum distance between peaks
 minprom=0.01; % minimum prominence between peaks
-%minpeakpro=0.015; % minimum prominence of the peak
 % peaks...
 [amp_sig1,locs_sig1]=findpeaks(sig1(1:len_sig),1:len_sig,'MinPeakDistance',minpeakdist,'MinPeakProminence',minprom);
 % figure('Name','SIGNAL AFTER APPLYING FILTER 0');
@@ -432,7 +431,7 @@ if length(T2_save)==10
     [c,lags]=xcorr(sig);
     [amp,locs]=findpeaks(c(7800:end),'MinPeakDistance',200,'MinPeakProminence',0.5);
     % calcu diff between 1st and 2nd peaks
-    T.fil2=(locs(2)-locs(1))-20;
+    T.fil2=locs(2)-locs(1);
 else
     T.fil2=T2_mean;
 end
