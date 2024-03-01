@@ -76,7 +76,7 @@ if useExistingFile==true % open existing measurement
         
     else
         % use for .bin files, in latest measurements not used anymore
-        [filename,pathname]=uigetfile('C:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\ATS9120\DualPort\NPT\Dominik\Recordings\20220712\*.bin','Select Fast GBSAR file'); 
+        [filename,pathname]=uigetfile('X:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\ATS9120\DualPort\NPT\...\*.bin','Select Fast GBSAR file'); 
         fitxer=strcat(pathname,filename); % concatenate strings horizontally
         ff=fopen(fitxer,'rb');
         data=fread(ff,Digitizer.long*Digitizer.wfrm,'uint16');
@@ -145,7 +145,7 @@ Spectrum=fft(beatingTone_time_window,Digitizer.long*Sampling.ZP);
 %------------------------SUBTRACT-CALIBRATION-DATA-------------------------
 if (subtractThroughCalibration==true && useExistingFile==true)
     waitbar(.33,f,'Subtract Calibration Data ...');
-    [filename,pathname]=uigetfile('C:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\ATS9120\DualPort\NPT\Dominik\Recordings\20220712\CalibrationData\*.mat','Select file'); 
+    [filename,pathname]=uigetfile('X:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\ATS9120\DualPort\NPT\...\*.mat','Select file'); 
     fitxer=strcat(pathname,filename); % concatenate strings horizontally
     load(fitxer,'CALIBRATION_DATA_FREQ')
     DivideThroughFrame=5;
@@ -209,7 +209,7 @@ if (useExistingFile==false && produceCalibrationData==false)
 elseif (useExistingFile==false && produceCalibrationData==true)
     % CALIBRATION_DATA_FREQ: saves the matrix of n chirps with m samples of the
     % spectrum as a calibration matrix for a later subtraction of measurements
-    Save_strFolder="Recordings\20220712\CalibrationData\";
+    Save_strFolder="...\CalibrationData\";
     strName="CalibrationData";
     CALIBRATION_DATA_FREQ=fda;
     save('CalibrationData.mat','CALIBRATION_DATA_FREQ')
@@ -232,7 +232,7 @@ xlabel('Time (s)')
 ylabel('Amplitude')
 grid on
 
-distanceOfObject=(Radar.Tm * Radar.c_0 .*Sampling.f)/(2*Radar.deltaf);
+distanceOfObject=(Radar.Tm*Radar.c_0 .*Sampling.f)/(2*Radar.deltaf);
 
 subplot(2,1,2); % spectrum depending on range
 distanceOfObjectShift=distanceOfObject-(max(distanceOfObject)/2);
