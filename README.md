@@ -18,7 +18,7 @@ For more info: [Micrometric deformation imaging at W-Band with GBSAR](https://ww
 ATS-SDK is a Windows and Linux compatible software development kit created by *AlazarTech* to allow users to programmatically control and acquire data from its line of waveform digitizers, which fully supports for C/C++ and C# (Visual Studio or GCC), MATLAB, LabVIEW and Python environments. In this case, we complete the project based on **MATLAB**.
 
 ## Algorithm
-**MAIN FILE:** [`main_wu.m`](https://github.com/Rc-W024/VitalSense2024/blob/main/main_wu.m)
+**MAIN FILE:** [`main_wu.m`](https://github.com/Rc-W024/VitalSense2024/blob/main/main_wu.m) (**KEEP UPDATING...**)
 
 Be sure to check the parameter settings and read the relevant comments before running!
 
