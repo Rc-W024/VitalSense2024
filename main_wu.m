@@ -1,7 +1,7 @@
 % MAIN function for RECORDING and READING recorded data as well as further 
 % processing for VitalSense by the radar @UPC CommSensLab
 % VitalSense 2024 for biometrics and biomedical applications
-% 07/03/2024 Wu Ruochen for v.7.0 (since 15/03/2023 for v.0.0)
+% 07/03/2024 Ruochen Wu for v.7.0 (since 15/03/2023 for v.0.0)
 
 clear;
 close all;
