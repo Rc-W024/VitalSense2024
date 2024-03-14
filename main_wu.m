@@ -381,19 +381,19 @@ filter_simple=1; % 1=sine; 2=triangle; 3=rectangular
 % create Filter 0 
 if filter_simple==1
     % sin wave
-    fil0=max(sig)*sin(linspace(0,pi,T.fil0))+min(sig);
+    filA=max(sig)*sin(linspace(0,pi,T.fil0))+min(sig);
 elseif filter_simple==2
     % triangle wave
-    fil0=min(sig)+(sawtooth(2*pi*linspace(0,1,T.fil0),0.5)+1)*(max(sig)-min(sig))/2;
+    filA=min(sig)+(sawtooth(2*pi*linspace(0,1,T.fil0),0.5)+1)*(max(sig)-min(sig))/2;
 elseif filter_simple==3
     % rectangular wave
-    fil0=zeros(1,100+T.fil0);
+    filA=zeros(1,100+T.fil0);
     rectg=max(sig)*square(linspace(0,1,T.fil0));
-    fil0(51:50+length(rectg))=rectg;
+    filA(51:50+length(rectg))=rectg;
 end
 
 % filtering with fil0 to determinate locs of the peaks
-sig1_0=conv(sig,fil0);
+sig1_0=conv(sig,filA);
 sig1_0=2*(sig1_0*(max(abs(sig))/max(abs(sig1_0))));
 % signal shifting to eliminate delay
 sig1=circshift(sig1_0,fix(-length(fil0)/2));
