@@ -29,9 +29,9 @@ Be sure to check the parameter settings and read the relevant comments before ru
 - Signal separation: respiratory signal $s_{b}$ extraction with FIR linear-phase filter; cardiac signal -> $s_{h}=s_{vital}−s_{b}$
 
 ### 2. Real-time Repetitive Waveform Adaptive Matched Filter (RWAMF)
-- **Phase A:** Iterative pulse period estimation -> FFT (DFT)
-- **Phase B:** Pulse waveform reconstruction -> AMF
-- **Phase C:** Final heart waveform parameters extraction
+- **Phase A:** Iterative pulse period estimation <- $FFT$ -> $FilA$
+- **Phase B:** Pulse waveform reconstruction -> $FilB$ -> **AMF**
+- **Phase C:** Final heart waveform parameters extraction <- $FilC$
 
 ### 3. Main Outcomes
 - Pulse repetition interval, heartbeat rate, abnormalities detection
