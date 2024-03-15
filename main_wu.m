@@ -376,6 +376,39 @@ if twoChannelMode==true
     fprintf('Period calculated by ECG: <strong>%d</strong>.\n',periodPeaksECG);
 end
 
+% Locs of the peaks determination for FASE B
+% various filters
+filter_simple=1; % 1=sine; 2=triangle; 3=rectangular
+% create Filter 0 
+if filter_simple==1
+    % sin wave
+    filA=max(sig)*sin(linspace(0,pi,T.fil0))+min(sig);
+elseif filter_simple==2
+    % triangle wave
+    filA=min(sig)+(sawtooth(2*pi*linspace(0,1,T.fil0),0.5)+1)*(max(sig)-min(sig))/2;
+elseif filter_simple==3
+    % rectangular wave
+    filA=zeros(1,100+T.fil0);
+    rectg=max(sig)*square(linspace(0,1,T.fil0));
+    filA(51:50+length(rectg))=rectg;
+end
+
+% filtering with fil0 to determinate locs of the peaks
+sig1_0=conv(sig,filA);
+sig1_0=2*(sig1_0*(max(abs(sig))/max(abs(sig1_0))));
+% signal shifting to eliminate delay
+sig1=circshift(sig1_0,fix(-length(filA)/2));
+% peaks detection
+len_sig=length(sig); % length of sig
+minpeakdist=fix(T.fil0*0.7);
+% peaks...
+[amp_sig1,locs_sig1]=findpeaks(sig1(1:len_sig),1:len_sig,'MinPeakDistance',minpeakdist);
+% figure('Name','SIGNAL AFTER APPLYING FILTER 0');
+% findpeaks(sig1(1:len_sig),1:len_sig,'MinPeakDistance',minpeakdist);
+% text(locs_sig1+.02,amp_sig1,num2str((1:numel(amp_sig1))'))
+% hold on
+% plot(sig,'r');
+
 
 %% FASE B: PULSE WAVEFORM RECONSTRUCTION FOR AMF
 % extract the first and second half of a cardiac period respectively
@@ -468,6 +501,11 @@ else
     % lege=legend('Heartbeat detection','Identified pulse','Cardiac signal','Respiratory signal','Vital signal','NumColumns',2);
     % set(lege,'box','off')
 end
+
+% calcu heart rate of the subject
+bpm_pks=round(length(locs_hsig)/(length(sig)*T_frame/60));
+% printing...
+fprintf('The detected heart rate of the subject is: <strong>%d</strong> bpm. (by detected peaks)\n',bpm_pks);
 
 % Reproduction of blood pressure waveform
 % find the locs...
