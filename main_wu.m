@@ -321,92 +321,60 @@ end
 
 %% FASE A: ITERATIVE PULSE PERIOD ESTIMATION
 sig=hsig_lp;
-sig_fft=abs(fft(sig)); % FFT
+% ZP for FFT
+orden_zp=4;
+sig_zp=[sig zeros(1,orden_zp*length(sig))];
+sig_fft=fft(sig_zp); % FFT
+% plot(abs(sig_fft))
 
-% Signal cleaning accroding to normal bpm: 40-200 -> 0.667 Hz(bps)-3.33 Hz(bps)
+% Signal cleaning accroding to normal bpm: 40-200 -> 0.667 Hz(bps)-3.333 Hz(bps)
 % window function to smooth the signal
-win=zeros(1,length(sig));
+win=zeros(1,length(sig_fft));
 % normal bpm corresponds to the 16th to 80th sampling data of the freq domain signal
-win(17:81)=1; % in MATLAB: 17-81
+win(17*orden_zp:81*orden_zp)=1; % in MATLAB: 17-81
 % smooth both sides of a rectangular wave
 k=1;
-for i=82:85
+for i=82*orden_zp:85*orden_zp
     win(i)=cos(k*pi/8);
     k=k+1;
 end
 
 k=1;
-for i=16:-1:13
+for i=16*orden_zp:-1:13*orden_zp
     win(i)=cos(k*pi/8);
     k=k+1;
 end
 % spectral window for both sides
-win(7915:7987)=win(13:85);
-% figure;
-% plot(win)
+win(7917*orden_zp:7989*orden_zp)=win(13*orden_zp:85*orden_zp); % 7915:7987
 
 % signal windowing & implement FFT-1
 sig_fclean=sig_fft.*win;
-% figure;
-% plot(sig_fclean)
-% xlim([0 100])
-% IFFT
-sig_clean=real(ifft(sig_fclean));
-% figure;
-% plot(sig_clean)
+% plot(abs(sig_fclean))
+% sig_clean=real(ifft(sig_fclean)); % IFFT
 
-% Peaks detection to determinate the cardiac period
-minpeakdist_initial=100; % minimum cardiac period: ~ 0.3s
-[amp_sigclean,locs_sigclean]=findpeaks(sig_clean(1:length(sig_clean)/2+1),1:length(sig_clean)/2+1,'MinPeakDistance',minpeakdist_initial,'MinPeakProminence',0.03);
-% T determination
-T.fil0=locs_sigclean(find(amp_sigclean==max(amp_sigclean)))-1;
-% period revision & calibration 
-if T.fil0>400 % ~ 1.2s
-    T.fil0=locs_sigclean(1)-1;
-end
+% Determinate the cardiac period based on spectrum
+% spectrum resolution
+Fs_fclean=1/(length(sig_fft)*T_frame);
+% T estimation
+loc_max=find(abs(sig_fclean)==max(abs(sig_fclean))); % loc of max(abs)
+% calcu heart rate of the subject (bps & bpm)
+bps=loc_max*Fs_fclean;
+bpm=round(bps*60);
+T.fil0=round((1/bps)/T_frame);
+
+% printing...
+fprintf('The detected heart rate of the subject is: <strong>%d</strong> bpm.\n',bpm);
 
 if twoChannelMode==true
     % ECG period
+    minpeakdist_initial=100; % minimum cardiac period: ~ 0.3s
     [amp_ecg,locs_ecg]=findpeaks((double(decimatedECGSignal-2^15)/2^16)*voltageRangeChannelB,1:length((double(decimatedECGSignal-2^15)/2^16)*voltageRangeChannelB),'MinPeakDistance',minpeakdist_initial,'MinPeakProminence',3e-5);
     periodPeaksECG=round(mean(diff(locs_ecg(1:10))));
     
     % print...
-    fprintf('Period calculated by autocorrelation: <strong>%d</strong>.\n',T.fil0);
+    fprintf('Period calculated by spectrum: <strong>%d</strong>.\n',T.fil0);
     fprintf('Period calculated by ECG: <strong>%d</strong>.\n',periodPeaksECG);
 end
-
-% Locs of the peaks determination for FASE B
-% various filters
-filter_simple=1; % 1=sine; 2=triangle; 3=rectangular
-% create Filter 0 
-if filter_simple==1
-    % sin wave
-    filA=max(sig)*sin(linspace(0,pi,T.fil0))+min(sig);
-elseif filter_simple==2
-    % triangle wave
-    filA=min(sig)+(sawtooth(2*pi*linspace(0,1,T.fil0),0.5)+1)*(max(sig)-min(sig))/2;
-elseif filter_simple==3
-    % rectangular wave
-    filA=zeros(1,100+T.fil0);
-    rectg=max(sig)*square(linspace(0,1,T.fil0));
-    filA(51:50+length(rectg))=rectg;
-end
-
-% filtering with fil0 to determinate locs of the peaks
-sig1_0=conv(sig,filA);
-sig1_0=2*(sig1_0*(max(abs(sig))/max(abs(sig1_0))));
-% signal shifting to eliminate delay
-sig1=circshift(sig1_0,fix(-length(fil0)/2));
-% peaks detection
-len_sig=length(sig); % length of sig
-minpeakdist=fix(T.fil0*0.7);
-% peaks...
-[amp_sig1,locs_sig1]=findpeaks(sig1(1:len_sig),1:len_sig,'MinPeakDistance',minpeakdist);
-% figure('Name','SIGNAL AFTER APPLYING FILTER 0');
-% findpeaks(sig1(1:len_sig),1:len_sig,'MinPeakDistance',minpeakdist);
-% text(locs_sig1+.02,amp_sig1,num2str((1:numel(amp_sig1))'))
-% hold on
-% plot(sig,'r');
 
 
 %% FASE B: PULSE WAVEFORM RECONSTRUCTION FOR AMF
@@ -501,11 +469,6 @@ else
     % set(lege,'box','off')
 end
 
-% calcu heart rate of the subject
-bpm=round(length(locs_hsig)/(length(sig)*T_frame/60));
-% printing...
-fprintf('The detected heart rate of the subject is: <strong>%d</strong> bpm. (by detected peaks)\n',bpm);
-
 % Reproduction of blood pressure waveform
 % find the locs...
 [amph,locsh]=findpeaks(hsig(1:len_sig),1:len_sig,'MinPeakDistance',minpeakdist,'MinPeakProminence',0.05);
@@ -543,10 +506,6 @@ ylabel('Amplidute (mm)')
 grid on
 % set(gca,'xtick',[],'xticklabel',[]);
 % set(gca,'ytick',[],'yticklabel',[]);
-
-% calcu bpm based on T of peaks 
-bpm_T=round(1/(length(BP)*T_frame)*60);
-fprintf('The detected heart rate of the subject is: <strong>%d</strong> bpm. (by cardiac period)\n',bpm_T);
 
 % End the timer
 toc
