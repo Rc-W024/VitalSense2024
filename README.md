@@ -34,7 +34,7 @@ Be sure to check the parameter settings and read the relevant comments before ru
 - **Phase C:** Final heart waveform parameters extraction <- $FilC$
 
 ### 3. Main Outcomes
-- Pulse repetition interval, heartbeat rate, abnormalities detection
+- Pulse repetition interval, heartbeat rate (bpm), abnormalities detection
 - Peaks and periods estimation, blood pressure waveform reconstruction
 - Extracted feature parameters could be studied for biometric authentication and encryption
 
