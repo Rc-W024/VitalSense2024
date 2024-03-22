@@ -1,7 +1,7 @@
 # VitalSense2024 - Radio biometrics with RADAR
 Vital signal processing and identification based on 120 GHz FMCW Radar System-on-Chip (RSoC) for biometrics and situation awareness.
 
-Paper: On the Feasibility of Vital Sensing with Radar System-on-Chip for Novel Modality Biometrics (*In Preparation*)
+Paper: On the Feasibility of Vital Sensing with Radar System-on-Chip for Novel Modality Biometrics (*In Preparation - Final internol revision*)
 
 ## RSoC
 ### Terahertz Radar Sensor by CommSensLab-UPC
