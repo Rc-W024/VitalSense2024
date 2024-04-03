@@ -32,6 +32,8 @@ ATS-SDK is a Windows and Linux compatible software development kit created by *A
 Vital Signals Database - *acquired by CommSensLab (Dept. of Signal Theory and Communications)* (Non-public)
 
 ### Sample data
+Several sets of sample vital signal data in the `data` are used for testing, familiarization and studying of the algorithm.
+
 🚧 *Under Construction...* 🚧
 
 ## Intelligent algorithm
