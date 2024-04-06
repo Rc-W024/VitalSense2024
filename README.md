@@ -34,7 +34,7 @@ Vital Signals Database - *acquired by CommSensLab (Dept. of Signal Theory and Co
 ### Sample data
 Several sets of sample vital signal data in the `data` are used for testing, familiarization and studying of the algorithm.
 
-Data file naming rules: *SUBJECT* + *MEASUREMENT POSITION* + *STATE* + *with ECG* (optional) *.mat*
+Data file naming rules: "*SUBJECT* + *MEASUREMENT POSITION* + *STATE* + *with ECG* (optional) *.mat*"
 
 🚧 *Under Construction...* 🚧
 
