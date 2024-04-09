@@ -64,7 +64,7 @@ Be sure to check the parameter settings and read the relevant comments before ru
 ![resText1](https://github.com/Rc-W024/VitalSense2024/assets/97808991/f34fafae-a686-434a-b56d-eab5f2407198)
 
 ### Case 2: with ECG signal
-![resECG](https://github.com/Rc-W024/VitalSense2024/assets/97808991/38c0dcd1-2393-4ff8-b9c5-1650c12c0ddf)
+![resECG](https://github.com/Rc-W024/VitalSense2024/assets/97808991/be2ec882-2bf9-4d91-b165-e9b1a48230a1)
 
 ![resTextECG](https://github.com/Rc-W024/VitalSense2024/assets/97808991/11fc1da0-28bb-4e03-8b32-86662be440a2)
 
