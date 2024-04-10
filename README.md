@@ -41,7 +41,17 @@ Data file naming rules: "*SUBJECT* + *MEASUREMENT POSITION* + *STATE* + *with EC
 ## Intelligent algorithm
 **MAIN FILE:** [`main_wu`](https://github.com/Rc-W024/VitalSense2024/blob/main/main_wu.m)
 
-Be sure to check the parameter settings and read the relevant comments before running!
+*Be sure to check the parameter settings and read the relevant comments before running!*
+
+Automated intelligent signal processing multiphase algorithm design to deliver for each monitored subject three complementary types of information:
+
+- An adapted filter perfectly matched to the monitored subject radar cardiac pulse waveform, providing the best possible Signal to Noise Ratio and interference rejection.
+
+- The repetitive radar blood pressure waveform estimation, which is not only an additional ideal biologicalcharacteristic for biometrics, but also an alternative to conventional invasive/contact sensors in determining the condition of the cardiovascular system.
+
+- The robust detection and precise temporal alignment of the cardiac pulses allowing to accurately measure heart-rate and to detect anomalies, resulting in more precise biometric parameters.
+
+- The acquired vital signals and characteristic parameters can be integrated with cryptographic technologies to generate secure keys for encrypted communications, thereby ensuring the safety and privacy of the data exchange process between the communicating parties. Moreover, it is feasible to study and develop vital signal-based authentication systems suitable for scenarios requiring high security levels, effectively preventing identity theft or session hijacking.
 
 ### 1. Signal Preprocessing
 - Vital signal $s_{vital}$ obtaintion by phase unwrapping
