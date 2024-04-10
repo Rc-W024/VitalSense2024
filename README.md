@@ -6,7 +6,7 @@ Vital signal processing and identification based on 120 GHz FMCW Radar System-on
 
 Paper: On the Feasibility of Vital Sensing with Radar System-on-Chip for Novel Modality Biometrics (*In Preparation - Final internol revision*)
 
-## RSoC
+## RSoC for Wireless Communication Sensing
 ### Terahertz Radar Sensor by CommSensLab-UPC
 <p>
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/3beb8c87-0072-419f-b07b-6c7b5c18d968" width=300 />
@@ -36,13 +36,12 @@ Several sets of sample vital signal data in the `data` are used for testing, fam
 
 Data file naming rules: "*SUBJECT* + *MEASUREMENT POSITION* + *STATE* + *with ECG* (optional) *.mat*"
 
-🚧 *Under Construction...* 🚧
-
-## Intelligent algorithm
+## Intelligent Signal Processing Algorithm
 **MAIN FILE:** [`main_wu`](https://github.com/Rc-W024/VitalSense2024/blob/main/main_wu.m)
 
 *Be sure to check the parameter settings and read the relevant comments before running!*
 
+### Achievements
 Automated intelligent signal processing multiphase algorithm design to deliver for each monitored subject three complementary types of information:
 
 - An adapted filter perfectly matched to the monitored subject radar cardiac pulse waveform, providing the best possible Signal to Noise Ratio and interference rejection.
@@ -53,22 +52,23 @@ Automated intelligent signal processing multiphase algorithm design to deliver f
 
 - The acquired vital signals and characteristic parameters can be integrated with cryptographic technologies to generate secure keys for encrypted communications, thereby ensuring the safety and privacy of the data exchange process between the communicating parties. Moreover, it is feasible to study and develop vital signal-based authentication systems suitable for scenarios requiring high security levels, effectively preventing identity theft or session hijacking.
 
-### 1. Signal Preprocessing
+### Workflow
+**1. Signal Preprocessing**
 - Vital signal $s_{vital}$ obtaintion by phase unwrapping
 - Signal separation: respiratory signal $s_{b}$ extraction with FIR linear-phase filter; cardiac signal -> $s_{h}=s_{vital}−s_{b}$
 
-### 2. Real-time Repetitive Waveform Adaptive Matched Filter (RWAMF)
+**2. Real-time Repetitive Waveform Adaptive Matched Filter (RWAMF)**
 - **Phase A:** Iterative pulse period estimation <- $FFT$ -> $FilA$
 - **Phase B:** Pulse waveform reconstruction -> $FilB$ -> **AMF**
 - **Phase C:** Final heart waveform parameters extraction <- $FilC$
 
-### 3. Main Outcomes
+**3. Main Outcomes**
 - Pulse repetition interval, heartbeat rate (bpm), abnormalities detection
 - Peaks and periods estimation, blood pressure waveform reconstruction
 - Extracted feature parameters could be studied for biometric authentication and encryption
 
 ## Overall Result
-### Case 1:
+### Case 1: with oximeter
 ![resRW](https://github.com/Rc-W024/VitalSense2024/assets/97808991/a2a44f71-5296-4cbf-9087-9ff5fb01cbea)
 
 ![resText1](https://github.com/Rc-W024/VitalSense2024/assets/97808991/f34fafae-a686-434a-b56d-eab5f2407198)
@@ -78,7 +78,11 @@ Automated intelligent signal processing multiphase algorithm design to deliver f
 
 ![resTextECG](https://github.com/Rc-W024/VitalSense2024/assets/97808991/11fc1da0-28bb-4e03-8b32-86662be440a2)
 
-## Similar Project...
+## One more thing...
+### Citation
+🚧 *Under Construction...* 🚧
+
+### Similar project
 [**IEEE Spectrum** - Millimeter-wave radar device makes electrode-less cardiovascular health tech possible](https://spectrum.ieee.org/contactless-ecg)
 
 Paper: [IEEE TMC](https://ieeexplore.ieee.org/document/9919401/)
