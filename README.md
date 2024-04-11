@@ -78,11 +78,11 @@ Automated intelligent signal processing multiphase algorithm design to deliver f
 
 ![resTextECG](https://github.com/Rc-W024/VitalSense2024/assets/97808991/11fc1da0-28bb-4e03-8b32-86662be440a2)
 
-## One more thing...
+## FYI
 ### Citation
 🚧 *Under Construction...* 🚧
 
-### Similar project
+### Similar project...
 [**IEEE Spectrum** - Millimeter-wave radar device makes electrode-less cardiovascular health tech possible](https://spectrum.ieee.org/contactless-ecg)
 
 Paper: [IEEE TMC](https://ieeexplore.ieee.org/document/9919401/)
