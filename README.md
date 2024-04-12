@@ -50,7 +50,7 @@ Automated intelligent signal processing multiphase algorithm design to deliver f
 
 - The robust detection and precise temporal alignment of the cardiac pulses allowing to accurately measure heart-rate and to detect anomalies, resulting in more precise biometric parameters.
 
-- The acquired vital signals and characteristic parameters can be integrated with cryptographic technologies to generate secure keys for encrypted communications, thereby ensuring the safety and privacy of the data exchange process between the communicating parties. Moreover, it is feasible to study and develop radar-based identity authentication system suitable for security-sensitive scenarios, such as surveillance of confidential areas, to effectively preventing identity theft or session hijacking.
+- The acquired vital signals and characteristic parameters can be integrated with cryptographic technologies to generate secure keys for encrypted communications, thereby ensuring the safety and privacy of the data exchange process between the communicating parties. Moreover, it is feasible to study and develop radar-based identity authentication system suitable for security-sensitive scenarios such as surveillance of confidential areas to effectively preventing identity theft or session hijacking.
 
 ### Workflow
 **1. Signal Preprocessing**
