@@ -15,11 +15,11 @@ Paper: On the Feasibility of Vital Sensing with Radar System-on-Chip for Novel M
 
 | Parameter                             | Value                        |
 | :----------:                          | :---------------:            |
-| Center Frequency ($f_{0}$)            | 122 GHz                      |
+| Center Frequency ($f_{0}$)            | 122.5 GHz                    |
 | Wavelength ($\lambda$)                | $\frac{c}{f_{0}}=$ 0.0025 m  |
 | Pulse Repetition Period ($T_{frame}$) | 3 ms                         |
 | Chirp Slope Time ($T_{m}$)            | 1.5 ms                       |
-| Chirp Slope Bandwidth ($\Delta f$)    | 3 GHz                        |
+| Chirp Slope Bandwidth ($\Delta f$)    | 1 GHz (in the ISM band)      |
 
 FYI: [EuJRS](https://www.tandfonline.com/doi/abs/10.5721/EuJRS20164937), [IEEE TAP](https://ieeexplore.ieee.org/document/8586968)
 
