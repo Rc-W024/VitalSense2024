@@ -13,13 +13,13 @@ Paper: On the Feasibility of Vital Sensing with Radar System-on-Chip for Novel M
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/ca2eb4d2-b0ea-477c-aa1b-ac01321f8663" width=320 />
 </p>
 
-| Parameter                             | Value                        |
-| :----------:                          | :---------------:            |
-| Center Frequency ($f_{0}$)            | 122.5 GHz                    |
-| Wavelength ($\lambda$)                | $\frac{c}{f_{0}}=$ 0.0025 m  |
-| Pulse Repetition Period ($T_{frame}$) | 3 ms                         |
-| Chirp Slope Time ($T_{m}$)            | 1.5 ms                       |
-| Chirp Slope Bandwidth ($\Delta f$)    | 1 GHz (in the ISM band)      |
+| Parameter                             | Value                                                                   |
+| :----------:                          | :---------------:                                                       |
+| Center Frequency ($f_{0}$)            | 122.5 GHz                                                               |
+| Wavelength ($\lambda$)                | $\frac{c}{f_{0}}=$ 0.0025 m                                             |
+| Pulse Repetition Period ($T_{frame}$) | 3 ms                                                                    |
+| Chirp Slope Time ($T_{m}$)            | 1.5 ms                                                                  |
+| Chirp Slope Bandwidth ($\Delta f$)    | 1 GHz (in the [ISM band](https://en.wikipedia.org/wiki/ISM_radio_band)) |
 
 FYI: [EuJRS](https://www.tandfonline.com/doi/abs/10.5721/EuJRS20164937), [IEEE TAP](https://ieeexplore.ieee.org/document/8586968)
 
