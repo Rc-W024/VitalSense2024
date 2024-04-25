@@ -15,13 +15,13 @@ On the Feasibility of Vital Sensing with Radar System-on-Chip for Novel Modality
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/ca2eb4d2-b0ea-477c-aa1b-ac01321f8663" width=320 />
 </p>
 
-| Parameter                             | Value                                                                   |
-| :----------:                          | :---------------:                                                       |
-| Center Frequency ($f_{0}$)            | 122.5 GHz                                                               |
-| Wavelength ($\lambda$)                | $\frac{c}{f_{0}}=$ 0.0025 m                                             |
-| Pulse Repetition Period ($T_{frame}$) | 3 ms                                                                    |
-| Chirp Slope Time ($T_{m}$)            | 1.5 ms                                                                  |
-| Chirp Slope Bandwidth ($\Delta f$)    | 1 GHz (in the [ISM band](https://en.wikipedia.org/wiki/ISM_radio_band)) |
+| 参数                             | 数值                                                                            |
+| :----------:                     | :---------------:                                                               |
+| 中心频率 $f_{0}$                  | 122.5 GHz                                                                       |
+| 波长 $\lambda$                   | $\frac{c}{f_{0}}=$ 0.0025 m                                                      |
+| 脉冲重复周期 $T_{frame}$          | 3 ms                                                                             |
+| 线性调频斜坡时间 $T_{m}$          | 1.5 ms                                                                           |
+| 线性调频斜坡带宽 $\Delta f$       | 1 GHz（在[ISM频段](https://baike.baidu.com/item/ISM%E9%A2%91%E6%AE%B5/2114556)内）|
 
 参考文献：[EuJRS](https://www.tandfonline.com/doi/abs/10.5721/EuJRS20164937), [IEEE TAP](https://ieeexplore.ieee.org/document/8586968)
 
