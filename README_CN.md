@@ -4,7 +4,7 @@
 ![](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=flat&color=BC4E99)
 ![](https://img.shields.io/github/license/Rc-W024/VitalSense2024.svg)
 
-面向生物识别和态势感知的120 GHz FMCW片上雷达（RSoC）生命信号处理与识别。
+面向态势感知和生物特征识别技术的120 GHz调频连续波（FMCW）片上雷达（RSoC）生命信号探测与处理。
 
 On the Feasibility of Vital Sensing with Radar System-on-Chip for Novel Modality Biometrics (*In Preparation - Final internol revision*)
 
