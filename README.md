@@ -6,7 +6,7 @@ English | [中文](README_CN.md)
 
 Vital signal detection and processing based on 120 GHz FMCW Radar System-on-Chip (RSoC) for situation awareness and biometrics.
 
-Paper: On the Feasibility of Vital Sensing with Radar System-on-Chip for Novel Modality Biometrics (*In Preparation - Final internol revision*)
+An Efficient Optimized Processing Technology based on Radar System-on-Chip for Wireless Vital Sensing (*In Preparation - Final internol revision*)
 
 ## RSoC for Wireless Sensing & Mobile Computing
 ### Terahertz Radar Sensor by CommSensLab-UPC
