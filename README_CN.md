@@ -6,7 +6,7 @@
 
 面向态势感知和生物特征识别技术的120 GHz调频连续波（FMCW）片上雷达（RSoC）生命信号探测与处理。
 
-On the Feasibility of Vital Sensing with Radar System-on-Chip for Novel Modality Biometrics (*In Preparation - Final internol revision*)
+An Efficient Optimized Processing Technology based on Radar System-on-Chip for Wireless Vital Sensing (*In Preparation - Final internol revision*)
 
 ## 基于RSoC的无线感知与移动计算
 ### CommSensLab-UPC研发的太赫兹雷达传感器
