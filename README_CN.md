@@ -1,4 +1,4 @@
-# VitalSense2024 - 基于雷达的无线电生物特征识别
+# VitalSense2024
 [English](README.md) | 中文
 
 ![](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=flat&color=BC4E99)
@@ -8,7 +8,7 @@
 
 An Efficient Optimized Processing Technology based on Radar System-on-Chip for Wireless Vital Sensing (*In Preparation - Final internol revision*)
 
-## 基于RSoC的无线感知与移动计算
+## 基于RSoC的无线感知和移动计算
 ### CommSensLab-UPC研发的太赫兹雷达传感器
 <p>
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/3beb8c87-0072-419f-b07b-6c7b5c18d968" width=300 />
