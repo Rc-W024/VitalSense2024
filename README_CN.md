@@ -1,10 +1,10 @@
-# VitalSense2024
+# VitalSense2024 - 基于雷达的生命信号侦测与处理
 [English](README.md) | 中文
 
 ![](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=flat&color=BC4E99)
 ![](https://img.shields.io/github/license/Rc-W024/VitalSense2024.svg)
 
-面向态势感知和生物特征识别技术的120 GHz调频连续波（FMCW）片上雷达（RSoC）生命信号探测与处理。
+面向态势感知和生物特征识别的120 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与通信方案。
 
 An Efficient Optimized Processing Technology based on Radar System-on-Chip for Wireless Vital Sensing (*In Preparation - Final internol revision*)
 
