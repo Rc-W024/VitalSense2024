@@ -87,6 +87,6 @@ Automated intelligent signal processing multiphase algorithm design to deliver f
 ### Similar project...
 [**IEEE Spectrum** - Millimeter-wave radar device makes electrode-less cardiovascular health tech possible](https://spectrum.ieee.org/contactless-ecg)
 
-Paper: [IEEE TMC](https://ieeexplore.ieee.org/document/9919401/)
+Paper: [*IEEE TMC*](https://ieeexplore.ieee.org/document/9919401/)
 
 News (In Chinese): [中国科学技术大学网络空间安全学院：中国科大实现非接触心电图实时监测](https://cybersec.ustc.edu.cn/2022/1201/c23831a582956/page.htm)
