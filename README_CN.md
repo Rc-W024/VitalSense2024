@@ -1,4 +1,4 @@
-# VitalSense2024 - 基于雷达的生命信号侦测与处理
+# VitalSense2024 - 雷达生命信号侦测与处理
 [English](README.md) | 中文
 
 ![](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=flat&color=BC4E99)
@@ -87,6 +87,6 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 ### 类似项目...
 [**IEEE Spectrum** - Millimeter-wave radar device makes electrode-less cardiovascular health tech possible](https://spectrum.ieee.org/contactless-ecg)
 
-论文：[IEEE TMC](https://ieeexplore.ieee.org/document/9919401/)
+论文：[*IEEE TMC*](https://ieeexplore.ieee.org/document/9919401/)
 
 新闻：[中国科学技术大学网络空间安全学院：中国科大实现非接触心电图实时监测](https://cybersec.ustc.edu.cn/2022/1201/c23831a582956/page.htm)
