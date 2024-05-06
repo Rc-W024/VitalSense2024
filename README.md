@@ -23,7 +23,7 @@ An Efficient Optimized Processing Technology based on Radar System-on-Chip for W
 | Chirp Slope Time ($T_{m}$)            | 1.5 ms                                                                  |
 | Chirp Slope Bandwidth ($\Delta f$)    | 1 GHz (in the [ISM band](https://en.wikipedia.org/wiki/ISM_radio_band)) |
 
-FYI: [EuJRS](https://www.tandfonline.com/doi/abs/10.5721/EuJRS20164937), [IEEE TAP](https://ieeexplore.ieee.org/document/8586968)
+FYI: [*EuJRS*](https://www.tandfonline.com/doi/abs/10.5721/EuJRS20164937), [*IEEE TAP*](https://ieeexplore.ieee.org/document/8586968)
 
 ### Files for hardware...
 **Radar measurement:** `AlazarTech`
