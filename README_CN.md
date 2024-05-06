@@ -23,7 +23,7 @@ An Efficient Optimized Processing Technology based on Radar System-on-Chip for W
 | 线性调频斜坡时间 $T_{m}$          | 1.5 ms                                                                           |
 | 线性调频斜坡带宽 $\Delta f$       | 1 GHz（在[ISM频段](https://baike.baidu.com/item/ISM%E9%A2%91%E6%AE%B5/2114556)内）|
 
-参考文献：[EuJRS](https://www.tandfonline.com/doi/abs/10.5721/EuJRS20164937), [IEEE TAP](https://ieeexplore.ieee.org/document/8586968)
+参考文献：[*EuJRS*](https://www.tandfonline.com/doi/abs/10.5721/EuJRS20164937), [*IEEE TAP*](https://ieeexplore.ieee.org/document/8586968)
 
 ### 硬件文件...
 **雷达测量任务：** `AlazarTech`
