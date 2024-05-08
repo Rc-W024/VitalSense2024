@@ -82,9 +82,18 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 
 ## 参考信息
 ### 引用
-🚧 *施工中...* 🚧
+🚧 *施工中……* 🚧
 
-### 类似项目...
+### 相关项目
+Eyelid Dynamics Characterization with 120 GHz mmW Radar (*In Preparation - Final internol revision*)
+
+提出了一种新的基于雷达技术测量眼睑运动的两步法方案，包括对眼睛距离的近似确定以及在测量期间评估相位演变。进一步研究了信号处理算法，以改进眼睑眨动检测，并在必要时对人体其他部位的干扰进行补偿。眨眼频率、持续时间和速度等眼睑运动特征可用于评估神经状况和车辆驾驶员的疲劳程度。此外，该生物特征还可为未来新兴生物特征识别研究提供重要参考和支持。
+
+**Citation:**
+
+🚧 *施工中……* 🚧
+
+### 类似项目
 [**IEEE Spectrum** - Millimeter-wave radar device makes electrode-less cardiovascular health tech possible](https://spectrum.ieee.org/contactless-ecg)
 
 论文：[*IEEE TMC*](https://ieeexplore.ieee.org/document/9919401/)
