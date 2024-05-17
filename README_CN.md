@@ -4,9 +4,9 @@
 ![](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=flat&color=BC4E99)
 ![](https://img.shields.io/github/license/Rc-W024/VitalSense2024.svg)
 
-面向态势感知和生物特征识别的120 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与通信方案。
-
 **An Efficient Optimized Processing Technology based on Radar System-on-Chip for Wireless Vital Sensing** (*In Preparation - Final internol revision*)
+
+用于生命体征感测、态势感知和生物特征识别的120 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与通信方案。
 
 ## 基于RSoC的无线感知和移动计算
 ### CommSensLab-UPC研发的太赫兹雷达传感器
