@@ -69,7 +69,28 @@ Automated intelligent signal processing multiphase algorithm design to deliver f
 - Peaks and periods estimation, blood pressure waveform reconstruction
 - Extracted feature parameters could be studied for biometric authentication and encryption
 
+## Phase results
+### Signal separation
+- Extract breathing signal $s_{b}$ with FIR linear-phase filter
+- Heartbeat signal -> $s_{h}=s_{vital}-s_{b}$
+
+![separation](https://github.com/Rc-W024/VitalSense2024/assets/97808991/99f80104-2506-492c-bf97-6378139acfd9)
+
+### RWAMF design
+- Calculate the average waveform based on the extracted cardiac signal as the tmplate signal of the filter
+
+![RWAMF](https://github.com/Rc-W024/VitalSense2024/assets/97808991/770a43d4-da7e-4ea4-8777-4c2f2db7d3a0)
+
+### Cardiac pulse recognition
+- Main function: [*findpeaks*](https://www.mathworks.com/help/signal/ref/findpeaks.html) in MATLAB
+
+![recognition](https://github.com/Rc-W024/VitalSense2024/assets/97808991/c6ea274f-4217-4cae-b98d-9dc7fd058da4)
+
+### Blood pressure waveform extraction
+![BPW](https://github.com/Rc-W024/VitalSense2024/assets/97808991/385901c1-3306-47fe-a885-08878a74bf9f)
+
 ## Overall Result
+
 ### Case 1: with oximeter
 ![resRW](https://github.com/Rc-W024/VitalSense2024/assets/97808991/a2a44f71-5296-4cbf-9087-9ff5fb01cbea)
 
