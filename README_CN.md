@@ -69,6 +69,26 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 - 峰与周期估计，血压波形重建
 - 提取的特征参数可用于生物特征认证和加密研究
 
+## 阶段成果
+### 信号分离
+- 利用有限长单位冲激响应（FIR）线性相位滤波器提取呼吸信号 $s_{b}$
+- 心跳信号 -> $s_{h}=s_{vital}-s_{b}$
+
+![separation](https://github.com/Rc-W024/VitalSense2024/assets/97808991/99f80104-2506-492c-bf97-6378139acfd9)
+
+### RWAMF设计
+- 根据提取的心脏信号计算平均波形作为滤波器的模板信号
+
+![RWAMF](https://github.com/Rc-W024/VitalSense2024/assets/97808991/770a43d4-da7e-4ea4-8777-4c2f2db7d3a0)
+
+### 心动脉冲识别
+- 主要函数：MATLAB中所提供的[*findpeaks*](https://www.mathworks.com/help/signal/ref/findpeaks.html)
+
+![recognition](https://github.com/Rc-W024/VitalSense2024/assets/97808991/c6ea274f-4217-4cae-b98d-9dc7fd058da4)
+
+### 血压波形提取
+![BPW](https://github.com/Rc-W024/VitalSense2024/assets/97808991/385901c1-3306-47fe-a885-08878a74bf9f)
+
 ## 总体结果
 ### 案例1：血氧计
 ![resRW](https://github.com/Rc-W024/VitalSense2024/assets/97808991/a2a44f71-5296-4cbf-9087-9ff5fb01cbea)
