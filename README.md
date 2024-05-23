@@ -87,7 +87,7 @@ Automated intelligent signal processing multiphase algorithm design to deliver f
 ![recognition](https://github.com/Rc-W024/VitalSense2024/assets/97808991/c6ea274f-4217-4cae-b98d-9dc7fd058da4)
 
 ### Blood pressure waveform extraction
-![BPW](https://github.com/Rc-W024/VitalSense2024/assets/97808991/385901c1-3306-47fe-a885-08878a74bf9f)
+![BPW](https://github.com/Rc-W024/VitalSense2024/assets/97808991/897de39b-2f02-444c-8344-232764f80b05)
 
 ## Overall Result
 
