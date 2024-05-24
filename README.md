@@ -4,7 +4,7 @@ English | [中文](README_CN.md)
 ![](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=flat&color=BC4E99)
 ![](https://img.shields.io/github/license/Rc-W024/VitalSense2024.svg)
 
-**An Efficient Optimized Processing Technology based on Radar System-on-Chip for Wireless Vital Sensing** (*In Preparation - Final internol revision*)
+**An Efficient Optimized Processing Technology based on Radar System-on-Chip for Wireless Vital Sensing** (*In Preparation*)
 
 Radio remote sensing and communication methodology based on 120 GHz FMCW Radar System-on-Chip (RSoC) for vital sign sensing, situation awareness and biometrics.
 
@@ -106,7 +106,7 @@ Automated intelligent signal processing multiphase algorithm design to deliver f
 🚧 *Under Construction...* 🚧
 
 ### Related project...
-**Eyelid Dynamics Characterization with 120 GHz mmW Radar** (*In Preparation - Final internol revision*)
+**Eyelid Dynamics Characterization with 120 GHz mmW Radar** (*In Preparation*)
 
 A new approach of two-step method for measuring eyelid movement using radar technology is proposed, involving the approximate determination of the distance to the eye and the evaluation of phase evolution over the measurement period. Further signal processing algorithms are studied to improve the eyelid blink detection and, if necessary, to compensate interference of other parts of the human body. The characteristics of eyelid movement, including blink frequency, duration, and velocity, can be used to assess neurological conditions and driver drowsiness. In addition, this biological characteristic can also provide important reference and support for future research on emerging biometrics.
 
