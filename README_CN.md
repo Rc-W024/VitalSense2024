@@ -112,10 +112,3 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 **引用：**
 
 🚧 *施工中……* 🚧
-
-### 类似项目
-[**IEEE Spectrum** - Millimeter-wave radar device makes electrode-less cardiovascular health tech possible](https://spectrum.ieee.org/contactless-ecg)
-
-论文：[*IEEE TMC*](https://ieeexplore.ieee.org/document/9919401/)
-
-新闻：[中国科学技术大学网络空间安全学院：中国科大实现非接触心电图实时监测](https://cybersec.ustc.edu.cn/2022/1201/c23831a582956/page.htm)
