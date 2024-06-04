@@ -19,7 +19,7 @@ Radio remote sensing and communication methodology based on 120 GHz FMCW Radar S
 | :----------:                          | :---------------:                                                       |
 | Center Frequency ($f_{0}$)            | 122.5 GHz                                                               |
 | Radar Bandwidth ($B$)                 | 1 GHz (in the [ISM band](https://en.wikipedia.org/wiki/ISM_radio_band)) |
-| Antenna Beamwidth ($\theta_{3dB}$)    | 2$^{\circ}$                                                             |
+| Antenna Beamwidth ($\theta_{3dB}$)    | $2^{\circ}$                                                             |
 | Radar Range Resolution ($\Delta r$)   | $\frac{c}{2B}=$ 150 mm                                                  |
 | Wavelength ($\lambda$)                | $\frac{c}{f_{0}}\approx$ 2.45 mm                                        |
 | Pulse Repetition Period ($T_{frame}$) | 3 ms                                                                    |
