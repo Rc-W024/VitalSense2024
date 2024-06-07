@@ -353,10 +353,33 @@ sig_fclean=sig_fft.*win;
 % sig_clean=real(ifft(sig_fclean)); % IFFT
 
 % Determinate the cardiac period based on spectrum
+SIG0=abs(sig_fclean);
+SIG=abs(sig_fclean);
+SIG(find(SIG<0.03))=[]; % clean the spectrum
+amp_mean=mean(SIG);
+% find the principle peaks
+[amp_fft,loc_fft]=findpeaks(SIG0(1:length(SIG0)),1:length(SIG0),'MinPeakProminence',amp_mean*2);
+% T estimation
+sort_amp=sort(amp_fft,'descend');
+% verify whether any of the detected peaks is close to the maximum peak
+if sort_amp(2)-sort_amp(1)<10
+    dif_l=diff(loc_fft);
+    dif_mean=round(mean(dif_l(2:end)));
+    % determine whether the second largest peak is the true cardiac frecuency
+    amp_validation=sort_amp(2);
+    if abs(loc_fft(find(amp_fft==amp_validation))-dif_mean)<3
+        loc_max=loc_fft(find(amp_fft==amp_validation)); % further verification
+    else
+        % T determination
+        loc_max=find(abs(sig_fclean)==max(abs(sig_fclean)));
+    end
+else
+    % T determination
+    loc_max=find(abs(sig_fclean)==max(abs(sig_fclean)));
+end
+
 % spectrum resolution
 Fs_fclean=1/(length(sig_fft)*T_frame);
-% T estimation
-loc_max=find(abs(sig_fclean)==max(abs(sig_fclean))); % loc of max(abs)
 % calcu heart rate of the subject (bps & bpm)
 bps=loc_max*Fs_fclean;
 bpm=round(bps*60);
