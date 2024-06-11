@@ -280,7 +280,8 @@ tic
 
 % FIR linear-phase filter
 smp_f=200; % sampling
-blp_r=fir1(300,0.1/(smp_f/2),'low');
+cutoff_f=0.3; % cut-off frecuency
+blp_r=fir1(300,cutoff_f/(smp_f/2),'low');
 % filtering results
 rsig_lp=filtfilt(blp_r,1,vitsig);
 hsig_lp=vitsig-rsig_lp;
