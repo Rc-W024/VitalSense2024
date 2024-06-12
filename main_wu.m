@@ -350,12 +350,12 @@ win(length(sig_fft)-(81*orden_zp+4)+1:length(sig_fft)-(17*orden_zp-4)+1)=win(17*
 
 % signal windowing
 sig_fclean=sig_fft.*win;
-% plot(abs(sig_fclean))
+%plot(abs(sig_fclean))
 sig_fclean_cut=sig_fclean(1:length(sig_fclean)/2); % right side
 
 % Determinate the cardiac period based on spectrum
-SIG0=abs(sig_fclean);
-SIG=abs(sig_fclean);
+SIG0=abs(sig_fclean_cut);
+SIG=abs(sig_fclean_cut);
 SIG(find(SIG<0.03))=[]; % clean the spectrum
 amp_mean=mean(SIG);
 % find the principle peaks
@@ -363,20 +363,19 @@ amp_mean=mean(SIG);
 % T estimation
 sort_amp=sort(amp_fft,'descend');
 % verify whether any of the detected peaks is close to the maximum peak
-if sort_amp(2)-sort_amp(1)<10
-    dif_l=diff(loc_fft);
-    dif_mean=round(mean(dif_l(2:end)));
-    % determine whether the second largest peak is the true cardiac frecuency
-    amp_validation=sort_amp(2);
-    if abs(loc_fft(find(amp_fft==amp_validation))-dif_mean)<3
-        loc_max=loc_fft(find(amp_fft==amp_validation)); % further verification
-    else
-        % T determination
-        loc_max=find(abs(sig_fclean)==max(abs(sig_fclean)));
-    end
+if sort_amp(1)-sort_amp(2)<10
+    % loc_fft vectorization operation
+    matrix=loc_fft'./loc_fft;
+    matrix=roundn(matrix,-1);
+    %disp(matrix);
+    % find the position of integer values
+    [row,col]=find(matrix>1 & mod(matrix,1)==0);
+    idx=mode(col); % find the most repeated element
+    % T determination
+    loc_d=loc_fft(idx);
 else
     % T determination
-    loc_max=find(abs(sig_fclean)==max(abs(sig_fclean)));
+    loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
 end
 
 % spectrum resolution
