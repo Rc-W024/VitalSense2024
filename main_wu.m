@@ -335,23 +335,23 @@ win=zeros(1,length(sig_fft));
 win(17*orden_zp:81*orden_zp)=1; % in MATLAB: 17-81
 % smooth both sides of a rectangular wave
 k=1;
-for i=82*orden_zp:85*orden_zp
+for i=81*orden_zp+1:81*orden_zp+4
     win(i)=cos(k*pi/8);
     k=k+1;
 end
 
 k=1;
-for i=16*orden_zp:-1:13*orden_zp
+for i=17*orden_zp-1:-1:17*orden_zp-4
     win(i)=cos(k*pi/8);
     k=k+1;
 end
 % spectral window for both sides
-win(7917*orden_zp:7989*orden_zp)=win(13*orden_zp:85*orden_zp); % 7915:7987
+win(length(sig_fft)-(81*orden_zp+4)+1:length(sig_fft)-(17*orden_zp-4)+1)=win(17*orden_zp-4:81*orden_zp+4);
 
-% signal windowing & implement FFT-1
+% signal windowing
 sig_fclean=sig_fft.*win;
 % plot(abs(sig_fclean))
-% sig_clean=real(ifft(sig_fclean)); % IFFT
+sig_fclean_cut=sig_fclean(1:length(sig_fclean)/2); % right side
 
 % Determinate the cardiac period based on spectrum
 SIG0=abs(sig_fclean);
