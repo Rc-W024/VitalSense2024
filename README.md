@@ -43,7 +43,8 @@ Data file naming rules: "*SUBJECT* + *MEASUREMENT POSITION* + *STATE* + *with EC
 ## Intelligent Signal Processing Algorithm
 **MAIN FILE:** [`main_wu`](https://github.com/Rc-W024/VitalSense2024/blob/main/main_wu.m)
 
-⚠ *Be sure to check the parameter settings and read the relevant comments before running!* ⚠
+> [!WARNING]\
+> Be sure to check the parameter settings and read the relevant comments before running!
 
 ### Achievements
 Automated intelligent signal processing multiphase algorithm design to deliver for each monitored subject three complementary types of information:
