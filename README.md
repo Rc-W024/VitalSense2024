@@ -8,6 +8,12 @@ English | [中文](README_CN.md)
 
 Radio remote sensing and communication methodology based on 120 GHz Frequency-Modulated Continuous Wave (FMCW) Radar System-on-Chip (RSoC) for vital sign sensing, situation awareness and biometrics.
 
+<details> <summary><b>Previous Project Background Video Introduction</b></summary>
+  
+https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27b-ba11a036f8c3
+
+</details>
+
 ## RSoC for Wireless Sensing & Mobile Computing
 ### Terahertz Radar Sensor by CommSensLab-UPC
 <p>
