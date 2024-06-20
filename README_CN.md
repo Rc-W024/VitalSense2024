@@ -8,6 +8,12 @@
 
 用于生命体征感测、态势感知和生物特征识别的120 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与通信方案。
 
+<details> <summary><b>前序项目介绍短片</b></summary>
+  
+https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27b-ba11a036f8c3
+
+</details>
+
 ## 基于RSoC的无线感知和移动计算
 ### CommSensLab-UPC研发的太赫兹雷达传感器
 <p>
