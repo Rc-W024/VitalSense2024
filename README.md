@@ -55,11 +55,11 @@ Data file naming rules: "*SUBJECT* + *MEASUREMENT POSITION* + *STATE* + *with EC
 > *Be sure to check the parameter settings and read the relevant comments before running!*
 
 ### Achievements
-Automated intelligent signal processing multiphase algorithm design to deliver for each monitored subject three complementary types of information:
+Vital sensing radar with automated intelligent signal processing multiphase algorithm to deliver for each monitored subject three complementary types of information:
 
 - An adapted filter perfectly matched to the monitored subject radar cardiac pulse waveform, providing the best possible Signal to Noise Ratio and interference rejection.
 
-- The repetitive radar blood pressure waveform estimation, which is not only an additional ideal biologicalcharacteristic for biometrics, but also an alternative to conventional invasive/contact sensors in determining the condition of the cardiovascular system.
+- The repetitive radar blood pressure waveform estimation, which is not only an additional biologicalcharacteristic for biometrics, but also an alternative to conventional invasive/contact sensors in determining the condition of the cardiovascular system.
 
 - The robust detection and precise temporal alignment of the cardiac pulses allowing to accurately measure heart-rate and to detect anomalies, resulting in more precise biometric parameters.
 
@@ -72,12 +72,13 @@ Automated intelligent signal processing multiphase algorithm design to deliver f
 
 **2. Real-time Repetitive Waveform Adaptive Matched Filter (RWAMF)**
 - **Phase A:** Iterative pulse period estimation <- $FFT$ -> $FilA$
-- **Phase B:** Pulse waveform reconstruction -> $FilB$ -> **AMF**
-- **Phase C:** Final heart waveform parameters extraction <- $FilC$
+- **Phase B:** Generic Filter & RWAMF -> $FilB$ <- $FilC$ -> **AMF**
+- **Phase C:** Vital information extraction
 
 **3. Main Outcomes**
 - Pulse repetition interval, heartbeat rate (bpm), abnormalities detection
-- Peaks and periods estimation, blood pressure waveform reconstruction
+- Peaks recognition, blood pressure waveform extraction
+- Respiratory monitoring
 - Extracted feature parameters could be studied for biometric authentication and encryption
 
 ## Phase results
