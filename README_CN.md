@@ -73,7 +73,7 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 **2、实时重复波形自适应匹配滤波（RWAMF）**
 - **Phase A:** 迭代脉冲周期估计 <- $FFT$ -> $FilA$
 - **Phase B:** 通用心动信号滤波器 & RWAMF -> $FilB$ <- $FilC$
-- **Phase C:** 生命信息提取 -> $bpm$，$s_{BP}$ ，......
+- **Phase C:** 生命信息提取 -> $bpm$， $s_{BP}$，......
 
 **3、主要成果**
 - 脉冲重复间隔，心率，异常检测
