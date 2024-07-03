@@ -72,7 +72,7 @@ Vital sensing radar with automated intelligent signal processing multiphase algo
 
 **2. Real-time Repetitive Waveform Adaptive Matched Filter (RWAMF)**
 - **Phase A:** Iterative pulse period estimation <- $FFT$ -> $FilA$
-- **Phase B:** Generic cardic filter & RWAMF -> $FilB$ <- $FilC$
+- **Phase B:** Generic cardic signal filter & RWAMF -> $FilB$ <- $FilC$
 - **Phase C:** Vital information extraction -> $bpm$, $s_{BP}$, ...
 
 **3. Main Outcomes**
