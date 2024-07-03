@@ -29,7 +29,7 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 | 雷达带宽 $B$                | 1 GHz（在[ISM频段](https://baike.baidu.com/item/ISM%E9%A2%91%E6%AE%B5/2114556)内）|
 | 天线波束宽度 $\theta_{3dB}$ | $2^{\circ}$                                                                     |
 | 雷达距离分辨率 $\Delta r$   | $\frac{c}{2B}=$ 150 mm                                                           |
-| 波长 $\lambda$             | $\frac{c}{f_{0}}\approx$ 2.45 mm                                                 |
+| 波长 $\lambda$             | $\frac{c}{f_{0}}=$ 2.449 mm                                                 |
 | 脉冲重复周期 $T_{frame}$    | 3 ms                                                                             |
 | 线性调频斜坡时间 $T_{m}$    | 1.5 ms                                                                           |
 
