@@ -8,7 +8,7 @@
 
 **An Efficient Optimized Processing Technology based on Radar System-on-Chip for Wireless Vital Sensing** (*Under Review*)
 
-用于生命体征感测、态势感知和生物特征识别的120 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与通信方案。
+用于生命体征感测、态势感知和生物特征识别的120 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与毫米波通信解决方案。
 
 <details> <summary><b>前序项目介绍短片</b></summary>
   
