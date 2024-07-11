@@ -6,7 +6,7 @@
 ![](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=flat&color=BC4E99)
 ![](https://img.shields.io/github/license/Rc-W024/VitalSense2024.svg)
 
-**An Efficient Optimized Processing Technology based on Radar System-on-Chip for Wireless Vital Sensing**
+**An Efficient Optimized Adaptive Processing Technique Based on Radar System-on-Chip for Wireless Vital Sensing**
 
 用于生命体征感测、态势感知和生物特征识别的120 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与毫米波通信解决方案。
 
@@ -19,7 +19,7 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 > [!WARNING]\
 > 该论文所依据的研究细节已提交上报至*加泰罗尼亚理工大学道德委员会*。该研究项目满足包括目的、技术细节、无风险和数据保护措施在内的所有指定要求。所有参与者均已签署知情同意书。
 
-## 基于RSoC的无线感知和移动计算
+## 基于RSoC的无线感知
 ### 太赫兹雷达传感器
 <p>
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/3beb8c87-0072-419f-b07b-6c7b5c18d968" width=300 />
