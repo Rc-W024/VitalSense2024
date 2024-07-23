@@ -36,6 +36,9 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 | Pulse Repetition Period ($T_{frame}$) | 3 ms                                                                    |
 | Chirp Slope Time ($T_{m}$)            | 1.5 ms                                                                  |
 
+> [!Tip]
+> For the radar prototype detail, please refer to the previous studies: [*EuJRS*](https://www.tandfonline.com/doi/abs/10.5721/EuJRS20164937), [*IEEE TAP*](https://ieeexplore.ieee.org/document/8586968).
+
 ### Files for hardware...
 **Radar measurement:** `AlazarTech`
 
