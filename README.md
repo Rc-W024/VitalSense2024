@@ -32,11 +32,9 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 | Radar Bandwidth ($B$)                 | 1 GHz (in the [ISM band](https://en.wikipedia.org/wiki/ISM_radio_band)) |
 | Antenna Beamwidth ($\theta_{3dB}$)    | $2^{\circ}$                                                             |
 | Radar Range Resolution ($\Delta r$)   | $\frac{c}{2B}=$ 150 mm                                                  |
-| Wavelength ($\lambda$)                | $\frac{c}{f_{0}}=$ 2.449 mm                                        |
+| Wavelength ($\lambda$)                | $\frac{c}{f_{0}}=$ 2.449 mm                                             |
 | Pulse Repetition Period ($T_{frame}$) | 3 ms                                                                    |
 | Chirp Slope Time ($T_{m}$)            | 1.5 ms                                                                  |
-
-FYI: [*EuJRS*](https://www.tandfonline.com/doi/abs/10.5721/EuJRS20164937), [*IEEE TAP*](https://ieeexplore.ieee.org/document/8586968)
 
 ### Files for hardware...
 **Radar measurement:** `AlazarTech`
