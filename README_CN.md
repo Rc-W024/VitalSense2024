@@ -36,6 +36,9 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 | 脉冲重复周期 $T_{frame}$    | 3 ms                                                                             |
 | 线性调频斜坡时间 $T_{m}$    | 1.5 ms                                                                           |
 
+> [!Tip]
+> 有关该雷达原型的详细信息，请参阅先前的研究文献：[*EuJRS*](https://www.tandfonline.com/doi/abs/10.5721/EuJRS20164937)、[*IEEE TAP*](https://ieeexplore.ieee.org/document/8586968)。
+
 ### 硬件文件...
 **雷达测量任务：** `AlazarTech`
 
