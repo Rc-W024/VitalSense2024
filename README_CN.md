@@ -19,7 +19,7 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 > [!WARNING]\
 > 该论文所依据的研究细节已提交上报至*加泰罗尼亚理工大学道德委员会*（等待文件批号）。该研究项目满足包括目的、技术细节、无风险和数据保护措施在内的所有指定要求。所有参与者均已签署知情同意书。
 
-## 基于RSoC的无线感知
+## 基于RSoC的无线感知与移动计算
 ### 太赫兹雷达传感器
 <p>
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/3beb8c87-0072-419f-b07b-6c7b5c18d968" width=300 />
