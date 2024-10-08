@@ -8,7 +8,7 @@ English | [中文](README_CN.md)
 
 **An Efficient Optimized Adaptive Processing Technique Based on Radar System-on-Chip for Wireless Vital Sensing** -- 🚧 🏗
 
-Radio remote sensing and millimeter wave communication solution based on 120 GHz Frequency-Modulated Continuous Wave (FMCW) Radar System-on-Chip (RSoC) for vital sign sensing, situation awareness and biometrics.
+Radio remote sensing and millimeter wave communication solution based on 120 GHz Frequency-Modulated Continuous Wave (FMCW) Radar System-on-Chip (RSoC) for vital sign sensing, situation awareness and biometric extraction.
 
 <details> <summary><b>Previous Project Introduction Video</b></summary>
   
