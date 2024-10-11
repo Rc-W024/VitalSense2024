@@ -1,4 +1,4 @@
-# VitalSense2024 - 雷达生命信号检测与处理
+# VitalSense2024 - 毫米波无线电生命信号检测与处理
 [English](README.md) | 中文
 
 ![](https://skillicons.dev/icons?i=matlab)
@@ -8,7 +8,7 @@
 
 **An Efficient Optimized Adaptive Processing Technique Based on Radar System-on-Chip for Wireless Vital Sensing**
 
-用于生命体征感测、态势感知和生物特征提取的120 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与毫米波通信解决方案。
+用于智慧医疗监测、态势感知和生物特征提取的120 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与毫米波感知解决方案。
 
 <details> <summary><b>前序项目介绍短片</b></summary>
   
