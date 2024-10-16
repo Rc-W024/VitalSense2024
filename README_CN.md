@@ -8,7 +8,7 @@
 
 ![VitalSense](https://github.com/user-attachments/assets/e60cada1-b487-44fa-8247-cfc7b7e7df9e)
 
-**An Efficient Optimized Adaptive Processing Technique Based on Radar System-on-Chip for Wireless Vital Sensing**
+**An Efficient Optimized Adaptive Processing Technique Based on Radar System-on-Chip for Wireless Vital Sensing** -- *等待伦理审查*
 
 用于智慧医疗监测、态势感知和生物特征提取的120 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与毫米波感知解决方案。
 
