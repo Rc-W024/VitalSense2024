@@ -10,7 +10,7 @@
 
 **An Efficient Optimized Adaptive Processing Technique Based on Radar System-on-Chip for Wireless Vital Sensing** -- *等待伦理审查*
 
-用于智慧医疗监测、态势感知和生物特征提取的120 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与毫米波感知解决方案。
+用于智慧医学监测、医疗物联网（IoMT）和生物特征提取的120 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与毫米波感知解决方案。
 
 <details> <summary><b>前序项目介绍短片</b></summary>
   
