@@ -57,7 +57,7 @@ Several sets of sample vital signal data in the `data` are used for testing, fam
 
 Data file naming rules: "*SUBJECT* + *MEASUREMENT POSITION* + *STATE* + *with ECG* (optional) *.mat*"
 
-## Intelligent Signal Processing Algorithm
+## Signal Processing Algorithm
 **MAIN FILE:** [`main_wu`](https://github.com/Rc-W024/VitalSense2024/blob/main/main_wu.m)
 
 > [!IMPORTANT]\
