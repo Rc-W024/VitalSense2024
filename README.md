@@ -18,7 +18,7 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 
 </details>
 
-> [!WARNING]\
+> [!WARNING]
 > The details of the study, on which the paper is based, have been reported to the *UPC Ethics Commission* (awaiting reference number). All the specified requirements are satisfied including informed purpose of the study, technical details, absence of risks and data protection measures. All participants have signed the informed consent forms.
 
 ## RSoC for Wireless Sensing and Mobile Computing
@@ -38,6 +38,9 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 | Pulse Repetition Period ($T_{frame}$) | 3 ms                                                                    |
 | Chirp Slope Time ($T_{m}$)            | 1.5 ms                                                                  |
 
+> [!NOTE]
+> The used non-commercial RADAR has been conceived, designed and built in our laboratory (CommSensLab-UPC) specifically for the intended applications.
+
 > [!Tip]
 > For the radar prototype details, please refer to the previous studies: [*EuJRS*](https://www.tandfonline.com/doi/abs/10.5721/EuJRS20164937), [*IEEE TAP*](https://ieeexplore.ieee.org/document/8586968).
 
@@ -49,7 +52,7 @@ ATS-SDK is a Windows and Linux compatible software development kit created by *A
 ## Dataset
 Vital Signals Database - *acquired by CommSensLab (Dept. of Signal Theory and Communications)* (Non-public)
 
-> [!NOTE]\
+> [!NOTE]
 > The **Dataset** is being considered and prepared for future release.
 
 ### Sample data
@@ -60,7 +63,7 @@ Data file naming rules: "*SUBJECT* + *MEASUREMENT POSITION* + *STATE* + *with EC
 ## Signal Processing Algorithm
 **MAIN FILE:** [`main_wu`](https://github.com/Rc-W024/VitalSense2024/blob/main/main_wu.m)
 
-> [!IMPORTANT]\
+> [!IMPORTANT]
 > *Be sure to check the parameter settings and read the relevant comments before running!*
 
 ### Achievements
