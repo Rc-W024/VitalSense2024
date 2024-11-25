@@ -129,10 +129,23 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 🚧 *施工中……* 🚧
 
 ### 相关项目
-**Eyelid Dynamics Characterization with 120 GHz mmW Radar**
+[**Eyelid Dynamics Characterization with 120 GHz mmW Radar**](https://www.mdpi.com/3054572)
 
 提出了一种新的基于雷达技术测量眼睑运动的两步法方案，包括对眼睛距离的近似确定以及在测量期间评估相位演变。进一步研究了信号处理算法，以改进眼睑眨动检测，并在必要时对人体其他部位的干扰进行补偿。此外，该生物特征还可为未来新兴生物特征识别研究提供重要参考和支持。
 
 **引用：**
 
-🚧 *施工中……* 🚧
+```
+@article{s24237464,
+AUTHOR = {Patscheider, Dominik and Wu, Ruochen and Broquetas, Antoni and Aguasca, Albert and Romeu, Jordi},
+TITLE = {Eyelid Dynamics Characterization with 120 GHz mmW Radar},
+JOURNAL = {Sensors},
+VOLUME = {24},
+YEAR = {2024},
+NUMBER = {23},
+ARTICLE-NUMBER = {7464},
+URL = {https://www.mdpi.com/1424-8220/24/23/7464},
+ISSN = {1424-8220},
+DOI = {10.3390/s24237464}
+}
+```
