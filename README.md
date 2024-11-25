@@ -130,10 +130,23 @@ Vital sensing radar with automated intelligent signal processing multiphase algo
 🚧 *Under Construction...* 🚧
 
 ### Related project...
-**Eyelid Dynamics Characterization with 120 GHz mmW Radar**
+[**Eyelid Dynamics Characterization with 120 GHz mmW Radar**](https://www.mdpi.com/3054572)
 
 A new approach of two-step method for measuring eyelid movement using radar technology is proposed, involving the approximate determination of the distance to the eye and the evaluation of phase evolution over the measurement period. Further signal processing algorithms are studied to improve the eyelid blink detection and, if necessary, to compensate interference of other parts of the human body. In addition, this biological characteristic can also provide important reference and support for future research on emerging biometrics.
 
 **Citation:**
 
-🚧 *Under Construction...* 🚧
+```
+@article{s24237464,
+AUTHOR = {Patscheider, Dominik and Wu, Ruochen and Broquetas, Antoni and Aguasca, Albert and Romeu, Jordi},
+TITLE = {Eyelid Dynamics Characterization with 120 GHz mmW Radar},
+JOURNAL = {Sensors},
+VOLUME = {24},
+YEAR = {2024},
+NUMBER = {23},
+ARTICLE-NUMBER = {7464},
+URL = {https://www.mdpi.com/1424-8220/24/23/7464},
+ISSN = {1424-8220},
+DOI = {10.3390/s24237464}
+}
+```
