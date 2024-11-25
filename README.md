@@ -136,7 +136,7 @@ A new approach of two-step method for measuring eyelid movement using radar tech
 
 **Citation:**
 
-```
+```bibtex
 @article{s24237464,
 AUTHOR = {Patscheider, Dominik and Wu, Ruochen and Broquetas, Antoni and Aguasca, Albert and Romeu, Jordi},
 TITLE = {Eyelid Dynamics Characterization with 120 GHz mmW Radar},
