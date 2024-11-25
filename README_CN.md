@@ -135,7 +135,7 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 
 **引用：**
 
-```
+```bibtex
 @article{s24237464,
 AUTHOR = {Patscheider, Dominik and Wu, Ruochen and Broquetas, Antoni and Aguasca, Albert and Romeu, Jordi},
 TITLE = {Eyelid Dynamics Characterization with 120 GHz mmW Radar},
