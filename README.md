@@ -18,9 +18,6 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 
 </details>
 
-> [!WARNING]
-> The details of the study, on which the paper is based, have been reported to the *UPC Ethics Commission* (awaiting reference number). All the specified requirements are satisfied including informed purpose of the study, technical details, absence of risks and data protection measures. All participants have signed the informed consent forms.
-
 ## RSoC for Wireless Sensing and Mobile Computing
 ### Terahertz Radar Sensor
 <p>
