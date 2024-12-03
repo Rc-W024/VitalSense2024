@@ -362,20 +362,29 @@ amp_mean=mean(SIG);
 [amp_fft,loc_fft]=findpeaks(SIG0(1:length(SIG0)),1:length(SIG0),'MinPeakProminence',amp_mean*2);
 % T estimation
 sort_amp=sort(amp_fft,'descend');
-% verify whether any of the detected peaks is close to the maximum peak
-if sort_amp(1)-sort_amp(2)<10
-    % loc_fft vectorization operation
-    matrix=loc_fft'./loc_fft;
-    matrix=roundn(matrix,-1);
-    %disp(matrix);
-    % find the position of integer values
-    [row,col]=find(matrix>1 & mod(matrix,1)==0);
-    idx=mode(col); % find the most repeated element
-    % T determination
-    loc_d=loc_fft(idx);
-else
+
+if length(sort_amp)<2
     % T determination
     loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
+else
+    % verify whether any of the detected peaks is close to the maximum peak
+    if sort_amp(1)-sort_amp(2)<10
+        % loc_fft vectorization operation
+        matrix=loc_fft'./loc_fft;
+        matrix=roundn(matrix,-1);
+        %disp(matrix);
+        % find the position of integer values
+        [row,col]=find(matrix>1 & mod(matrix,1)==0);
+        if isempty(row)==1
+            loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
+        else
+            idx=mode(col); % find the most repeated element
+            loc_d=loc_fft(idx);
+        end
+    else
+        % T determination
+        loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
+    end
 end
 
 % spectrum resolution
