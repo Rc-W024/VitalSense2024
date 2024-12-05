@@ -443,139 +443,143 @@ minpeakdist=fix(T.fil0*0.7);
 
 
 %% FASE B: PULSE WAVEFORM RECONSTRUCTION FOR AMF
-% extract the first and second half of a cardiac period respectively
-pulseA=round(locs_sig1-T.fil0/2);
-pulseB=round(locs_sig1+T.fil0/2);
-% make sure the matrix aize does not exceed the original signal size
-if pulseA(1)<=0
-    pulseA(1)=1; % the signal should start at 1
-end
-if pulseB(end)>length(sig)
-    pulseB(end)=length(sig);
-end
-
-% extract all pulses
-for i=1:length(pulseA)
-    pulse(i).sig=sig(pulseA(i):pulseB(i));
-end
-
-% eliminate the 1st & last data: usually the 1st & last pulse signal may not be complete
-pulse(1)=[];
-pulse(end)=[];
-% struct initialization
-if isempty(pulse)
-    pulse=struct('sig',[]);
-end
-
-% calcu mean of the pulses
-fil_sum=zeros(1,length(pulse(1).sig));
-for i=1:numel(pulse)
-    fil_sum=fil_sum+pulse(i).sig; % sum of the pulses
-end
-filB=fil_sum/numel(pulse); % filter of average
-figure('Name','WAVEFORM DESIGN');
-plot(filB);
-title('Average waveform filter');
-
-
+try
+    % extract the first and second half of a cardiac period respectively
+    pulseA=round(locs_sig1-T.fil0/2);
+    pulseB=round(locs_sig1+T.fil0/2);
+    % make sure the matrix aize does not exceed the original signal size
+    if pulseA(1)<=0
+        pulseA(1)=1; % the signal should start at 1
+    end
+    if pulseB(end)>length(sig)
+        pulseB(end)=length(sig);
+    end
+    
+    % extract all pulses
+    for i=1:length(pulseA)
+        pulse(i).sig=sig(pulseA(i):pulseB(i));
+    end
+    
+    % eliminate the 1st & last data: usually the 1st & last pulse signal may not be complete
+    pulse(1)=[];
+    pulse(end)=[];
+    % struct initialization
+    if isempty(pulse)
+        pulse=struct('sig',[]);
+    end
+    
+    % calcu mean of the pulses
+    fil_sum=zeros(1,length(pulse(1).sig));
+    for i=1:numel(pulse)
+        fil_sum=fil_sum+pulse(i).sig; % sum of the pulses
+    end
+    filB=fil_sum/numel(pulse); % filter of average
+    figure('Name','WAVEFORM DESIGN');
+    plot(filB);
+    title('Average waveform filter');
+    
+    
 %% FASE C: VITAL INFORMATION EXTRACTION
-% Cadiac pulse identification
-% adaptive matched filter design
-filC=fliplr(filB); % filC(t)=filB(-t)
-% application of AMF
-hsig1=conv(sig,filC);
-% amplitude normalization referring to 2*hsig_lp
-hsig2=2*(hsig1*(max(abs(sig))/max(abs(hsig1))));
-% signal shifting to eliminate delay
-hsig=circshift(hsig2,fix(-length(filC)/2));
-% peaks (cardiac pulse) detection
-[amp_hsig,locs_hsig]=findpeaks(hsig(1:len_sig),Radar.t_frame,'MinPeakDistance',minpeakdist*T_frame,'MinPeakProminence',0.02);
-
-% plot fig...
-if twoChannelMode==true
-    figure('Name','CARDIAC PULSE IDENTIFICATION');
-    subplot(length(LocFinder.locs_positive)*2+1,1,1:2)
-    plot(Radar.t_frame,hsig(1:len_sig),locs_hsig,amp_hsig,'rv','LineWidth',1.3);
-    text(locs_hsig+.1,amp_hsig,num2str((1:numel(amp_hsig))'))
-    hold on
-    plot(Radar.t_frame,sig,'-','Color','#D95319','LineWidth',1.5);
-    %xlabel('Time (s)')
-    grid on
-    ylabel('Cardiac Amplitude (mm)')
-    legend('Heartbeat detection','Identified pulse','Cardiac signal');
+    % Cadiac pulse identification
+    % adaptive matched filter design
+    filC=fliplr(filB); % filC(t)=filB(-t)
+    % application of AMF
+    hsig1=conv(sig,filC);
+    % amplitude normalization referring to 2*hsig_lp
+    hsig2=2*(hsig1*(max(abs(sig))/max(abs(hsig1))));
+    % signal shifting to eliminate delay
+    hsig=circshift(hsig2,fix(-length(filC)/2));
+    % peaks (cardiac pulse) detection
+    [amp_hsig,locs_hsig]=findpeaks(hsig(1:len_sig),Radar.t_frame,'MinPeakDistance',minpeakdist*T_frame,'MinPeakProminence',0.02);
     
-    % peaks detection based on ECG signal
-    [amp_ecg,locs_ecg]=findpeaks((double(decimatedECGSignal-2^15)/2^16)*voltageRangeChannelB,Radar.t_frame,'MinPeakDistance',minpeakdist*T_frame,'MinPeakProminence',2e-05);
-    % plot ECG signal...
-    subplot(length(LocFinder.locs_positive)*2+1,1,length(LocFinder.locs_positive)*2+1);
-    plot(Radar.t_frame,(double(decimatedECGSignal-2^15)/2^16)*voltageRangeChannelB,'g',locs_ecg,amp_ecg,'rv','LineWidth',1.3);
-    text(locs_ecg+.1,amp_ecg,num2str((1:numel(amp_ecg))'))
-    grid on
-    xlabel('Time (s)')
-    ylabel('ECG')
-else
-    figure('Name','CARDIAC PULSE IDENTIFICATION');
-    %yyaxis left
-    plot(Radar.t_frame,hsig(1:len_sig),locs_hsig,amp_hsig,'rv','LineWidth',1.3)
-    text(locs_hsig+.1,amp_hsig,num2str((1:numel(amp_hsig))'))
-    hold on
-    plot(Radar.t_frame,sig,'-','Color','#D95319','LineWidth',1.5);
-    xlabel('Time (s)')
-    ylabel('Cardiac Amplitude (mm)')
-    legend('Heartbeat detection','Identified pulse','Cardiac signal');
+    % plot fig...
+    if twoChannelMode==true
+        figure('Name','CARDIAC PULSE IDENTIFICATION');
+        subplot(length(LocFinder.locs_positive)*2+1,1,1:2)
+        plot(Radar.t_frame,hsig(1:len_sig),locs_hsig,amp_hsig,'rv','LineWidth',1.3);
+        text(locs_hsig+.1,amp_hsig,num2str((1:numel(amp_hsig))'))
+        hold on
+        plot(Radar.t_frame,sig,'-','Color','#D95319','LineWidth',1.5);
+        %xlabel('Time (s)')
+        grid on
+        ylabel('Cardiac Amplitude (mm)')
+        legend('Heartbeat detection','Identified pulse','Cardiac signal');
+        
+        % peaks detection based on ECG signal
+        [amp_ecg,locs_ecg]=findpeaks((double(decimatedECGSignal-2^15)/2^16)*voltageRangeChannelB,Radar.t_frame,'MinPeakDistance',minpeakdist*T_frame,'MinPeakProminence',2e-05);
+        % plot ECG signal...
+        subplot(length(LocFinder.locs_positive)*2+1,1,length(LocFinder.locs_positive)*2+1);
+        plot(Radar.t_frame,(double(decimatedECGSignal-2^15)/2^16)*voltageRangeChannelB,'g',locs_ecg,amp_ecg,'rv','LineWidth',1.3);
+        text(locs_ecg+.1,amp_ecg,num2str((1:numel(amp_ecg))'))
+        grid on
+        xlabel('Time (s)')
+        ylabel('ECG')
+    else
+        figure('Name','CARDIAC PULSE IDENTIFICATION');
+        %yyaxis left
+        plot(Radar.t_frame,hsig(1:len_sig),locs_hsig,amp_hsig,'rv','LineWidth',1.3)
+        text(locs_hsig+.1,amp_hsig,num2str((1:numel(amp_hsig))'))
+        hold on
+        plot(Radar.t_frame,sig,'-','Color','#D95319','LineWidth',1.5);
+        xlabel('Time (s)')
+        ylabel('Cardiac Amplitude (mm)')
+        legend('Heartbeat detection','Identified pulse','Cardiac signal');
+        
+        % yyaxis right
+        % plot(Radar.t_frame,rsig_lp,'-','Color','#EDB120','LineWidth',1.2);
+        % hold on
+        % plot(Radar.t_frame,vitsig,':','Color','#C82423','LineWidth',1.5);
+        % grid on
+        % ylabel('Breathing Amplitude (mm)')
+        % lege=legend('Heartbeat detection','Identified pulse','Cardiac signal','Respiratory signal','Vital signal','NumColumns',2);
+        % set(lege,'box','off')
+    end
     
-    % yyaxis right
-    % plot(Radar.t_frame,rsig_lp,'-','Color','#EDB120','LineWidth',1.2);
-    % hold on
-    % plot(Radar.t_frame,vitsig,':','Color','#C82423','LineWidth',1.5);
-    % grid on
-    % ylabel('Breathing Amplitude (mm)')
-    % lege=legend('Heartbeat detection','Identified pulse','Cardiac signal','Respiratory signal','Vital signal','NumColumns',2);
-    % set(lege,'box','off')
+    % calcu heart rate of the subject
+    bpm_pks=round(length(locs_hsig)/(length(sig)*T_frame/60));
+    % printing...
+    fprintf('The detected heart rate of the subject is: <strong>%d</strong> bpm. (by detected peaks)\n',bpm_pks);
+    
+    % Reproduction of blood pressure waveform
+    % find the locs...
+    [amph,locsh]=findpeaks(hsig(1:len_sig),1:len_sig,'MinPeakDistance',minpeakdist,'MinPeakProminence',0.05);
+    T.fil1=round(mean(diff(locsh)));
+    % extract the first and second half of a cardiac period
+    pulseC=round(locsh-T.fil1/2);
+    pulseD=round(locsh+T.fil1/2);
+    % make sure the matrix aize does not exceed the original signal size
+    if pulseC(1)<=0
+        pulseC(1)=1; % the signal should start at 1
+    end
+    % extract all pulses
+    if pulseD(end)>length(sig)
+        pulseD(end)=length(sig);
+    end
+    % eliminate the 1st & last data
+    for i=1:length(pulseC)
+        bp(i).sig=sig(pulseC(i):pulseD(i));
+    end
+    bp(1).sig=0;
+    bp(end).sig=0;
+    % calcu mean of the pulses
+    bp_sum=zeros(1,length(bp(1).sig));
+    for i=1:numel(bp)
+        bp_sum=bp_sum+bp(i).sig; % sum of the pulses
+    end
+    % BP waveform
+    BP=bp_sum/numel(bp);
+    
+    figure('Name','BLOOD PRESSURE WAVEFORM');
+    plot((1:length(BP))*T_frame,BP,'Color','#D95319','LineWidth',1.5);
+    %set(gca,'Box','off');
+    xlabel('Time (s)')
+    ylabel('Amplidute (mm)')
+    grid on
+    % set(gca,'xtick',[],'xticklabel',[]);
+    % set(gca,'ytick',[],'yticklabel',[]);
+catch
+    warning('NO target detected! Please check the measurement position.');
 end
-
-% calcu heart rate of the subject
-bpm_pks=round(length(locs_hsig)/(length(sig)*T_frame/60));
-% printing...
-fprintf('The detected heart rate of the subject is: <strong>%d</strong> bpm. (by detected peaks)\n',bpm_pks);
-
-% Reproduction of blood pressure waveform
-% find the locs...
-[amph,locsh]=findpeaks(hsig(1:len_sig),1:len_sig,'MinPeakDistance',minpeakdist,'MinPeakProminence',0.05);
-T.fil1=round(mean(diff(locsh)));
-% extract the first and second half of a cardiac period
-pulseC=round(locsh-T.fil1/2);
-pulseD=round(locsh+T.fil1/2);
-% make sure the matrix aize does not exceed the original signal size
-if pulseC(1)<=0
-    pulseC(1)=1; % the signal should start at 1
-end
-% extract all pulses
-if pulseD(end)>length(sig)
-    pulseD(end)=length(sig);
-end
-% eliminate the 1st & last data
-for i=1:length(pulseC)
-    bp(i).sig=sig(pulseC(i):pulseD(i));
-end
-bp(1).sig=0;
-bp(end).sig=0;
-% calcu mean of the pulses
-bp_sum=zeros(1,length(bp(1).sig));
-for i=1:numel(bp)
-    bp_sum=bp_sum+bp(i).sig; % sum of the pulses
-end
-% BP waveform
-BP=bp_sum/numel(bp);
-
-figure('Name','BLOOD PRESSURE WAVEFORM');
-plot((1:length(BP))*T_frame,BP,'Color','#D95319','LineWidth',1.5);
-%set(gca,'Box','off');
-xlabel('Time (s)')
-ylabel('Amplidute (mm)')
-grid on
-% set(gca,'xtick',[],'xticklabel',[]);
-% set(gca,'ytick',[],'yticklabel',[]);
 
 % End the timer
 toc
