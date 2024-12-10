@@ -58,7 +58,7 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 数据文件命名规则：“*受试者* + *测量位置* + *生理状态* + *ECG参考信号*（可选）*.mat*”
 
 ## 信号处理算法
-**主文件：** [`main_wu`](https://github.com/Rc-W024/VitalSense2024/blob/main/main_wu.m)
+**主文件：** [`main_AMF`](https://github.com/Rc-W024/VitalSense2024/blob/main/main_AMF.m)
 
 > [!IMPORTANT]
 > *运行前请务必检查参数设置并阅读相关注释！*
