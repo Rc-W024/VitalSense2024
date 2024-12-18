@@ -332,6 +332,7 @@ sig_fft=fft(sig_zp); % FFT
 % window function to smooth the signal
 win=zeros(1,length(sig_fft));
 % normal bpm corresponds to the 16th to 80th sampling data of the freq domain signal
+% -> ((bps_min,max)*length(signal))/fs_radar
 win(17*orden_zp:81*orden_zp)=1; % in MATLAB: 17-81
 % smooth both sides of a rectangular wave
 k=1;
@@ -390,7 +391,7 @@ end
 % spectrum resolution
 Fs_fclean=1/(length(sig_fft)*T_frame);
 % calcu heart rate of the subject (bps & bpm)
-bps=loc_max*Fs_fclean;
+bps=loc_d*Fs_fclean;
 bpm=round(bps*60);
 T.fil0=round((1/bps)/T_frame);
 
