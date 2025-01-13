@@ -537,9 +537,9 @@ try
     end
     
     % calcu heart rate of the subject
-    bpm_pks=round(length(locs_hsig)/(length(sig)*T_frame/60));
+    bpm_d=length(locs_hsig)/(length(sig)*T_frame/60);
     % printing...
-    fprintf('The detected heart rate of the subject is: <strong>%d</strong> bpm. (by detected peaks)\n',bpm_pks);
+    fprintf('The detected heart rate of the subject is: <strong>%.2f</strong> bpm. (by detected peaks)\n',bpm_d);
     
     % Reproduction of blood pressure waveform
     % find the locs...
