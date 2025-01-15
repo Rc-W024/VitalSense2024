@@ -108,7 +108,7 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 ![recognition](https://github.com/Rc-W024/VitalSense2024/assets/97808991/c6ea274f-4217-4cae-b98d-9dc7fd058da4)
 
 ### 血压波形提取
-![BPW](https://github.com/user-attachments/assets/194cfbef-d472-4b3d-ad72-798318b46be9)
+![BPW](https://github.com/user-attachments/assets/6348f9dc-ab2a-432a-b5db-986f3ebb9278)
 
 ## 总体结果
 ### 案例1：血氧计
