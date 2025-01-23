@@ -38,9 +38,6 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 > [!NOTE]
 > The used non-commercial RADAR has been conceived, designed and built in our laboratory (CommSensLab-UPC) specifically for the intended applications.
 
-> [!Tip]
-> For the radar prototype details, please refer to the previous studies: [*EuJRS*](https://www.tandfonline.com/doi/abs/10.5721/EuJRS20164937), [*IEEE TAP*](https://ieeexplore.ieee.org/document/8586968).
-
 ### Files for hardware...
 **Radar measurement:** `AlazarTech`
 
@@ -89,6 +86,9 @@ Vital sensing radar with automated intelligent signal processing multiphase algo
 - Peaks identification, Blood Pressure Waveform
 - Respiratory monitoring
 - Extracted vital feature parameters could be studied for biometric authentication and encryption
+
+> [!Tip]
+> For the algorithm details, please refer to the previous study: [`RWAMF-BioSP`](https://github.com/Rc-W024/RWAMF-BioSP).
 
 ## Phase results
 ### Signal separation
