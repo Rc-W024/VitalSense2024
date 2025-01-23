@@ -38,9 +38,6 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 > [!NOTE]
 > 所使用的非商业雷达为在我实验室（CommSensLab-UPC）中构思、设计和制造的，专用于有关预期应用。
 
-> [!Tip]
-> 有关该雷达原型的详细信息，请参阅先前的研究文献：[*EuJRS*](https://www.tandfonline.com/doi/abs/10.5721/EuJRS20164937)、[*IEEE TAP*](https://ieeexplore.ieee.org/document/8586968)。
-
 ### 硬件文件...
 **雷达测量任务：** `AlazarTech`
 
@@ -89,6 +86,9 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 - 心跳峰识别，血压波形
 - 呼吸监测
 - 提取的生命特征参数可用于生物特征认证和加密研究
+
+> [!Tip]
+> 有关算法细节，请参阅先前的研究：[`RWAMF-BioSP`](https://github.com/Rc-W024/RWAMF-BioSP)
 
 ## 阶段成果
 ### 信号分离
