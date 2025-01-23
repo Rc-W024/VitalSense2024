@@ -1,4 +1,4 @@
-# VitalSense2024 - 毫米波无线电生命信号检测与处理
+# VitalSense2024 - 毫米波无线电生命体征监测及参数提取
 [English](README.md) | 中文
 
 ![](https://skillicons.dev/icons?i=matlab)
