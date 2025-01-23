@@ -1,4 +1,4 @@
-# VitalSense2024 - Vital Signal Detection & Processing with mmWave Radio
+# VitalSense2024 - Vital Signs Monitoring & Parameters Extraction with mmWave Radio
 English | [中文](README_CN.md)
 
 ![](https://skillicons.dev/icons?i=matlab)
