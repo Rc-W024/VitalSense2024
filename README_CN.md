@@ -125,6 +125,9 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 ### 引用
 🚧 *施工中……* 🚧
 
+### 后续项目
+[**Mission Planning for Radar Autonomous Localization in Vital Sensing Task**](https://github.com/Rc-W024/RWAMF-BioSP)
+
 ### 相关项目
 [**Eyelid Dynamics Characterization with 120 GHz mmW Radar**](https://www.mdpi.com/3054572)
 
@@ -146,6 +149,3 @@ ISSN = {1424-8220},
 DOI = {10.3390/s24237464}
 }
 ```
-
-### 后续项目
-[**Mission Planning for Radar Autonomous Localization in Vital Sensing Task**](https://github.com/Rc-W024/RWAMF-BioSP)
