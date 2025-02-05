@@ -126,6 +126,9 @@ Vital sensing radar with automated intelligent signal processing multiphase algo
 ### Citation
 🚧 *Under Construction...* 🚧
 
+### Further project...
+[**Mission Planning for Radar Autonomous Localization in Vital Sensing Task**](https://github.com/Rc-W024/RWAMF-BioSP)
+
 ### Related project...
 [**Eyelid Dynamics Characterization with 120 GHz mmW Radar**](https://www.mdpi.com/3054572)
 
@@ -147,6 +150,3 @@ ISSN = {1424-8220},
 DOI = {10.3390/s24237464}
 }
 ```
-
-### Further project...
-[**Mission Planning for Radar Autonomous Localization in Vital Sensing Task**](https://github.com/Rc-W024/RWAMF-BioSP)
