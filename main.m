@@ -369,7 +369,7 @@ if length(sort_amp)<2
     loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
 else
     % verify whether any of the detected peaks is close to the maximum peak
-    if sort_amp(1)-sort_amp(2)<10
+    if sort_amp(1)-sort_amp(2)<20
         % loc_fft vectorization operation
         matrix=loc_fft'./loc_fft;
         matrix=roundn(matrix,-1);
@@ -380,7 +380,12 @@ else
             loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
         else
             idx=mode(col); % find the most repeated element
-            loc_d=loc_fft(idx);
+            bpm_estim=(loc_fft(idx)*(1/(length(sig_fft)*T_frame)))*60;
+            if bpm_estim<40
+                loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
+            else
+                loc_d=loc_fft(idx);
+            end
         end
     else
         % T determination
