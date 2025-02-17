@@ -360,7 +360,7 @@ SIG=abs(sig_fclean_cut);
 SIG(find(SIG<0.03))=[]; % clean the spectrum
 amp_mean=mean(SIG);
 % find the principle peaks
-[amp_fft,loc_fft]=findpeaks(SIG0(1:length(SIG0)),1:length(SIG0),'MinPeakProminence',amp_mean*2);
+[amp_fft,loc_fft]=findpeaks(SIG0(1:length(SIG0)),1:length(SIG0),'MinPeakProminence',amp_mean*2,'MinPeakDistance',50);
 
 % T estimation
 if length(loc_fft)==1
