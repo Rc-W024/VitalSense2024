@@ -1,7 +1,7 @@
 % MAIN function for RECORDING and READING recorded data as well as further 
 % processing for VitalSense by the radar @UPC CommSensLab
 % VitalSense 2024 for biometrics and biomedical applications
-% 07/03/2024 Ruochen Wu for v.7.0 (since 15/03/2023 for v.0.0)
+% 17/02/2025 Ruochen Wu for v.8.0 (since 15/03/2023 for v.0.0)
 
 clear;
 close all;
@@ -361,35 +361,29 @@ SIG(find(SIG<0.03))=[]; % clean the spectrum
 amp_mean=mean(SIG);
 % find the principle peaks
 [amp_fft,loc_fft]=findpeaks(SIG0(1:length(SIG0)),1:length(SIG0),'MinPeakProminence',amp_mean*2);
-% T estimation
-sort_amp=sort(amp_fft,'descend');
 
-if length(sort_amp)<2
-    % T determination
-    loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
+% T estimation
+if length(loc_fft)==1
+    loc_d=loc_fft;
 else
-    % verify whether any of the detected peaks is close to the maximum peak
-    if sort_amp(1)-sort_amp(2)<20
-        % loc_fft vectorization operation
-        matrix=loc_fft'./loc_fft;
-        matrix=roundn(matrix,-1);
-        %disp(matrix);
-        % find the position of integer values
-        [row,col]=find(matrix>1 & mod(matrix,1)==0);
-        if isempty(row)==1
-            loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
-        else
-            idx=mode(col); % find the most repeated element
-            bpm_estim=(loc_fft(idx)*(1/(length(sig_fft)*T_frame)))*60;
-            if bpm_estim<40
-                loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
-            else
-                loc_d=loc_fft(idx);
-            end
-        end
-    else
+    [acor,lags]=xcorr(sig,'coeff');
+    lags=lags(lags>=0);
+    acor=acor(lags>=0);
+    
+    % find the first major peak in the autocorrelation
+    [acor_peaks,acor_locs]=findpeaks(acor,'MinPeakHeight',0.15);
+    if ~isempty(acor_peaks)
+        % delay corresponding to the first peak
+        tau=lags(acor_locs(1))/(1/(length(sig_fft)*T_frame));
+        delay=1/tau;
+        
         % T determination
-        loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
+        [~,idx]=min(abs(loc_fft-delay));
+        loc_d=loc_fft(idx);
+    else
+        % maximum peak
+        [~,max_idx]=max(amp_fft);
+        loc_d=loc_fft(max_idx);
     end
 end
 
