@@ -88,7 +88,7 @@ Vital sensing radar with automated intelligent signal processing multiphase algo
 - Extracted vital feature parameters could be studied for biometric authentication and encryption
 
 > [!Tip]
-> For the algorithm details, please refer to the previous study: [`RWAMF-BioSP`](https://github.com/Rc-W024/RWAMF-BioSP)
+> For the algorithm prototype details, please refer to the previous study: [`RWAMF-BioSP`](https://github.com/Rc-W024/RWAMF-BioSP)
 
 ## Phase results
 ### Signal separation
