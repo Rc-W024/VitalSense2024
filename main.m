@@ -372,7 +372,7 @@ else
     peak_found=false;
     for i=1:length(loc_fft)
         pks=loc_fft(i);
-        % check if there is a peak close to 2*candidate
+        % check if there is a peak close to 2*candidate peak
         if any(abs(loc_fft-2*pks)<tolerance)
             loc_d=pks;
             peak_found=true;
