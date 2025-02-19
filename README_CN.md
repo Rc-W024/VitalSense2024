@@ -88,7 +88,7 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 - 提取的生命特征参数可用于生物特征认证和加密研究
 
 > [!Tip]
-> 有关算法细节，请参阅先前的研究：[`RWAMF-BioSP`](https://github.com/Rc-W024/RWAMF-BioSP)
+> 有关算法原型的更多细节，请参阅先前的研究：[`RWAMF-BioSP`](https://github.com/Rc-W024/RWAMF-BioSP)
 
 ## 阶段成果
 ### 信号分离
