@@ -365,25 +365,41 @@ amp_mean=mean(SIG);
 % T estimation
 if length(loc_fft)==1
     loc_d=loc_fft;
+elseif isempty(loc_fft)
+    loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
 else
-    [acor,lags]=xcorr(sig,'coeff');
-    lags=lags(lags>=0);
-    acor=acor(lags>=0);
+    tolerance=20;
+    peak_found=false;
+    for i=1:length(loc_fft)
+        pks=loc_fft(i);
+        % check if there is a peak close to 2*candidate
+        if any(abs(loc_fft-2*pks)<tolerance)
+            loc_d=pks;
+            peak_found=true;
+            break;
+        end
+    end
+
+    if ~peak_found
+        [acor,lags]=xcorr(sig,'coeff');
+        lags=lags(lags>=0);
+        acor=acor(lags>=0);
     
-    % find the first major peak in the autocorrelation
-    [acor_peaks,acor_locs]=findpeaks(acor,'MinPeakHeight',0.15);
-    if ~isempty(acor_peaks)
-        % delay corresponding to the first peak
-        tau=lags(acor_locs(1))/(1/(length(sig_fft)*T_frame));
-        delay=1/tau;
-        
-        % T determination
-        [~,idx]=min(abs(loc_fft-delay));
-        loc_d=loc_fft(idx);
-    else
-        % maximum peak
-        [~,max_idx]=max(amp_fft);
-        loc_d=loc_fft(max_idx);
+        % find the first major peak in the autocorrelation
+        [acor_pks,acor_locs]=findpeaks(acor,'MinPeakHeight',0.15);
+        if ~isempty(acor_pks)
+            % delay corresponding to the first peak
+            tau=lags(acor_locs(1))/(1/T_frame);
+            delay=1/tau;
+    
+            % T determination
+            [~,idx]=min(abs(loc_fft-delay));
+            loc_d=loc_fft(idx);
+        else
+            % maximum peak
+            [~,max_idx]=max(amp_fft);
+            loc_d=loc_fft(max_idx);
+        end
     end
 end
 
