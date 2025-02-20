@@ -367,6 +367,30 @@ if length(loc_fft)==1
     loc_d=loc_fft;
 elseif isempty(loc_fft)
     loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
+elseif length(loc_fft)==2
+    % loc_fft vectorization operation
+    matrix=loc_fft'./loc_fft;
+    matrix=roundn(matrix,-1);
+    %disp(matrix);
+    % find the position of integer values
+    [row,col]=find(matrix>1 & mod(matrix,1)==0);
+    if isempty(row)==1
+        idx=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
+        bpm_estim=(idx*(1/(length(sig_fft)*T_frame)))*60;
+        if bpm_estim>130
+            loc_d=loc_fft(1);
+        else
+            loc_d=idx;
+        end
+    else
+        idx=mode(col); % find the most repeated element
+        bpm_estim=(loc_fft(idx)*(1/(length(sig_fft)*T_frame)))*60;
+        if bpm_estim<40
+            loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
+        else
+            loc_d=loc_fft(idx);
+        end
+    end
 else
     tolerance=20;
     peak_found=false;
@@ -374,7 +398,7 @@ else
         pks=loc_fft(i);
         % check if there is a peak close to 2*candidate peak
         if any(abs(loc_fft-2*pks)<tolerance)
-            loc_d=pks;
+            loc_d=loc_fft(find((abs(loc_fft-2*pks)<tolerance)==1));
             peak_found=true;
             break;
         end
@@ -388,11 +412,9 @@ else
         % find the first major peak in the autocorrelation
         [acor_pks,acor_locs]=findpeaks(acor,'MinPeakHeight',0.15);
         if ~isempty(acor_pks)
-            % delay corresponding to the first peak
             tau=lags(acor_locs(1))/(1/T_frame);
             delay=1/tau;
     
-            % T determination
             [~,idx]=min(abs(loc_fft-delay));
             loc_d=loc_fft(idx);
         else
