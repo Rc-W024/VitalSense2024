@@ -1,7 +1,7 @@
 % MAIN function for RECORDING and READING recorded data as well as further 
 % processing for VitalSense by the radar @UPC CommSensLab
 % VitalSense 2024 for biometrics and biomedical applications
-% 17/02/2025 Ruochen Wu for v.8.0 (since 15/03/2023 for v.0.0)
+% 20/02/2025 Ruochen Wu for v.9.0 (since 15/03/2023 for v.0.0)
 
 clear;
 close all;
@@ -368,28 +368,17 @@ if length(loc_fft)==1
 elseif isempty(loc_fft)
     loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
 elseif length(loc_fft)==2
-    % loc_fft vectorization operation
-    matrix=loc_fft'./loc_fft;
-    matrix=roundn(matrix,-1);
-    %disp(matrix);
-    % find the position of integer values
-    [row,col]=find(matrix>1 & mod(matrix,1)==0);
-    if isempty(row)==1
-        idx=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
-        bpm_estim=(idx*(1/(length(sig_fft)*T_frame)))*60;
-        if bpm_estim>130
-            loc_d=loc_fft(1);
-        else
-            loc_d=idx;
-        end
-    else
-        idx=mode(col); % find the most repeated element
-        bpm_estim=(loc_fft(idx)*(1/(length(sig_fft)*T_frame)))*60;
-        if bpm_estim<40
-            loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
-        else
-            loc_d=loc_fft(idx);
-        end
+    % bpm verification
+    for k=1:length(loc_fft)
+        bpm_estim(k)=(loc_fft(k)*(1/(length(sig_fft)*T_frame)))*60;
+    end
+    
+    % T determination
+    loc_d=loc_fft(find(bpm_estim>40 & bpm_estim<130));
+
+    if isempty(loc_d)
+        loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
+        warning('MAYBE SOMETHING WENT WRONG, PLEASE CHECK THE DATA!')
     end
 else
     tolerance=20;
