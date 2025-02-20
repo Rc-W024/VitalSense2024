@@ -398,10 +398,15 @@ else
         pks=loc_fft(i);
         % check if there is a peak close to 2*candidate peak
         if any(abs(loc_fft-2*pks)<tolerance)
-            loc_d=loc_fft(find((abs(loc_fft-2*pks)<tolerance)==1));
+            loc_cantidate(i)=pks;
             peak_found=true;
-            break;
         end
+    end
+
+    if length(loc_cantidate)==1
+        loc_d=loc_cantidate;
+    else
+        loc_d=max(loc_cantidate);
     end
 
     if ~peak_found
