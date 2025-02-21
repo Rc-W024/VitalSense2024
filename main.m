@@ -379,6 +379,9 @@ elseif length(loc_fft)==2
     if isempty(loc_d)
         loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
         warning('MAYBE SOMETHING WENT WRONG, PLEASE CHECK THE DATA!')
+    elseif length(loc_d)==2
+        find_locd=[abs(bpm_estim(1)-40),abs(bpm_estim(2)-130)];
+        loc_d=loc_fft(find(max(find_locd)));
     end
 else
     tolerance=20;
