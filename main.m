@@ -410,29 +410,15 @@ else
         end
     end
 
-    if length(loc_cantidate)==1
-        loc_d=loc_cantidate;
-    else
-        loc_d=max(loc_cantidate);
-    end
-
     if ~peak_found
-        [acor,lags]=xcorr(sig,'coeff');
-        lags=lags(lags>=0);
-        acor=acor(lags>=0);
-    
-        % find the first major peak in the autocorrelation
-        [acor_pks,acor_locs]=findpeaks(acor,'MinPeakHeight',0.15);
-        if ~isempty(acor_pks)
-            tau=lags(acor_locs(1))/(1/T_frame);
-            delay=1/tau;
-    
-            [~,idx]=min(abs(loc_fft-delay));
-            loc_d=loc_fft(idx);
+        [~,max_idx]=max(amp_fft);
+        loc_d=loc_fft(max_idx);
+    else
+        if length(loc_cantidate)==1
+            loc_d=loc_cantidate;
         else
-            % maximum peak
-            [~,max_idx]=max(amp_fft);
-            loc_d=loc_fft(max_idx);
+            loc_cantidate(loc_cantidate==0)=[];
+            loc_d=loc_cantidate(find(max(SIG0(loc_cantidate))));
         end
     end
 end
