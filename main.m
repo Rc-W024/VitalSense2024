@@ -321,9 +321,24 @@ end
 
 
 %% FASE A: ITERATIVE PULSE PERIOD ESTIMATION
-sig=hsig_lp;
 % ZP for FFT
 orden_zp=4;
+% RR estimation
+rsig_zp=[rsig_lp zeros(1,orden_zp*length(rsig_lp))];
+rsig_fft=fft(rsig_zp);
+% plot(abs(rsig_fft(1:17*orden_zp)))
+% find peak
+idx_rr=find(abs(rsig_fft(1:17*orden_zp))==max(abs(rsig_fft(1:17*orden_zp))));
+
+% spectrum resolution
+Fs_fclean_rr=1/(length(rsig_fft)*T_frame);
+% calcu heart rate of the subject (bps & bpm)
+bpm_rr=idx_rr*Fs_fclean_rr*60;
+
+% printing RR...
+fprintf('The detected RR of the subject is: <strong>%.2f</strong> bpm.\n',bpm_rr);
+
+sig=hsig_lp;
 sig_zp=[sig zeros(1,orden_zp*length(sig))];
 sig_fft=fft(sig_zp); % FFT
 % plot(abs(sig_fft))
@@ -426,11 +441,11 @@ end
 Fs_fclean=1/(length(sig_fft)*T_frame);
 % calcu heart rate of the subject (bps & bpm)
 bps=loc_d*Fs_fclean;
-bpm=round(bps*60);
+bpm_fft=round(bps*60);
 T.fil0=round((1/bps)/T_frame);
 
-% printing...
-fprintf('The detected heart rate of the subject is: <strong>%d</strong> bpm.\n',bpm);
+% printing HR...
+fprintf('The estimated HR of the subject is: <strong>%d</strong> bpm.\n',bpm_fft);
 
 if twoChannelMode==true
     % ECG period
@@ -571,9 +586,9 @@ try
     end
     
     % calcu heart rate of the subject
-    bpm_d=length(locs_hsig)/(length(sig)*T_frame/60);
+    bpm_pks=length(locs_hsig)/(length(sig)*T_frame/60);
     % printing...
-    fprintf('The detected heart rate of the subject is: <strong>%.2f</strong> bpm. (by detected peaks)\n',bpm_d);
+    fprintf('The detected HR of the subject is: <strong>%.2f</strong> bpm.\n',bpm_pks);
     
     % Reproduction of blood pressure waveform
     % find the locs...
