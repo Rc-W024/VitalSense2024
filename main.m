@@ -322,10 +322,11 @@ end
 
 %% FASE A: ITERATIVE PULSE PERIOD ESTIMATION
 % ZP for FFT
-orden_zp=4;
+orden_zp=32;
 % RR estimation
 rsig_zp=[rsig_lp zeros(1,orden_zp*length(rsig_lp))];
 rsig_fft=fft(rsig_zp);
+rsig_fft(1:2*orden_zp)=1;
 % plot(abs(rsig_fft(1:17*orden_zp)))
 % find peak
 idx_rr=find(abs(rsig_fft(1:17*orden_zp))==max(abs(rsig_fft(1:17*orden_zp))));
