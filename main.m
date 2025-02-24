@@ -376,7 +376,7 @@ SIG=abs(sig_fclean_cut);
 SIG(find(SIG<0.03))=[]; % clean the spectrum
 amp_mean=mean(SIG);
 % find the principle peaks
-[amp_fft,loc_fft]=findpeaks(SIG0(1:length(SIG0)),1:length(SIG0),'MinPeakProminence',amp_mean*2,'MinPeakDistance',50);
+[amp_fft,loc_fft]=findpeaks(SIG0(1:length(SIG0)),1:length(SIG0),'MinPeakProminence',amp_mean*2,'MinPeakDistance',400);
 
 % T estimation
 if length(loc_fft)==1
@@ -400,7 +400,7 @@ elseif length(loc_fft)==2
         loc_d=loc_fft(find(max(find_locd)));
     end
 else
-    tolerance=20;
+    tolerance=100;
     peak_found=false;
     for i=1:length(loc_fft)
         pks=loc_fft(i);
