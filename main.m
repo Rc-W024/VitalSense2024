@@ -414,6 +414,10 @@ else
     if ~peak_found
         [~,max_idx]=max(amp_fft);
         loc_d=loc_fft(max_idx);
+        bpm_estim=(loc_d*(1/(length(sig_fft)*T_frame)))*60;
+        if bpm_estim>130
+            loc_d=loc_fft(1);
+        end
     else
         if length(loc_cantidate)==1
             loc_d=loc_cantidate;
