@@ -144,27 +144,6 @@ end
 % FFT with ZP
 Spectrum=fft(beatingTone_time_window,Digitizer.long*Sampling.ZP);
 
-%------------------------SUBTRACT-CALIBRATION-DATA-------------------------
-if (subtractThroughCalibration==true && useExistingFile==true)
-    waitbar(.33,f,'Subtract Calibration Data ...');
-    [filename,pathname]=uigetfile('C:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\ATS9120\...\CalibrationData\*.mat','Select file'); 
-    fitxer=strcat(pathname,filename); % concatenate strings horizontally
-    load(fitxer,'CALIBRATION_DATA_FREQ')
-    DivideThroughFrame=5;
-    Spectrum=zeros(Digitizer.long*Sampling.ZP,Digitizer.wfrm);
-%     Divider=CALIBRATION_DATA_FREQ;
-%     for k=1:wfrm
-%         fdb(:,k)=fda/Divider;
-%     end
-%     fdb=fda./Divider;
-    Spectrum=Spectrum-CALIBRATION_DATA_FREQ;
-    disp('Subtract through chirp of time:');
-    DivideThroughFrame*T_frame;
-else
-    waitbar(.33,f,'Make Spectrum ...');
-end
-%-------------------------------------------------------------------
-
 % Make spectrum
 Sampling.f=Sampling.Fs*(1:(Sampling.L*Sampling.ZP))/(Sampling.L*Sampling.ZP);
 Spec_abs=abs(Spectrum);
@@ -323,22 +302,6 @@ end
 %% FASE A: ITERATIVE PULSE PERIOD ESTIMATION
 % ZP for FFT
 orden_zp=32;
-% RR estimation
-rsig_zp=[rsig_lp zeros(1,orden_zp*length(rsig_lp))];
-rsig_fft=fft(rsig_zp);
-rsig_fft(1:2*orden_zp)=1;
-% plot(abs(rsig_fft(1:17*orden_zp)))
-% find peak
-idx_rr=find(abs(rsig_fft(1:17*orden_zp))==max(abs(rsig_fft(1:17*orden_zp))));
-
-% spectrum resolution
-Fs_fclean_rr=1/(length(rsig_fft)*T_frame);
-% calcu heart rate of the subject (bps & bpm)
-bpm_rr=idx_rr*Fs_fclean_rr*60;
-
-% printing RR...
-fprintf('The detected RR of the subject is: <strong>%.2f</strong> bpm.\n',bpm_rr);
-
 sig=hsig_lp;
 sig_zp=[sig zeros(1,orden_zp*length(sig))];
 sig_fft=fft(sig_zp); % FFT
