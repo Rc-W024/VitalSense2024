@@ -311,8 +311,9 @@ sig_fft=fft(sig_zp); % FFT
 % window function to smooth the signal
 win=zeros(1,length(sig_fft));
 % normal bpm corresponds to the 16th to 80th sampling data of the freq domain signal
-% -> ((bps_min,max)*length(signal))/fs_radar
-win(17*orden_zp:81*orden_zp)=1; % in MATLAB: 17-81
+%%% -> ((bps_min,max)*length(signal))/fs_radar %%%
+%%% Modify dynamically according to the equation according to the actual situation %%%
+win(17*orden_zp:81*orden_zp)=1; % in this case for MATLAB: 17-81
 % smooth both sides of a rectangular wave
 k=1;
 for i=81*orden_zp+1:81*orden_zp+4
@@ -383,7 +384,12 @@ else
         end
     else
         if length(loc_cantidate)==1
-            loc_d=loc_cantidate;
+            bpm_estim=(loc_cantidate*(1/(length(sig_fft)*T_frame)))*60;
+            if bpm_estim<40
+                loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
+            else
+                loc_d=loc_cantidate;
+            end
         else
             loc_cantidate(loc_cantidate==0)=[];
             loc_d=loc_cantidate(find(max(SIG0(loc_cantidate))));
