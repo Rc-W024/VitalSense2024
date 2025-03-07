@@ -385,7 +385,7 @@ else
     else
         if length(loc_cantidate)==1
             bpm_estim=(loc_cantidate*(1/(length(sig_fft)*T_frame)))*60;
-            if bpm_estim<40
+            if bpm_estim<45
                 loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
             else
                 loc_d=loc_cantidate;
