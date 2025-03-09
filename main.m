@@ -13,7 +13,7 @@ addpath('C:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\Include')
 %-----------------------------------------RECORDING and PROCESSING CONFIGS----------------------------------------------
 
 %--------------------------------------------RECORD or USE EXISTING DATA------------------------------------------------
-useExistingFile = true;         % for evaluation of exising recording
+useExistingFile = true;         % keep this switch: for exising recording processing
 %-----------------------------------------------------------------------------------------------------------------------
 twoChannelMode = true;          % FALSE = ONLY radar channel, TRUE = 2 channels: CHA=radar channel + CHB=ECG channel;
 produceCalibrationData = false; % not used anymore: Idea of subtracting static calibration data without testcandidate
@@ -166,37 +166,6 @@ waitbar(.67,f,'Search Peaks ...');
 [LocFinder.pks,LocFinder.locs]=findpeaks(Spec_abs_dB(:,searchInMeasure),Sampling.f,'SortStr','descend','MinPeakDistance',5,'MinPeakHeight',-35,'NPeaks',2);
 LocFinder.locs_positive=LocFinder.locs(LocFinder.locs>0 & LocFinder.locs<=5e4);
 text(LocFinder.locs+.02,LocFinder.pks,num2str((1:numel(LocFinder.pks))'))
-
-
-%% SAVE TO FILE
-% save Calibration Data or Measurement. Files were saved as Matlab File
-% .mat or in past as .bin file.
-if (useExistingFile==false && produceCalibrationData==false)
-    % New acquisitions and not a recording of a calibration data.      
-    strName=input('Name of Recording: ','s');
-    strFile=append(Save_strFolder,strName,'.bin');
-    if saveAsVariable==true
-        if twoChannelMode==true
-            save('outputVar.mat','data','beatingTone_time','ECGSignal')
-        else
-            save('outputVar.mat','data','beatingTone_time')
-        end
-        strFile=append(Save_strFolder,strName,'.mat');
-        copyfile("outputVar.mat",strFile);
-    else
-        % not saved as .bin in last measurements
-        copyfile("data.bin",strFile);
-    end
-elseif (useExistingFile==false && produceCalibrationData==true)
-    % CALIBRATION_DATA_FREQ: saves the matrix of n chirps with m samples of the
-    % spectrum as a calibration matrix for a later subtraction of measurements
-    Save_strFolder="...\CalibrationData\";
-    strName="CalibrationData";
-    CALIBRATION_DATA_FREQ=fda;
-    save('CalibrationData.mat','CALIBRATION_DATA_FREQ')
-    strFile=append(Save_strFolder,strName,'.mat');
-    copyfile("CalibrationData.mat",strFile);
-end
 
 
 %% PRINT FIGURES
