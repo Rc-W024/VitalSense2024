@@ -1,7 +1,7 @@
 % MAIN function for RECORDING and READING recorded data as well as further 
 % processing for VitalSense by the radar @UPC CommSensLab
 % VitalSense 2024 for biometrics and biomedical applications
-% 20/02/2025 Ruochen Wu for v.9.0 (since 15/03/2023 for v.0.0)
+% 10/03/2025 Ruochen Wu for v.10.0 (since 15/03/2023 for v.0.0)
 
 clear;
 close all;
@@ -271,6 +271,16 @@ end
 %% FASE A: ITERATIVE PULSE PERIOD ESTIMATION
 % ZP for FFT
 orden_zp=32;
+% RR estimation
+[amp_rr,loc_rr]=findpeaks(rsig_lp,Radar.t_frame,'MinPeakProminence',0.5);
+% RR by intervals between the peak
+loc_med_rr=mean(diff(loc_rr));
+bpm_rr=60/loc_med_rr;
+
+% printing RR...
+fprintf('The detected RR of the subject is: <strong>%.2f</strong> bpm.\n',bpm_rr);
+
+% HR estimation
 sig=hsig_lp;
 sig_zp=[sig zeros(1,orden_zp*length(sig))];
 sig_fft=fft(sig_zp); % FFT
@@ -312,59 +322,7 @@ amp_mean=mean(SIG);
 [amp_fft,loc_fft]=findpeaks(SIG0(1:length(SIG0)),1:length(SIG0),'MinPeakProminence',amp_mean*2,'MinPeakDistance',400);
 
 % T estimation
-if length(loc_fft)==1
-    loc_d=loc_fft;
-elseif isempty(loc_fft)
-    loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
-elseif length(loc_fft)==2
-    % bpm verification
-    for k=1:length(loc_fft)
-        bpm_estim(k)=(loc_fft(k)*(1/(length(sig_fft)*T_frame)))*60;
-    end
-    
-    % T determination
-    loc_d=loc_fft(find(bpm_estim>40 & bpm_estim<130));
-
-    if isempty(loc_d)
-        loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
-        warning('MAYBE SOMETHING WENT WRONG, PLEASE CHECK THE DATA!')
-    elseif length(loc_d)==2
-        find_locd=[abs(bpm_estim(1)-40),abs(bpm_estim(2)-130)];
-        loc_d=loc_fft(find(max(find_locd)));
-    end
-else
-    tolerance=100;
-    peak_found=false;
-    for i=1:length(loc_fft)
-        pks=loc_fft(i);
-        % check if there is a peak close to 2*candidate peak
-        if any(abs(loc_fft-2*pks)<tolerance)
-            loc_cantidate(i)=pks;
-            peak_found=true;
-        end
-    end
-
-    if ~peak_found
-        [~,max_idx]=max(amp_fft);
-        loc_d=loc_fft(max_idx);
-        bpm_estim=(loc_d*(1/(length(sig_fft)*T_frame)))*60;
-        if bpm_estim>130
-            loc_d=loc_fft(1);
-        end
-    else
-        if length(loc_cantidate)==1
-            bpm_estim=(loc_cantidate*(1/(length(sig_fft)*T_frame)))*60;
-            if bpm_estim<45
-                loc_d=find(abs(sig_fclean_cut)==max(abs(sig_fclean_cut)));
-            else
-                loc_d=loc_cantidate;
-            end
-        else
-            loc_cantidate(loc_cantidate==0)=[];
-            loc_d=loc_cantidate(find(max(SIG0(loc_cantidate))));
-        end
-    end
-end
+loc_d=HRestim(T_frame,SIG0,sig_fclean_cut,sig_fft,amp_fft,loc_fft);
 
 % spectrum resolution
 Fs_fclean=1/(length(sig_fft)*T_frame);
@@ -516,9 +474,14 @@ try
     
     % calcu heart rate of the subject
     bpm_pks=length(locs_hsig)/(length(sig)*T_frame/60);
+    % by intervals between the peak
+    loc_med_rr=mean(diff(locs_hsig));
+    bpm_intv=60/loc_med_rr;
+
     % printing...
-    fprintf('The detected HR of the subject is: <strong>%.2f</strong> bpm.\n',bpm_pks);
-    
+    fprintf('The detected HR of the subject is: <strong>%.2f</strong> bpm. (by detected peaks)\n',bpm_pks);
+    fprintf('The determined HR of the subject is: <strong>%.2f</strong> bpm. (by intervals)\n',bpm_intv);
+
     % Reproduction of blood pressure waveform
     % find the locs...
     [amph,locsh]=findpeaks(hsig(1:len_sig),1:len_sig,'MinPeakDistance',minpeakdist,'MinPeakProminence',0.05);
