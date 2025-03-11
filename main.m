@@ -272,8 +272,8 @@ end
 % ZP for FFT
 orden_zp=32;
 % RR estimation
-[amp_rr,loc_rr]=findpeaks(rsig_lp,Radar.t_frame,'MinPeakProminence',0.5);
-% RR by intervals between the peak
+[amp_rr,loc_rr]=findpeaks(rsig_lp,Radar.t_frame,'MinPeakProminence',0.2);
+% RR by intervals between the peaks
 loc_med_rr=mean(diff(loc_rr));
 bpm_rr=60/loc_med_rr;
 
