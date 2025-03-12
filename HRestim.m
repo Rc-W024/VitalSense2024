@@ -48,7 +48,7 @@ else
             end
         else
             loc_cantidate(loc_cantidate==0)=[];
-            loc_d=loc_cantidate(find(max(SIG0(loc_cantidate))));
+            loc_d=loc_cantidate(find(SIG0(loc_cantidate)==max(SIG0(loc_cantidate))));
         end
     end
 end
