@@ -475,6 +475,15 @@ try
     % calcu heart rate of the subject
     bpm_pks=length(locs_hsig)/(length(sig)*T_frame/60);
     % by intervals between the peak
+    loc_diff=diff(locs_hsig);
+    threshold=mean(loc_diff)+2*std(loc_diff);  
+
+    % check whether there is any missed peak
+    while max(loc_diff)>threshold
+        [~,idx]=max(loc_diff);
+        loc_diff(idx)=[];
+    end
+    
     loc_med_rr=mean(diff(locs_hsig));
     bpm_intv=60/loc_med_rr;
 
