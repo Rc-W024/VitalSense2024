@@ -1,7 +1,7 @@
 % MAIN function for RECORDING and READING recorded data as well as further 
 % processing for VitalSense by the radar @UPC CommSensLab
 % VitalSense 2024 for biometrics and biomedical applications
-% 10/03/2025 Ruochen Wu for v.10.0 (since 15/03/2023 for v.0.0)
+% 12/03/2025 Ruochen Wu for v.10.5 (since 15/03/2023 for v.0.0)
 
 clear;
 close all;
@@ -278,7 +278,7 @@ loc_med_rr=mean(diff(loc_rr));
 bpm_rr=60/loc_med_rr;
 
 % printing RR...
-fprintf('The detected RR of the subject is: <strong>%.2f</strong> bpm.\n',bpm_rr);
+fprintf('The determined RR of the subject is: <strong>%.2f</strong> bpm.\n',bpm_rr);
 
 % HR estimation
 sig=hsig_lp;
@@ -328,11 +328,11 @@ loc_d=HRestim(T_frame,SIG0,sig_fclean_cut,sig_fft,amp_fft,loc_fft);
 Fs_fclean=1/(length(sig_fft)*T_frame);
 % calcu heart rate of the subject (bps & bpm)
 bps=loc_d*Fs_fclean;
-bpm_fft=round(bps*60);
+bpm_fft=bps*60;
 T.fil0=round((1/bps)/T_frame);
 
 % printing HR...
-fprintf('The estimated HR of the subject is: <strong>%d</strong> bpm.\n',bpm_fft);
+fprintf('The estimated HR of the subject is: <strong>%.2f</strong> bpm.\n',bpm_fft);
 
 if twoChannelMode==true
     % ECG period
@@ -488,7 +488,7 @@ try
     bpm_intv=60/loc_med_rr;
 
     % printing...
-    fprintf('The detected HR of the subject is: <strong>%.2f</strong> bpm. (by detected peaks)\n',bpm_pks);
+    fprintf('The detected HR of the subject is: <strong>%.2f</strong> bpm. (by peaks)\n',bpm_pks);
     fprintf('The determined HR of the subject is: <strong>%.2f</strong> bpm. (by intervals)\n',bpm_intv);
 
     % Reproduction of blood pressure waveform
