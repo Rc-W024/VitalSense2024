@@ -17,7 +17,7 @@ elseif length(loc_fft)==2
         warning('MAYBE SOMETHING WENT WRONG, PLEASE CHECK THE DATA!')
     elseif length(loc_d)==2
         find_locd=[abs(bpm_estim(1)-40),abs(bpm_estim(2)-130)];
-        loc_d=loc_fft(find(max(find_locd)));
+        loc_d=loc_fft(find(find_locd==max(find_locd)));
     end
 else
     tolerance=100;
