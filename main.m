@@ -234,6 +234,11 @@ blp_r=fir1(300,cutoff_f/(smp_f/2),'low');
 rsig_lp=filtfilt(blp_r,1,vitsig);
 hsig_lp=vitsig-rsig_lp;
 
+% clean the cardiac signal
+hsig_fft=fft(hsig_lp);
+hsig_fft(1:40)=0; % eliminate the noise
+hsig_lp=real(ifft(hsig_fft));
+
 figure('Name','SEPARATION OF BREATHING & CARDIAC SIGNAL');
 subplot(2,1,1)
 plot(Radar.t_frame,vitsig);
