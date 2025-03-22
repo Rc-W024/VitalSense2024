@@ -1,4 +1,4 @@
-# VitalSense2024 - 毫米波无线电生命体征监测及参数提取
+# VitalSense - 毫米波无线电生命体征监测及参数提取
 [English](README.md) | 中文
 
 ![](https://skillicons.dev/icons?i=matlab)
@@ -8,9 +8,9 @@
 
 ![VitalSense](https://github.com/user-attachments/assets/e60cada1-b487-44fa-8247-cfc7b7e7df9e)
 
-**Radar System-on-Chip Based Wireless Vital Sensing for Robust Biometric Extraction**
+**VitalSense: Radar System-on-Chip Based mmWave Vital Sensing for Robust Biometric Extraction**
 
-用于智慧医学监测、医疗物联网（IoMT）和生物特征提取的120 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与毫米波感知解决方案。
+用于智慧医学监测、医疗物联网（IoMT）和生物特征提取的122 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与毫米波感知解决方案。
 
 <details> <summary><b>前序项目介绍短片</b></summary>
   
@@ -18,7 +18,7 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 
 </details>
 
-## 基于RSoC的无线感知与移动计算
+## 基于RSoC的无线感知
 ### 太赫兹雷达传感器
 <p>
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/3beb8c87-0072-419f-b07b-6c7b5c18d968" width=300 />
