@@ -1,4 +1,4 @@
-# VitalSense2024 - Vital Signs Monitoring & Parameters Extraction with mmWave Radio
+# VitalSense - Vital Signs Monitoring & Parameters Extraction with mmWave Radio
 English | [中文](README_CN.md)
 
 ![](https://skillicons.dev/icons?i=matlab)
@@ -8,9 +8,9 @@ English | [中文](README_CN.md)
 
 ![VitalSense](https://github.com/user-attachments/assets/e60cada1-b487-44fa-8247-cfc7b7e7df9e)
 
-**Radar System-on-Chip Based Wireless Vital Sensing for Robust Biometric Extraction**
+**VitalSense: Radar System-on-Chip Based mmWave Vital Sensing for Robust Biometric Extraction**
 
-Radio remote sensing and millimeter-wave (mmWave) sensing solution based on 120 GHz Frequency-Modulated Continuous Wave (FMCW) Radar System-on-Chip (RSoC) for smart healthcare monitoring, Internet of Medical Things (IoMT), and biometric extraction.
+Radio remote sensing and millimeter-wave (mmWave) sensing solution based on 122 GHz Frequency-Modulated Continuous Wave (FMCW) Radar System-on-Chip (RSoC) for smart healthcare monitoring, Internet of Medical Things (IoMT), and biometric extraction.
 
 <details> <summary><b>Previous Project Introduction Video</b></summary>
   
@@ -18,7 +18,7 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 
 </details>
 
-## RSoC for Wireless Sensing and Mobile Computing
+## RSoC for Wireless Sensing
 ### Terahertz Radar Sensor
 <p>
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/3beb8c87-0072-419f-b07b-6c7b5c18d968" width=300 />
