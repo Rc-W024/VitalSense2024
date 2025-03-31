@@ -8,7 +8,7 @@
 
 ![VitalSense](https://github.com/user-attachments/assets/e60cada1-b487-44fa-8247-cfc7b7e7df9e)
 
-**Robust Biometric Information Sensing and Extraction Using a mmWave Radar System-on-Chip**
+**Robust Biometric Information Sensing With mmWave Radar System-on-Chip**
 
 用于智慧医学监测、医疗物联网（IoMT）和生物特征提取的122 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与毫米波感知解决方案。
 
