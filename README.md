@@ -8,7 +8,7 @@ English | [中文](README_CN.md)
 
 ![VitalSense](https://github.com/user-attachments/assets/e60cada1-b487-44fa-8247-cfc7b7e7df9e)
 
-**Robust Biometric Information Sensing and Extraction Using a mmWave Radar System-on-Chip**
+**Robust Biometric Information Sensing With mmWave Radar System-on-Chip**
 
 Radio remote sensing and millimeter-wave (mmWave) sensing solution based on 122 GHz Frequency-Modulated Continuous Wave (FMCW) Radar System-on-Chip (RSoC) for smart healthcare monitoring, Internet of Medical Things (IoMT), and biometric extraction.
 
