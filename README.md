@@ -10,7 +10,7 @@ English | [中文](README_CN.md)
 
 **Robust Biometric Information Sensing With mmWave Radar System-on-Chip**
 
-Radio remote sensing and millimeter-wave (mmWave) sensing solution based on 122 GHz Frequency-Modulated Continuous Wave (FMCW) Radar System-on-Chip (RSoC) for smart healthcare monitoring, Internet of Medical Things (IoMT), and biometric extraction.
+Radio remote sensing and millimeter-wave (mmWave) sensing solution based on 120 GHz Frequency-Modulated Continuous Wave (FMCW) Radar System-on-Chip (RSoC) for smart healthcare monitoring, Internet of Medical Things (IoMT), and biometric extraction.
 
 <details> <summary><b>Previous Project Introduction Video</b></summary>
   
