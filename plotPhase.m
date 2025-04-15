@@ -21,7 +21,7 @@ phasePlot=figure('Name',titleText,'NumberTitle','off');
         if(DoUnWrapping==true)
             ylabel('Offset (mm)')
         else
-            ylabel('Phi')
+            ylabel('\phi (rad)')
             ylim([-pi pi])
         end
         yyaxis right
