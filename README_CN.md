@@ -125,6 +125,9 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 ### 引用
 🚧 *施工中……* 🚧
 
+### 相关项目
+[**A Novel Optimized Adaptive Signal Processing Technique for Radar Vital Sign Monitoring**](https://github.com/Rc-W024/RWAMF-BioSP)
+
 ### 后续项目
 **Mission Planning for Radar Autonomous Localization in Vital Sensing Task**
 
