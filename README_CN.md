@@ -44,10 +44,10 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件，允许用户以编程方式控制其波形数字化仪并采集数据。其完全支持C/C++和C#（Visual Studio或GCC）、MATLAB、LabVIEW和Python环境。在本项目中，我们全程基于**MATLAB**开发并完成了任务。
 
 ## 数据集
-生命信号数据库 - *由CommSensLab（信号理论与通信系）采集和管理* （非公开）
+生命信号数据库 - *由CommSensLab（信号理论与通信系）采集和管理* （内部实验数据）
 
 > [!NOTE]
-> **数据集**正在筹备中，并计划在未来进行发布。
+> **数据集**正在筹备中，并计划在不久后发布。
 
 ### 样例数据
 `data`中包含了几组样本生命信号数据，用于算法的测试、熟悉和学习。
