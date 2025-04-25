@@ -44,7 +44,7 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 ATS-SDK is a Windows and Linux compatible software development kit created by *AlazarTech* to allow users to programmatically control and acquire data from its line of waveform digitizers, which fully supports for C/C++ and C# (Visual Studio or GCC), MATLAB, LabVIEW and Python environments. In this case, we complete the project based on **MATLAB**.
 
 ## Dataset
-Vital Signals Database - *acquired by CommSensLab (Dept. of Signal Theory and Communications)* (Non-public)
+Vital Signals Database - *acquired by CommSensLab (Dept. of Signal Theory and Communications)* (Internal experimental data)
 
 > [!NOTE]
 > The **Dataset** is being considered and prepared for future release.
