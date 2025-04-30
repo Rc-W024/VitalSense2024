@@ -1,4 +1,4 @@
-# VitalSense - 毫米波无线电生命体征监测及参数提取
+# VitalSense - 毫米波无线电生命体征监测及生物特征参数提取
 [English](README.md) | 中文
 
 ![](https://skillicons.dev/icons?i=matlab)
