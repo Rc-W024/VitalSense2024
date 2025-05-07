@@ -130,5 +130,5 @@ Vital sensing radar with automated intelligent signal processing multiphase algo
 [**A Novel Optimized Adaptive Signal Processing Technique for Radar Vital Sign Monitoring**](https://github.com/Rc-W024/RWAMF-BioSP)
 
 ### Further project...
-**Mission Planning for Radar Autonomous Localization in Vital Sensing Task**
+**mmVital: Mission Planning for Radar Autonomous Localization in mmWave Vital Sensing Task**
 
