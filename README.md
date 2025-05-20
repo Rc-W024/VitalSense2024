@@ -1,4 +1,4 @@
-# VitalSense - Vital Signs Monitoring & Biometric Parameters Extraction with mmWave Radios
+# VitalSense - Biometric Sensing with mmWave Radios
 English | [中文](README_CN.md)
 
 ![](https://skillicons.dev/icons?i=matlab)
