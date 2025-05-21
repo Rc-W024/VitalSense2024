@@ -6,7 +6,7 @@
 clear;
 close all;
 % ADD path to AlazarTech mfiles for the recording
-addpath('C:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\Include')
+%addpath('C:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\Include')
 
 
 
@@ -41,10 +41,10 @@ Radar.c_0=3e8;                                    % Lightspeed (m/s)
 Radar.lambda=Radar.c_0/Radar.f_0;                 % Wavelength (m)
 % Measurement
 L_samplesDwell=512;                               % Pause samples between chirps
-T_frame=3e-3;                                     % T*(L+L_samplesDwell); 3ms ???
+T_frame=3e-3;                                     % T*(L+L_samplesDwell); 3 ms ???
 
 % CHIRP
-Radar.Tm=0.0015;                                  % Chirp slope time: 1.5ms
+Radar.Tm=0.0015;                                  % Chirp slope time: 1.5 ms
 Radar.deltaf=3e9;                                 % Chirp slope bandwidth: 3 GHz
 %------------------------------------------------Digitizer-Settings-----------------------------------------------------
 Digitizer.decimation=4; % ???? GIVING it to the function??? to configureBoard and 
@@ -295,28 +295,29 @@ sig_fft=fft(sig_zp); % FFT
 % Signal cleaning accroding to normal bpm: 40-200 -> 0.667 Hz(bps)-3.333 Hz(bps)
 % window function to smooth the signal
 win=zeros(1,length(sig_fft));
-% normal bpm corresponds to the 16th to 80th sampling data of the freq domain signal
-%%% -> ((bps_min,max)*length(signal))/fs_radar %%%
-%%% Modify dynamically according to the equation according to the actual situation %%%
-win(17*orden_zp:81*orden_zp)=1; % in this case for MATLAB: 17-81
+% normal bpm corresponds to the sampling data in freq domain signal
+h_low=round((0.667*length(sig))/(1/T_frame))+1; % in MATLAB +1
+h_high=round((3.333*length(sig))/(1/T_frame))+1;
+
+win(h_low*orden_zp:h_high*orden_zp)=1;
 % smooth both sides of a rectangular wave
 k=1;
-for i=81*orden_zp+1:81*orden_zp+4
+for i=h_high*orden_zp+1:h_high*orden_zp+4
     win(i)=cos(k*pi/8);
     k=k+1;
 end
 
 k=1;
-for i=17*orden_zp-1:-1:17*orden_zp-4
+for i=h_low*orden_zp-1:-1:h_low*orden_zp-4
     win(i)=cos(k*pi/8);
     k=k+1;
 end
 % spectral window for both sides
-win(length(sig_fft)-(81*orden_zp+4)+1:length(sig_fft)-(17*orden_zp-4)+1)=win(17*orden_zp-4:81*orden_zp+4);
+win(length(sig_fft)-(h_high*orden_zp+4)+1:length(sig_fft)-(h_low*orden_zp-4)+1)=win(h_low*orden_zp-4:h_high*orden_zp+4);
 
 % signal windowing
 sig_fclean=sig_fft.*win;
-%plot(abs(sig_fclean))
+% plot(abs(sig_fclean))
 sig_fclean_cut=sig_fclean(1:length(sig_fclean)/2); % right side
 
 % Determinate the cardiac period based on spectrum
