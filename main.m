@@ -45,7 +45,7 @@ T_frame=3e-3;                                     % T*(L+L_samplesDwell); 3 ms ?
 
 % CHIRP
 Radar.Tm=0.0015;                                  % Chirp slope time: 1.5 ms
-Radar.deltaf=3e9;                                 % Chirp slope bandwidth: 3 GHz
+Radar.deltaf=1e9;                                 % Chirp slope bandwidth: 1 GHz   % 3e9: 3 GHz ?
 %------------------------------------------------Digitizer-Settings-----------------------------------------------------
 Digitizer.decimation=4; % ???? GIVING it to the function??? to configureBoard and 
 Digitizer.long=round(2048/Digitizer.decimation);  % Length of Chirp in samples defined by DDS settings
