@@ -35,7 +35,7 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 | 脉冲重复周期 $T_{frame}$    | 3 ms                                                                             |
 | 线性调频斜坡时间 $T_{m}$    | 1.5 ms                                                                           |
 
-> [!NOTE]
+> [!IMORTANT]
 > 雷达带宽可编程扩展至4 GHz。在我们的实验中，雷达带宽配置为3 GHz。
 
 > [!NOTE]
