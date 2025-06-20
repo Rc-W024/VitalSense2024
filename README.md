@@ -35,6 +35,9 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 | Pulse Repetition Period ($T_{frame}$) | 3 ms                                                                    |
 | Chirp Slope Time ($T_{m}$)            | 1.5 ms                                                                  |
 
+> [!IMPORTANT]
+> The radar bandwidth can be programmed up to 4 GHz. In our experimental setup, a radar bandwidth of 3 GHz was configured.
+
 > [!NOTE]
 > The used non-commercial RADAR has been conceived, designed and built in our laboratory (CommSensLab-UPC) specifically for the intended applications.
 
