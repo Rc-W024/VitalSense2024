@@ -1,4 +1,4 @@
-# VitalSense - Biometric Sensing with mmWave Radios
+# VitalSense - mmWave Radios-Based Biometric Sensing
 English | [中文](README_CN.md)
 
 ![](https://skillicons.dev/icons?i=matlab)
