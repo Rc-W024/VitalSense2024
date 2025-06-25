@@ -90,9 +90,6 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 - 呼吸监测
 - 提取的生命特征参数可用于生物特征认证和加密研究
 
-> [!Tip]
-> 有关算法原型的更多细节，请参阅先前的研究：[`RWAMF-BioSP`](https://github.com/Rc-W024/RWAMF-BioSP)
-
 ## 阶段成果
 ### 信号分离
 - 利用有限长单位冲激响应（FIR）线性相位滤波器提取呼吸信号 $s_{b}$
@@ -127,9 +124,6 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 ## 参考信息
 ### 引用
 🚧 *施工中……* 🚧
-
-### 相关项目
-[**A Novel Optimized Adaptive Signal Processing Technique for Radar Vital Sign Monitoring**](https://github.com/Rc-W024/RWAMF-BioSP)
 
 ### 后续项目
 **mmVital: Mission Planning for Radar Radio Autonomous Localization in mmWave Vital Sensing Task**
