@@ -6,40 +6,24 @@
 clear;
 close all;
 % ADD path to AlazarTech mfiles for the recording
-addpath('C:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\Include')
-
-% Figure parameter settings
-set(groot,'defaultLineLineWidth',1)
-set(groot,'defaultAxesFontName','Times New Roman')
-set(groot,'defaultAxesFontSize',10)
-set(groot,'defaultAxesLabelFontSizeMultiplier',1)
-set(groot,'defaultFigurePosition',[600 500 400 300])
+%addpath('C:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\Include')
 
 
 %-----------------------------------------RECORDING and PROCESSING CONFIGS----------------------------------------------
 
-%--------------------------------------------RECORD or USE EXISTING DATA------------------------------------------------
-useExistingFile = true;         % for evaluation of exising recording
+%-------------------------------------------------USE EXISTING DATA-----------------------------------------------------
+useExistingFile = true;         % for exising recording processing
 %-----------------------------------------------------------------------------------------------------------------------
 twoChannelMode = false;         % FALSE = ONLY radar channel, TRUE = 2 channels: CHA=radar channel + CHB=ECG channel;
-produceCalibrationData = false; % not used anymore: Idea of subtracting static calibration data without testcandidate
-doMoreAnalysingSwitch = true;   % more analysis with different algorithm: check Matlab version! STFT in Matlab Introduced in R2019a
-    subtractThroughCalibration = false;
-    tryCompensationBySubtraction = true;
-    reduceBandwidthFunction = false;
-HbsigFilterTest = false;        % not used anymore: Test the filter effect for heartbeat signal with different cutoff frequency
-HRVanalysis = false;            % make Poincaré plot to analyze HRV
 %-------------------------------------------------Format-Settings-------------------------------------------------------
 openAsVariable = true;          % FALSE open as .bin file, used as only one channel mode; not used anymore
 saveAsVariable = true;          % FALSE save as .bin file, used as only one channel mode; not used anymore
 %------------------------------------------------Directory-Settings-----------------------------------------------------
-% Search in folder for open existing measurement, or
-Open_strFolder = 'D:\UPC\THzRadar\Radar_Measurement\data\*.mat';
-% Select folder to save measurement
-Save_strFolder = "D:\UPC\THzRadar\Radar_Measurement\data\20250313\";
+% Search in folder for open existing measurement
+Open_strFolder = 'X:\YOUR PATH\*.mat';
 %-----------------------------------------------------------------------------------------------------------------------
 % Search peak in chirp x:
-searchInMeasure = 30; % 
+searchInMeasure = 30; %
 
 %--------------------------------------------------RADAR-Settings-------------------------------------------------------
 Radar.f_0=122e9;                                  % Center freq: 122 GHz
@@ -47,7 +31,7 @@ Radar.c_0=3e8;                                    % Lightspeed (m/s)
 Radar.lambda=Radar.c_0/Radar.f_0;                 % Wavelength (m)
 % Measurement
 L_samplesDwell=512;                               % Pause samples between chirps
-T_frame=3e-3;                                     % T*(L+L_samplesDwell); 3ms ???
+T_frame=3e-3;                                     % T*(L+L_samplesDwell); 3ms
 
 % CHIRP
 Radar.Tm=0.0015;                                  % Chirp slope time: 1.5ms
@@ -64,67 +48,20 @@ Sampling.L=2048/Digitizer.decimation;             % Length of signal CHANGED was
 t=(0:Sampling.L-1)*Sampling.T;                    % Time vector (s)
 
 
-%% OPEN or RECORD Measurement
+%% OPEN Measurement
 % .bin files are not used recently anymore. Saved and opened as Matlab
 % matrix
 
 if useExistingFile==true % open existing measurement
-    if openAsVariable==true
-        % open Matlab data as matrix
-        [Open_filename,Open_pathname]=uigetfile(Open_strFolder,'Select file');
-        fitxer=strcat(Open_pathname,Open_filename); % concatenate strings horizontally
-        if twoChannelMode==true
-            % CHA Radar = beatingTone_time + CHB ECG = ECGSignal
-            load(fitxer,'data','beatingTone_time','ECGSignal')
-            %ECGSignal=ButtonSignal; % ButtonSignal: !!ONLY USED IN CASES OF 20240214!!
-        else
-            % only radar signal beatingTone_time
-            load(fitxer,'data','beatingTone_time')
-        end
-        
-    else
-        % use for .bin files, in latest measurements not used anymore
-        [filename,pathname]=uigetfile('C:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\ATS9120\DualPort\NPT\RW\Recordings\*.bin','Select Fast GBSAR file'); 
-        fitxer=strcat(pathname,filename); % concatenate strings horizontally
-        ff=fopen(fitxer,'rb');
-        data=fread(ff,Digitizer.long*Digitizer.wfrm,'uint16');
-    end
-else
-    % Make Measurements with AlazarTech
-    % Call mfile with library definitions
-    AlazarDefs
-    
-    % Load driver library
-    if ~alazarLoadLibrary()
-      fprintf('Error: ATSApi library not loaded\n');
-      return
-    end
-    
-    % TODO: Select a board
-    systemId=int32(1);
-    boardId=int32(1);
-    
-    % Get a handle to the board
-    boardHandle=AlazarGetBoardBySystemID(systemId,boardId);
-    setdatatype(boardHandle,'voidPtr',1,1);
-    if boardHandle.Value==0
-      fprintf('Error: Unable to open board system ID %u board ID %u\n',systemId,boardId);
-      return
-    end
-
-    % START CONFIG BOARD & RECORD
+    % open Matlab data as matrix
+    [Open_filename,Open_pathname]=uigetfile(Open_strFolder,'Select file');
+    fitxer=strcat(Open_pathname,Open_filename); % concatenate strings horizontally
     if twoChannelMode==true
-        % TWO CHANNEL MODE
-        [result]=configureBoard2Ch(boardHandle,Digitizer.decimation,Digitizer.wfrm); 
-        [result,data2CH]=acquireData2Ch(boardHandle,Digitizer.decimation,Digitizer.wfrm);
-        data=400e-3*data2CH(1:2:end);
-        ECGSignal=5*data2CH(2:2:end);
-        clear data2CH;
+        % CHA Radar = beatingTone_time + CHB ECG = ECGSignal
+        load(fitxer,'data','beatingTone_time','ECGSignal')
     else
-        % ONE CHANNEL MODE
-        [result]=configureBoard1Ch(boardHandle,Digitizer.decimation,Digitizer.wfrm);
-        tt=clock;
-        [result,data]=acquireData1Ch(boardHandle,Digitizer.decimation,Digitizer.wfrm);
+        % only radar signal beatingTone_time
+        load(fitxer,'data','beatingTone_time')
     end
 end
 
@@ -151,26 +88,8 @@ end
 % FFT with ZP
 Spectrum=fft(beatingTone_time_window,Digitizer.long*Sampling.ZP);
 
-%------------------------SUBTRACT-CALIBRATION-DATA-------------------------
-if (subtractThroughCalibration==true && useExistingFile==true)
-    waitbar(.33,f,'Subtract Calibration Data ...');
-    [filename,pathname]=uigetfile('C:\AlazarTech\ATS-SDK\7.3.0\Samples_MATLAB\ATS9120\DualPort\NPT\RW\Recordings\CalibrationData\*.mat','Select file'); 
-    fitxer=strcat(pathname,filename); % concatenate strings horizontally
-    load(fitxer,'CALIBRATION_DATA_FREQ')
-    DivideThroughFrame=5;
-    Spectrum=zeros(Digitizer.long*Sampling.ZP,Digitizer.wfrm);
-%     Divider=CALIBRATION_DATA_FREQ;
-%     for k=1:wfrm
-%         fdb(:,k)=fda/Divider;
-%     end
-%     fdb=fda./Divider;
-    Spectrum=Spectrum-CALIBRATION_DATA_FREQ;
-    disp('Subtract through chirp of time:');
-    DivideThroughFrame*T_frame;
-else
-    waitbar(.33,f,'Make Spectrum ...');
-end
 %-------------------------------------------------------------------
+waitbar(.33,f,'Make Spectrum ...');
 
 % Make spectrum
 Sampling.f=Sampling.Fs*(1:(Sampling.L*Sampling.ZP))/(Sampling.L*Sampling.ZP);
@@ -194,42 +113,6 @@ waitbar(.67,f,'Search Peaks ...');
 [LocFinder.pks,LocFinder.locs]=findpeaks(Spec_abs_dB(:,searchInMeasure),Sampling.f,'SortStr','descend','MinPeakDistance',5,'MinPeakHeight',-35,'NPeaks',2);
 LocFinder.locs_positive=LocFinder.locs(LocFinder.locs>0 & LocFinder.locs<=5e4);
 text(LocFinder.locs+.02,LocFinder.pks,num2str((1:numel(LocFinder.pks))'))
-
-
-%% SAVE TO FILE
-% save Calibration Data or Measurement. Files were saved as Matlab File
-% .mat or in past as .bin file.
-if (useExistingFile==false && produceCalibrationData==false)
-    % New acquisitions and not a recording of a calibration data.      
-    strName=input('Name of Recording: ','s');
-    strFile=append(Save_strFolder,strName,'.bin');
-    % save the measurement time
-    %Save_strFolder
-    strFolder_File=strcat(Save_strFolder,strName);
-    save(strcat(strFolder_File,'_TIME'),'tt');
-    if saveAsVariable==true
-        if twoChannelMode==true
-            save('outputVar.mat','data','beatingTone_time','ECGSignal')
-        else
-            save('outputVar.mat','data','beatingTone_time')
-        end
-        strFile=append(Save_strFolder,strName,'.mat');
-        copyfile("outputVar.mat",strFile);
-    else
-        % not saved as .bin in last measurements
-        copyfile("data.bin",strFile);
-    end
-elseif (useExistingFile==false && produceCalibrationData==true)
-    % CALIBRATION_DATA_FREQ: saves the matrix of n chirps with m samples of the
-    % spectrum as a calibration matrix for a later subtraction of measurements
-    Save_strFolder="Recordings\20220712\CalibrationData\";
-    strName="CalibrationData";
-    CALIBRATION_DATA_FREQ=fda;
-    save('CalibrationData.mat','CALIBRATION_DATA_FREQ')
-    strFile=append(Save_strFolder,strName,'.mat');
-    copyfile("CalibrationData.mat",strFile);
-end
-
 
 %% PRINT FIGURES
 % Prints every 10th chirp of the acquisiton in time domain or frequency
@@ -278,6 +161,8 @@ end
 close(f)
 
 
+%-----------------------------------------------------MAIN-CODE---------------------------------------------------------
+
 %% CARDIAC SIGNAL FILTERING
 % Vital signal filtering and extraction of heartbeat & respiration signal
 % original radar micro-motion signal extraction
@@ -286,18 +171,23 @@ for i=1:length(LocFinder.locs_positive)
     vitsig=1000*(Radar.lambda/(4*pi))*unwrap(angle(Spectrum(lineWithPeak,1:Digitizer.wfrm))-angle(Spectrum(lineWithPeak,1)));
 end
 
+%%% In our case, 'vitalsig' is the raw radar vital signal (breathing sig + heartbeat sig)            %%%
+%%% In practice, set the variable 'vitalsig' as you needed (also for the related parameter settings) %%%
+
 % Start the timer
 tic
 
 % FIR linear-phase filter
 smp_f=1/T_frame; % sampling
-cutoff_f=0.3; % cut-off frecuency %0.1
+cutoff_f=0.3; % cut-off frecuency
+%%% Please adjust the filter order according to the signal conditions, we recommend trying a value similar to the signal sampling freq %%%
 blp_r=fir1(300,cutoff_f/(smp_f/2),'low');
 % filtering results
 rsig_lp=filtfilt(blp_r,1,vitsig);
 hsig_lp=vitsig-rsig_lp;
 
 % clean the cardiac signal
+%%% Only for our radar data (24s) %%%
 hsig_fft=fft(hsig_lp);
 hsig_fft(1:40)=0; % eliminate the noise
 hsig_lp=real(ifft(hsig_fft));
@@ -343,7 +233,7 @@ end
 
 %% FASE A: ITERATIVE PULSE PERIOD ESTIMATION
 % ZP for FFT
-orden_zp=32;
+orden_zp=32; % or may be smaller
 % RR estimation
 [amp_rr,loc_rr]=findpeaks(rsig_lp,Radar.t_frame,'MinPeakProminence',0.2);
 % RR by intervals between the peaks
@@ -351,7 +241,7 @@ loc_med_rr=mean(diff(loc_rr));
 bpm_rr=60/loc_med_rr;
 
 % printing RR...
-fprintf('The determined RR of the subject is: <strong>%.2f</strong> bpm.\n',bpm_rr);
+fprintf('The determined RR of the subject is: <strong>%.4f</strong> bpm.\n',bpm_rr);
 
 % HR estimation
 sig=hsig_lp;
@@ -563,8 +453,8 @@ try
     bpm_intv=60/loc_med_rr;
 
     % printing...
-    fprintf('The detected HR of the subject is: <strong>%.2f</strong> bpm. (by peaks)\n',bpm_pks);
-    fprintf('The determined HR of the subject is: <strong>%.2f</strong> bpm. (by intervals)\n',bpm_intv);
+    fprintf('The detected HR of the subject is: <strong>%.4f</strong> bpm. (by peaks)\n',bpm_pks);
+    fprintf('The determined HR of the subject is: <strong>%.4f</strong> bpm. (by intervals)\n',bpm_intv);
     
     % Reproduction of blood pressure waveform
     % find the locs...
@@ -610,59 +500,3 @@ end
 % End the timer
 toc
 
-
-%% HRV ANALYSIS
-if HRVanalysis==true
-    % Poincare plot based on R-R intervals
-    % calcu RR based on the peaks detected
-    RR0=diff(locs_hsig);
-    RR=RR0*1000; % s->ms
-    % calcu x & y axes
-    PlotX=RR(1:end-1); % RR interval of current peak
-    PlotY=RR(2:end); % RR interval of next peak
-    
-    % SDNN
-    sdnn=std(RR,0);
-    % SDSD
-    sdsd=std(diff(RR));
-    % SD1 & SD2
-    sd1=sqrt(0.5)*sdnn;
-    sd2=sqrt(2*sdnn^2-0.5*sdsd^2);
-    % dynamic balance indicator
-    RatioHRV=sd1/sd2;
-    
-    % plot...
-    figure('Name','POINCARÉ PLOT');
-    line([min(PlotX),max(PlotY)],[min(PlotX),max(PlotY)],'Color','#808080','Linestyle','--');
-    hold on
-    scatter(PlotX,PlotY,60,[0 0.4470 0.7410],'+','LineWidth',1.5);
-    xlabel('RR_n (ms)');
-    ylabel('RR_{n+1} (ms)');
-    grid on
-end
-
-
-% figure('Name','CARDIAC PULSE IDENTIFICATION');
-% ax1=subplot(length(LocFinder.locs_positive)*2+1,1,1:2);
-% plot(Radar.t_frame,hsig(1:len_sig),locs_hsig,amp_hsig,'rv','LineWidth',1.3);
-% text(locs_hsig+.1,amp_hsig,num2str((1:numel(amp_hsig))'))
-% hold on
-% plot(Radar.t_frame,sig,'-','Color','#D95319','LineWidth',1.3);
-% xlabel('Time (s)')
-% grid on
-% ylabel('Cardiac Amplitude (mm)')
-% legend('Heartbeat detection','Identified pulse','Cardiac signal');
-% 
-% % peaks detection based on ECG signal
-% ecg_lead=circshift(ecg_lead2,-150);
-% ecg_t=(1:length(ecg_lead))*0.002;
-% [amp_ecg,locs_ecg]=findpeaks(ecg_lead,ecg_t,'MinPeakDistance',minpeakdist*T_frame,'MinPeakProminence',100);
-% % plot ECG signal...
-% ax2=subplot(length(LocFinder.locs_positive)*2+1,1,length(LocFinder.locs_positive)*2+1);
-% plot(ecg_t(1:12000),ecg_lead(1:12000),'g','LineWidth',1.3);
-% hold on
-% plot(locs_ecg,amp_ecg,'rv','LineWidth',1.3)
-% text(locs_ecg+.1,amp_ecg,num2str((1:numel(amp_ecg))'))
-% grid on
-% xlabel('Sampling')
-% ylabel('ECG')
