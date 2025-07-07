@@ -19,11 +19,14 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 </details>
 
 ## RSoC for Wireless Sensing
-### mmWave Radar Sensor
+### mmWave Radar Sensor Prototype
 <p>
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/3beb8c87-0072-419f-b07b-6c7b5c18d968" width=300 />
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/ca2eb4d2-b0ea-477c-aa1b-ac01321f8663" width=320 />
 </p>
+
+> [!NOTE]
+> The used non-commercial RADAR has been conceived, designed and built in our laboratory (CommSensLab-UPC) specifically for the intended applications.
 
 | Parameter                                    | Value                                                                   |
 | :----------:                                 | :---------------:                                                       |
@@ -37,9 +40,6 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 
 > [!IMPORTANT]
 > The radar bandwidth can be programmed up to 4 GHz. In our experimental setup, a radar bandwidth of 3 GHz was configured.
-
-> [!NOTE]
-> The used non-commercial RADAR has been conceived, designed and built in our laboratory (CommSensLab-UPC) specifically for the intended applications.
 
 ### Files for hardware...
 **Radar measurement:** `AlazarTech`
