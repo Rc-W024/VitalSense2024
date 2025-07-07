@@ -55,7 +55,7 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 ### 样例数据
 `data`中包含了几组样本生命信号数据，用于算法的测试、熟悉和学习。
 
-数据文件命名规则：“*受试者* + *测量位置* + *生理状态* + *ECG参考信号*（可选）*.mat*”
+数据文件命名规则：“*受试者* + *测量部位* + *生理状态* + *ECG参考信号*（可选）*.mat*”
 
 ## 信号处理算法
 **主文件：** [`main`](https://github.com/Rc-W024/VitalSense2024/blob/main/main.m)
