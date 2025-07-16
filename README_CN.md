@@ -12,7 +12,7 @@
 
 用于智慧医学监测、医疗物联网（IoMT）和生物特征提取的120 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与毫米波感知解决方案。
 
-<details> <summary><b>前序项目介绍短片</b></summary>
+<details> <summary><b>前序合作项目（与<a href="https://www.sjdhospitalbarcelona.org/zh" target="_blank">SJD巴塞罗那儿童医院</a>）介绍短片</b></summary>
   
 https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27b-ba11a036f8c3
 
