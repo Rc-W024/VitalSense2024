@@ -12,7 +12,7 @@ English | [中文](README_CN.md)
 
 Radio remote sensing and millimeter-wave (mmWave) sensing solution based on 120 GHz Frequency-Modulated Continuous Wave (FMCW) Radar System-on-Chip (RSoC) for smart healthcare monitoring, Internet of Medical Things (IoMT), and biometric extraction.
 
-<details> <summary><b>Previous Project Introduction Video</b></summary>
+<details> <summary><b>Previous Collaborative Project (with [Hospital Sant Joan de Déu Barcelona](https://www.sjdhospitalbarcelona.org/)) Introduction Video</b></summary>
   
 https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27b-ba11a036f8c3
 
