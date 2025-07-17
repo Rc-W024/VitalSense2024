@@ -12,6 +12,9 @@
 
 用于智慧医学监测、医疗物联网（IoMT）和生物特征提取的120 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与毫米波感知解决方案。
 
+> [!NOTE]
+> 我们目前正在与巴塞罗那[**Hospital Universitari Germans Trias i Pujol (HUGTiP)**](https://hospitalgermanstrias.cat/web/guest/home) ([**Institut de Recerca Germans Trias i Pujol, IGTP**](https://www.germanstrias.org/en/)) 开展合作研究，针对心脏病科患者进行所开发用于生命感知的毫米波雷达的实验验证。
+
 <details> <summary><b>前序合作项目（与<a href="https://www.sjdhospitalbarcelona.org/zh" target="_blank">SJD巴塞罗那儿童医院</a>）介绍短片</b></summary>
   
 https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27b-ba11a036f8c3
@@ -20,13 +23,12 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 
 ## 基于RSoC的无线感知
 ### 毫米波雷达传感器原型
+所使用的非商业雷达为在我实验室（CommSensLab-UPC）中构思、设计和制造的，专用于有关预期应用。
+
 <p>
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/3beb8c87-0072-419f-b07b-6c7b5c18d968" width=300 />
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/ca2eb4d2-b0ea-477c-aa1b-ac01321f8663" width=320 />
 </p>
-
-> [!NOTE]
-> 所使用的非商业雷达为在我实验室（CommSensLab-UPC）中构思、设计和制造的，专用于有关预期应用。
 
 | 参数                               | 数值                                                                              |
 | :----------:                       | :---------------:                                                                 |
