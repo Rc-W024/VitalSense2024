@@ -12,6 +12,9 @@ English | [中文](README_CN.md)
 
 Radio remote sensing and millimeter-wave (mmWave) sensing solution based on 120 GHz Frequency-Modulated Continuous Wave (FMCW) Radar System-on-Chip (RSoC) for smart healthcare monitoring, Internet of Medical Things (IoMT), and biometric extraction.
 
+> [!NOTE]
+> We are currently collaborating with the [**Hospital Universitari Germans Trias i Pujol (HUGTiP)**](https://hospitalgermanstrias.cat/) ([**Institut de Recerca Germans Trias i Pujol, IGTP**](https://www.germanstrias.org/)) of Barcelona to carry out an experimental validation of the developed mmWave Radar for Vital Sensing on patients of the Cardiology Service.
+
 <details> <summary><b>Previous Collaborative Project (with <a href="https://www.sjdhospitalbarcelona.org/" target="_blank">Hospital Sant Joan de Déu Barcelona</a>) Introduction Video</b></summary>
   
 https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27b-ba11a036f8c3
@@ -20,13 +23,12 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 
 ## RSoC for Wireless Sensing
 ### mmWave Radar Sensor Prototype
+The used non-commercial RADAR has been conceived, designed and built in our laboratory (CommSensLab-UPC) specifically for the intended applications.
+
 <p>
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/3beb8c87-0072-419f-b07b-6c7b5c18d968" width=300 />
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/ca2eb4d2-b0ea-477c-aa1b-ac01321f8663" width=320 />
 </p>
-
-> [!NOTE]
-> The used non-commercial RADAR has been conceived, designed and built in our laboratory (CommSensLab-UPC) specifically for the intended applications.
 
 | Parameter                                    | Value                                                                   |
 | :----------:                                 | :---------------:                                                       |
