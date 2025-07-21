@@ -59,7 +59,7 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 ## 信号处理算法
 **主文件：** [`main`](https://github.com/Rc-W024/VitalSense2024/blob/main/main.m)
 
-> [!IMPORTANT]
+> [!WARNING]
 > *运行前请务必检查参数设置并阅读相关注释！*
 
 ### 算法成就
