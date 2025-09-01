@@ -66,7 +66,7 @@ Data file naming rules: "*SUBJECT* + *MEASUREMENT POSITION* + *STATE* + *with EC
 > *Be sure to check the parameter settings and read the relevant comments before running!*
 
 ### Achievements
-Vital sensing radar with automated intelligent signal processing multiphase algorithm to deliver for each monitored subject three complementary types of information:
+Vital sensing radar with intelligent adaptive multi-phase signal processing chain to deliver for each monitored subject three complementary types of information:
 
 - An adapted filter perfectly matched to the monitored subject radar cardiac pulse waveform, providing the best possible Signal to Noise Ratio and interference rejection.
 
