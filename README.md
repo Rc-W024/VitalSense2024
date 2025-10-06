@@ -130,5 +130,5 @@ Vital sensing radar with intelligent adaptive multi-phase signal processing chai
 🚧 *Under Construction...* 🚧
 
 ### Further project...
-**mmVital: Mission Planning for Radar Radio Autonomous Localization in mmWave Vital Sensing Task**
+**Mission Planning for Radar Radio Autonomous Localization**
 
