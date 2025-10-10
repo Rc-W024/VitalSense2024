@@ -53,6 +53,8 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 
 > [!TIP]
 > 一个包含24名受试者的全新高频毫米波雷达生命信号[数据集（IEEE *DataPort*）]()即将推出。
+>
+> 关联论文：*Coming soon...*
 
 ### 样例数据
 `data`中包含了几组样本生命信号数据，用于算法的测试、熟悉和学习。
