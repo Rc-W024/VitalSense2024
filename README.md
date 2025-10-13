@@ -54,7 +54,7 @@ Vital Signals Database - *acquired by CommSensLab (Dept. of Signal Theory and Co
 > [!TIP]
 > A new high-frequency mmWave radar vital signals [DATASET (IEEE *DataPort*)]() comprising 24 subjects will be published soon.
 > 
-> Associated paper: *Coming soon...*
+> Associated repository: `VS_DATASET` -- *Coming soon...*
 
 ### Sample data
 Several sets of sample vital signal data in the `data` are used for testing, familiarization and studying of the algorithm.
