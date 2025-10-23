@@ -31,10 +31,10 @@ Radar.c_0=3e8;                                    % Lightspeed (m/s)
 Radar.lambda=Radar.c_0/Radar.f_0;                 % Wavelength (m)
 % Measurement
 L_samplesDwell=512;                               % Pause samples between chirps
-T_frame=3e-3;                                     % T*(L+L_samplesDwell); 3ms
+T_frame=3e-3;                                     % T*(L+L_samplesDwell); 3 ms
 
 % CHIRP
-Radar.Tm=0.0015;                                  % Chirp slope time: 1.5ms
+Radar.Tm=0.0015;                                  % Chirp slope time: 1.5 ms
 Radar.deltaf=3e9;                                 % Chirp slope bandwidth: 3 GHz
 %------------------------------------------------Digitizer-Settings-----------------------------------------------------
 Digitizer.decimation=4; % ???? GIVING it to the function??? to configureBoard and 
@@ -178,7 +178,7 @@ end
 tic
 
 % FIR linear-phase filter
-smp_f=1/T_frame; % sampling
+smp_f=1/T_frame; % sampling: in principle the same as the radar config
 cutoff_f=0.3; % cut-off frecuency
 %%% Please adjust the filter order according to the signal conditions, we recommend trying a value similar to the signal sampling freq %%%
 blp_r=fir1(300,cutoff_f/(smp_f/2),'low');
@@ -217,14 +217,15 @@ title('Extracted cardiac signal')
 % ECG signal & extracted cardiac signal
 if twoChannelMode==true
     decimatedECGSignal=ECGSignal(1:Digitizer.long:end);
-    voltageRangeChannelB=10;
+    %voltageRangeChannelB=10;
 
     figure('Name','ECG SIGNAL & CARDIAC SIGNAL');
     yyaxis left
     plot(Radar.t_frame,hsig_lp);
     ylabel('Amplitude (mm)')
     yyaxis right
-    plot(Radar.t_frame,(double(decimatedECGSignal-2^15)/2^16)*voltageRangeChannelB,'g');
+    %plot(Radar.t_frame,(double(decimatedECGSignal-2^15)/2^16)*voltageRangeChannelB,'g');
+    plot(Radar.t_frame,decimatedECGSignal,'g');
     grid on
     xlabel('Time (s)')
     ylabel('ECG')
@@ -301,13 +302,13 @@ fprintf('The estimated HR of the subject is: <strong>%.2f</strong> bpm. (by FFT)
 
 if twoChannelMode==true
     % ECG period
-    minpeakdist_initial=100; % minimum cardiac period: ~ 0.3s
-    [amp_ecg,locs_ecg]=findpeaks((double(decimatedECGSignal-2^15)/2^16)*voltageRangeChannelB,1:length((double(decimatedECGSignal-2^15)/2^16)*voltageRangeChannelB),'MinPeakDistance',minpeakdist_initial,'MinPeakProminence',3e-5);
-    periodPeaksECG=round(mean(diff(locs_ecg(1:10))));
+    minpeakdist_initial=0.3; % minimum cardiac period: ~ 0.3s
+    minpeakpro_ecg=1; %%% Please adjust the prominence according to the ECG signal %%%
+    [amp_ecg,locs_ecg]=findpeaks(decimatedECGSignal,Radar.t_frame,'MinPeakDistance',minpeakdist_initial,'MinPeakProminence',1);
+    bpm_ecg=60/mean(diff(locs_ecg));
     
     % print...
-    fprintf('Period calculated by spectrum: <strong>%d</strong>.\n',T.fil0);
-    fprintf('Period calculated by ECG: <strong>%d</strong>.\n',periodPeaksECG);
+    fprintf('HR of the subject by ECG: <strong>%.4f</strong>.\n',bpm_ecg);
 end
 
 % Locs of the peaks determination for FASE B
@@ -397,7 +398,7 @@ try
     % plot fig...
     if twoChannelMode==true
         figure('Name','CARDIAC PULSE IDENTIFICATION');
-        subplot(length(LocFinder.locs_positive)*2+1,1,1:2)
+        ax1=subplot(length(LocFinder.locs_positive)*2+1,1,1:2)
         plot(Radar.t_frame,hsig(1:len_sig),locs_hsig,amp_hsig,'rv','LineWidth',1.3);
         text(locs_hsig+.1,amp_hsig,num2str((1:numel(amp_hsig))'))
         hold on
@@ -408,14 +409,15 @@ try
         legend('Heartbeat detection','Identified pulse','Cardiac signal');
         
         % peaks detection based on ECG signal
-        [amp_ecg,locs_ecg]=findpeaks((double(decimatedECGSignal-2^15)/2^16)*voltageRangeChannelB,Radar.t_frame,'MinPeakDistance',minpeakdist*T_frame,'MinPeakProminence',2e-05);
         % plot ECG signal...
-        subplot(length(LocFinder.locs_positive)*2+1,1,length(LocFinder.locs_positive)*2+1);
-        plot(Radar.t_frame,(double(decimatedECGSignal-2^15)/2^16)*voltageRangeChannelB,'g',locs_ecg,amp_ecg,'rv','LineWidth',1.3);
+        ax2=subplot(length(LocFinder.locs_positive)*2+1,1,length(LocFinder.locs_positive)*2+1);
+        plot(Radar.t_frame,decimatedECGSignal,'g',locs_ecg,amp_ecg,'rv','LineWidth',1.3);
         text(locs_ecg+.1,amp_ecg,num2str((1:numel(amp_ecg))'))
         grid on
         xlabel('Time (s)')
         ylabel('ECG')
+
+        linkaxes([ax1,ax2],'x')
     else
         figure('Name','CARDIAC PULSE IDENTIFICATION');
         %yyaxis left
@@ -499,4 +501,5 @@ end
 
 % End the timer
 toc
+
 
