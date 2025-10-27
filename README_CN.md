@@ -52,7 +52,7 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 生命信号数据库 - *由CommSensLab（信号理论与通信系）采集和管理* （内部实验数据）
 
 > [!TIP]
-> 一个包含24名受试者的全新高频毫米波雷达生命信号[数据集](https://github.com/Rc-W024/VS_DATASET)即将推出。
+> 一个包含24名受试者的全新高频毫米波雷达生命信号[数据集](https://github.com/Rc-W024/VS_DATASET)现已推出。
 
 ### 样例数据
 `data`中包含了几组样本生命信号数据，用于算法的测试、熟悉和学习。
