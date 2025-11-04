@@ -52,7 +52,7 @@ ATS-SDK is a Windows and Linux compatible software development kit created by *A
 Vital Signals Database - *acquired by CommSensLab (Dept. of Signal Theory and Communications)* (Internal experimental data)
 
 > [!TIP]
-> 📣 A new high-frequency mmWave radar vital signals [DATASET](https://github.com/Rc-W024/VS_DATASET) comprising 24 healthy subjects has been published! 🎉
+> 📣 A new radar vital signals [DATASET](https://github.com/Rc-W024/VS_DATASET) comprising 24 healthy subjects has been published! 🎉
 
 ### Sample data
 Several sets of sample vital signal data in the `data` are used for testing, familiarization and studying of the algorithm.
