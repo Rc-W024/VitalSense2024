@@ -62,7 +62,7 @@ Data file naming rules: "*SUBJECT* + *MEASUREMENT POSITION* + *STATE* + *with EC
 ## Signal Processing Algorithm
 **MAIN FILE:** [`main`](https://github.com/Rc-W024/VitalSense2024/blob/main/main.m)
 
-> [!WARNING]
+> [!IMPORTANT]
 > *Be sure to check the parameter settings and read the relevant comments before running!*
 
 ### Achievements
