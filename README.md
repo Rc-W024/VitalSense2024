@@ -95,7 +95,7 @@ Vital sensing radar with intelligent adaptive multi-phase signal processing chai
 > [!WARNING]
 > Spectrum-based HR estimation in complex signal environments remains a significant open challenge in the field. Please be aware that no single algorithm currently offers universal applicability across all scenarios. The performance of the algorithm heavily relies on the specific conditions during signal collection, especially antenna pointing. We are continuously researching solutions to improve this phase and welcome community feedback for further optimization.
 
-## Phase results
+## Phase Results
 ### Signal separation
 - Extract breathing signal $s_{b}$ with FIR linear-phase filter
 - Heartbeat signal -> $s_{h}=s_{vital}-s_{b}$
