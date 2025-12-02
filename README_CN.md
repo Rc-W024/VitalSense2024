@@ -128,5 +128,5 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 🚧 *施工中……* 🚧
 
 ### 后续项目
-**Mission Planning for Radar Radio Autonomous Localization**
+**A Radar Beam Autonomous Orientation Framework for mmWave Vital Sensing Tasks**
 
