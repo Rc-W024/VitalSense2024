@@ -92,6 +92,9 @@ Vital sensing radar with intelligent adaptive multi-phase signal processing chai
 - Respiratory monitoring
 - Extracted vital feature parameters could be studied for biometric authentication and encryption
 
+> [!WARNING]
+> Spectrum-based HR estimation in complex signal environments remains a significant open challenge in the field. Please be aware that no single algorithm currently offers universal applicability across all scenarios. The performance of the algorithm heavily relies on the specific conditions during signal collection, especially antenna pointing. We are continuously researching solutions to improve this phase and welcome community feedback for further optimization.
+
 ## Phase results
 ### Signal separation
 - Extract breathing signal $s_{b}$ with FIR linear-phase filter
