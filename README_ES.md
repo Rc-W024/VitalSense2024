@@ -22,7 +22,7 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 </details>
 
 ## RSoC para Detección Inalámbrica
-### Prototipo de Sensor de Radar mmWave
+### Prototipo de sensor de radar mmWave
 El radar no comercial utilizado ha sido concebido, diseñado y construido en nuestro laboratorio (CommSensLab-UPC) específicamente para las aplicaciones previstas.
 
 <p>
