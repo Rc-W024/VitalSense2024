@@ -8,7 +8,7 @@
 
 ![VitalSense](https://github.com/user-attachments/assets/e60cada1-b487-44fa-8247-cfc7b7e7df9e)
 
-**Robust Biometric Information Sensing With mmWave Radar System-on-Chip**
+[**Robust Biometric Information Sensing With mmWave Radar System-on-Chip**](https://doi.org/10.1109/TMC.2025.3640267)
 
 Solución de teledetección por radar y detección de mmWave basada en un Sistema en Chip de Radar (RSoC) de Onda Continua Modulada en Frecuencia (FMCW) de 120 GHz para la monitorización sanitaria inteligente, el Internet de las Cosas Médicas (IoMT) y la extracción biométrica.
 
