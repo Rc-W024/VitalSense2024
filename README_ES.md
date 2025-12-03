@@ -108,7 +108,7 @@ Radar de detección de constantes vitales con cadena de procesamiento de señale
 ![RWAMF](https://github.com/Rc-W024/VitalSense2024/assets/97808991/770a43d4-da7e-4ea4-8777-4c2f2db7d3a0)
 
 ### Reconocimiento de pulso cardíaco
-- Main function: [*findpeaks*](https://www.mathworks.com/help/signal/ref/findpeaks.html) in MATLAB
+- Función principal: [*findpeaks*](https://es.mathworks.com/help/signal/ref/findpeaks.html) en MATLAB
 
 ![recognition](https://github.com/Rc-W024/VitalSense2024/assets/97808991/c6ea274f-4217-4cae-b98d-9dc7fd058da4)
 
