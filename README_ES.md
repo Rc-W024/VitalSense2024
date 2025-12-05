@@ -129,7 +129,7 @@ Radar de detección de constantes vitales con cadena de procesamiento de señale
 ## FYI
 ### Citación
 ```bibtex
-@ARTICLE{11277394,
+@ARTICLE{wu2025vs,
   author={Wu, Ruochen and Miro, Laura and Aguasca, Albert and Najar, Montse and Broquetas, Antoni},
   journal={IEEE Transactions on Mobile Computing}, 
   title={Robust Biometric Information Sensing With Mmwave Radar System-on-Chip}, 
