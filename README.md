@@ -8,7 +8,7 @@ English | [中文](README_CN.md) | [Español](README_ES.md)
 
 ![VitalSense](https://github.com/user-attachments/assets/e60cada1-b487-44fa-8247-cfc7b7e7df9e)
 
-[**Robust Biometric Information Sensing With mmWave Radar System-on-Chip**](https://doi.org/10.1109/TMC.2025.3640267)
+[**Robust Biometric Information Sensing With mmWave Radar System-on-Chip**](https://doi.org/10.1109/TMC.2025.3640267) (Early Access)
 
 Radio remote sensing and millimeter-wave (mmWave) sensing solution based on 120 GHz Frequency-Modulated Continuous Wave (FMCW) Radar System-on-Chip (RSoC) for smart healthcare monitoring, Internet of Medical Things (IoMT), and biometric extraction.
 
@@ -129,8 +129,15 @@ Vital sensing radar with intelligent adaptive multi-phase signal processing chai
 
 ## FYI
 ### Citation
-🚧 *Under Construction...* 🚧
-
-### Further project...
-**A Radar Beam Autonomous Orientation Framework for mmWave Vital Sensing Tasks**
-
+```bibtex
+@ARTICLE{11277394,
+  author={Wu, Ruochen and Miro, Laura and Aguasca, Albert and Najar, Montse and Broquetas, Antoni},
+  journal={IEEE Transactions on Mobile Computing}, 
+  title={Robust Biometric Information Sensing With Mmwave Radar System-on-Chip}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-15},
+  doi={10.1109/TMC.2025.3640267}
+}
+```
