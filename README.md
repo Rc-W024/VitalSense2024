@@ -130,7 +130,7 @@ Vital sensing radar with intelligent adaptive multi-phase signal processing chai
 ## FYI
 ### Citation
 ```bibtex
-@ARTICLE{11277394,
+@ARTICLE{wu2025vs,
   author={Wu, Ruochen and Miro, Laura and Aguasca, Albert and Najar, Montse and Broquetas, Antoni},
   journal={IEEE Transactions on Mobile Computing}, 
   title={Robust Biometric Information Sensing With Mmwave Radar System-on-Chip}, 
