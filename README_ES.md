@@ -128,8 +128,16 @@ Radar de detección de constantes vitales con cadena de procesamiento de señale
 
 ## FYI
 ### Citación
-🚧 *Under Construction...* 🚧
-
-### Proyecto subsiguiente...
-**A Radar Beam Autonomous Orientation Framework for mmWave Vital Sensing Tasks**
+```bibtex
+@ARTICLE{11277394,
+  author={Wu, Ruochen and Miro, Laura and Aguasca, Albert and Najar, Montse and Broquetas, Antoni},
+  journal={IEEE Transactions on Mobile Computing}, 
+  title={Robust Biometric Information Sensing With Mmwave Radar System-on-Chip}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-15},
+  doi={10.1109/TMC.2025.3640267}
+}
+```
 
