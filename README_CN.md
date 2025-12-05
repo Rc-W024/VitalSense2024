@@ -128,8 +128,16 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 
 ## 参考信息
 ### 引用
-🚧 *施工中……* 🚧
-
-### 后续项目
-**A Radar Beam Autonomous Orientation Framework for mmWave Vital Sensing Tasks**
+```bibtex
+@ARTICLE{11277394,
+  author={Wu, Ruochen and Miro, Laura and Aguasca, Albert and Najar, Montse and Broquetas, Antoni},
+  journal={IEEE Transactions on Mobile Computing}, 
+  title={Robust Biometric Information Sensing With Mmwave Radar System-on-Chip}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-15},
+  doi={10.1109/TMC.2025.3640267}
+}
+```
 
