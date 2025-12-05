@@ -129,7 +129,7 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 ## 参考信息
 ### 引用
 ```bibtex
-@ARTICLE{11277394,
+@ARTICLE{wu2025vs,
   author={Wu, Ruochen and Miro, Laura and Aguasca, Albert and Najar, Montse and Broquetas, Antoni},
   journal={IEEE Transactions on Mobile Computing}, 
   title={Robust Biometric Information Sensing With Mmwave Radar System-on-Chip}, 
