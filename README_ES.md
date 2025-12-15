@@ -1,14 +1,39 @@
-# VitalSense - Detección Biométrica Basada en Radios de Onda Milimétrica (mmWave)
-[English](README.md) | [中文](README_CN.md) | Español
+<div align="center">
+<img src="https://github.com/user-attachments/assets/e60cada1-b487-44fa-8247-cfc7b7e7df9e" alt="VitalSense2024"/>
+
+# VitalSense - Detección Biométrica Basada en Radios de Onda Milimétrica
+[**Robust Biometric Information Sensing With mmWave Radar System-on-Chip**](https://doi.org/10.1109/TMC.2025.3640267)
 
 ![](https://skillicons.dev/icons?i=matlab)
 
-![](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=flat&color=BC4E99)
-![](https://img.shields.io/github/license/Rc-W024/VitalSense2024.svg)
+![](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=flat-square&color=BC4E99)
+![](https://img.shields.io/github/license/Rc-W024/VitalSense2024?style=flat-square)
+![](https://img.shields.io/badge/GitHub-Rc--W024%2FVitalSense2024-24292F?logo=github&style=flat-square)
+![](https://img.shields.io/github/stars/Rc-W024/VitalSense2024?logo=github&label=Stars&color=F2C94C&style=flat-square)
 
-![VitalSense](https://github.com/user-attachments/assets/e60cada1-b487-44fa-8247-cfc7b7e7df9e)
+[**Ruochen Wu**](https://futur.upc.edu/32247005) <sup>✉</sup>
+<img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="Logo" height="15"/>
+<img src="https://github.com/user-attachments/assets/42faadef-7999-4130-a4fc-84a467b37e95" alt="Logo" height="15"/>, &nbsp; &nbsp;
+[Laura Miro](https://futur.upc.edu/37088913)
+<img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="Logo" height="15"/>,
+<img src="https://github.com/user-attachments/assets/f4d75b89-1ad1-4081-a95a-a768955ab762" alt="Logo" height="15"/>
+<img src="https://github.com/user-attachments/assets/77f263af-ecbc-4806-a5b4-7b3c8a94fd11" alt="Logo" height="15"/>, &nbsp; &nbsp;
+[Albert Aguasca](https://futur.upc.edu/179522)
+<img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="Logo" height="15"/>
+<img src="https://github.com/user-attachments/assets/42faadef-7999-4130-a4fc-84a467b37e95" alt="Logo" height="15"/>
 
-[**Robust Biometric Information Sensing With mmWave Radar System-on-Chip**](https://doi.org/10.1109/TMC.2025.3640267)
+[Montse Najar](https://futur.upc.edu/180118)
+<img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="Logo" height="15"/>, &nbsp; &nbsp;
+[Antoni Broquetas](https://futur.upc.edu/178234) <sup>✉</sup>
+<img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="Logo" height="15"/>
+<img src="https://github.com/user-attachments/assets/42faadef-7999-4130-a4fc-84a467b37e95" alt="Logo" height="15"/>
+
+<img width="400" alt="MICIU" src="https://github.com/user-attachments/assets/4d84b669-d7b8-443b-8c18-0168e14cce47"/>
+
+[English](README.md) | [中文](README_CN.md) | Español
+</div>
+
+---
 
 Solución de teledetección por radar y detección de mmWave basada en un Sistema en Chip de Radar (RSoC) de Onda Continua Modulada en Frecuencia (FMCW) de 120 GHz para la monitorización sanitaria inteligente, el Internet de las Cosas Médicas (IoMT) y la extracción biométrica.
 
