@@ -13,17 +13,17 @@
 
 [**Ruochen Wu**](https://futur.upc.edu/32247005) <sup>✉</sup>
 <img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="Logo" height="15"/>
-<img src="https://github.com/user-attachments/assets/42faadef-7999-4130-a4fc-84a467b37e95" alt="Logo" height="15"/>, &nbsp; &nbsp;
+<img src="https://github.com/user-attachments/assets/42faadef-7999-4130-a4fc-84a467b37e95" alt="Logo" height="15"/> &nbsp; &nbsp;
 [Laura Miro](https://futur.upc.edu/37088913)
 <img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="Logo" height="15"/>,
 <img src="https://github.com/user-attachments/assets/f4d75b89-1ad1-4081-a95a-a768955ab762" alt="Logo" height="15"/>
-<img src="https://github.com/user-attachments/assets/77f263af-ecbc-4806-a5b4-7b3c8a94fd11" alt="Logo" height="15"/>, &nbsp; &nbsp;
+<img src="https://github.com/user-attachments/assets/77f263af-ecbc-4806-a5b4-7b3c8a94fd11" alt="Logo" height="15"/> &nbsp; &nbsp;
 [Albert Aguasca](https://futur.upc.edu/179522)
 <img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="Logo" height="15"/>
 <img src="https://github.com/user-attachments/assets/42faadef-7999-4130-a4fc-84a467b37e95" alt="Logo" height="15"/>
 
 [Montse Najar](https://futur.upc.edu/180118)
-<img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="Logo" height="15"/>, &nbsp; &nbsp;
+<img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="Logo" height="15"/> &nbsp; &nbsp;
 [Antoni Broquetas](https://futur.upc.edu/178234) <sup>✉</sup>
 <img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="Logo" height="15"/>
 <img src="https://github.com/user-attachments/assets/42faadef-7999-4130-a4fc-84a467b37e95" alt="Logo" height="15"/>
