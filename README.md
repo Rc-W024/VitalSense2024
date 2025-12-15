@@ -101,6 +101,8 @@ Vital sensing radar with intelligent adaptive multi-phase signal processing chai
 
 - In the future, the acquired biometric information can be integrated with cryptographic technologies to generate secure keys for encrypted communications, thereby ensuring the safety and privacy of the data exchange process between the communicating parties. Moreover, it is feasible to study and develop radar-based identity authentication system suitable for security-sensitive scenarios such as surveillance of confidential areas.
 
+---
+
 ### Workflow
 **1. Signal Preprocessing**
 - Vital signal $s_{vital}$ obtaintion by phase unwrapping
@@ -127,25 +129,32 @@ Vital sensing radar with intelligent adaptive multi-phase signal processing chai
 
 ![separation](https://github.com/Rc-W024/VitalSense2024/assets/97808991/99f80104-2506-492c-bf97-6378139acfd9)
 
+---
+
 ### RWAMF design
 - Calculate the average waveform based on the extracted cardiac signal as the tmplate signal of the filter
 
 ![RWAMF](https://github.com/Rc-W024/VitalSense2024/assets/97808991/770a43d4-da7e-4ea4-8777-4c2f2db7d3a0)
+
+---
 
 ### Cardiac pulse recognition
 - Main function: [*findpeaks*](https://www.mathworks.com/help/signal/ref/findpeaks.html) in MATLAB
 
 ![recognition](https://github.com/Rc-W024/VitalSense2024/assets/97808991/c6ea274f-4217-4cae-b98d-9dc7fd058da4)
 
+---
+
 ### Blood pressure waveform extraction
 ![BPW](https://github.com/user-attachments/assets/6348f9dc-ab2a-432a-b5db-986f3ebb9278)
 
 ## Overall Result
-
 ### Case 1: with oximeter
 ![resRW](https://github.com/Rc-W024/VitalSense2024/assets/97808991/a2a44f71-5296-4cbf-9087-9ff5fb01cbea)
 
 ![resText1](https://github.com/Rc-W024/VitalSense2024/assets/97808991/f34fafae-a686-434a-b56d-eab5f2407198)
+
+---
 
 ### Case 2: with ECG signal
 ![resECG](https://github.com/Rc-W024/VitalSense2024/assets/97808991/be2ec882-2bf9-4d91-b165-e9b1a48230a1)
@@ -166,3 +175,15 @@ Vital sensing radar with intelligent adaptive multi-phase signal processing chai
   doi={10.1109/TMC.2025.3640267}
 }
 ```
+
+---
+
+### Contribution
+<div align="center">
+
+[![](https://img.shields.io/badge/Issues-Submit_Bug-red?style=for-the-badge&logo=github)](https://github.com/Rc-W024/VitalSense2024/issues)
+
+[![](https://img.shields.io/github/stars/Rc-W024/VitalSense2024?style=social)](https://github.com/Rc-W024/VitalSense2024/stargazers)
+[![](https://img.shields.io/github/forks/Rc-W024/VitalSense2024?style=social)](https://github.com/Rc-W024/VitalSense2024/network/members)
+
+</div>
