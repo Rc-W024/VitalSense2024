@@ -68,6 +68,8 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 > [!IMPORTANT]
 > 雷达带宽可编程扩展至4 GHz。在我们的实验中，雷达带宽配置为3 GHz。
 
+---
+
 ### 硬件文件...
 **雷达测量任务：** `AlazarTech`
 
@@ -101,6 +103,8 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 
 - 未来，获取的生物特征信息可与密码技术相结合，生成加密通信的安全密钥，从而保证通信双方数据交换过程的安全性和隐私性。此外，研究和开发适用于涉密区域监视等安全敏感场景的雷达身份认证系统具有较高可行性。
 
+---
+
 ### 算法流程
 **1、信号预处理**
 - 通过相位展开获取生命信号$s_{vital}$
@@ -127,15 +131,21 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 
 ![separation](https://github.com/Rc-W024/VitalSense2024/assets/97808991/99f80104-2506-492c-bf97-6378139acfd9)
 
+---
+
 ### RWAMF设计
 - 根据提取的心脏信号计算平均波形作为滤波器的模板信号
 
 ![RWAMF](https://github.com/Rc-W024/VitalSense2024/assets/97808991/770a43d4-da7e-4ea4-8777-4c2f2db7d3a0)
 
+---
+
 ### 心动脉冲识别
 - 主要函数：MATLAB中所提供的[*findpeaks*](https://www.mathworks.com/help/signal/ref/findpeaks.html)
 
 ![recognition](https://github.com/Rc-W024/VitalSense2024/assets/97808991/c6ea274f-4217-4cae-b98d-9dc7fd058da4)
+
+---
 
 ### 血压波形提取
 ![BPW](https://github.com/user-attachments/assets/6348f9dc-ab2a-432a-b5db-986f3ebb9278)
@@ -145,6 +155,8 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 ![resRW](https://github.com/Rc-W024/VitalSense2024/assets/97808991/a2a44f71-5296-4cbf-9087-9ff5fb01cbea)
 
 ![resText1](https://github.com/Rc-W024/VitalSense2024/assets/97808991/f34fafae-a686-434a-b56d-eab5f2407198)
+
+---
 
 ### 案例2：ECG信号
 ![resECG](https://github.com/Rc-W024/VitalSense2024/assets/97808991/be2ec882-2bf9-4d91-b165-e9b1a48230a1)
@@ -166,3 +178,14 @@ ATS-SDK是*AlazarTech*创建的兼容Windows和Linux系统的软件开发套件�
 }
 ```
 
+---
+
+### 贡献
+<div align="center">
+
+[![](https://img.shields.io/badge/Issues-报告_Bug-red?style=for-the-badge&logo=github)](https://github.com/Rc-W024/VitalSense2024/issues)
+
+[![](https://img.shields.io/github/stars/Rc-W024/VitalSense2024?style=social)](https://github.com/Rc-W024/VitalSense2024/stargazers)
+[![](https://img.shields.io/github/forks/Rc-W024/VitalSense2024?style=social)](https://github.com/Rc-W024/VitalSense2024/network/members)
+
+</div>
