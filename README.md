@@ -181,7 +181,7 @@ Vital sensing radar with intelligent adaptive multi-phase signal processing chai
 ### Contribution
 <div align="center">
 
-[![](https://img.shields.io/badge/Issues-Submit_Bug-red?style=for-the-badge&logo=github)](https://github.com/Rc-W024/VitalSense2024/issues)
+[![](https://img.shields.io/badge/Issues-Report_Bug-red?style=for-the-badge&logo=github)](https://github.com/Rc-W024/VitalSense2024/issues)
 
 [![](https://img.shields.io/github/stars/Rc-W024/VitalSense2024?style=social)](https://github.com/Rc-W024/VitalSense2024/stargazers)
 [![](https://img.shields.io/github/forks/Rc-W024/VitalSense2024?style=social)](https://github.com/Rc-W024/VitalSense2024/network/members)
