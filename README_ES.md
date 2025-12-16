@@ -181,6 +181,8 @@ Radar de detección de constantes vitales con cadena de procesamiento de señale
 ### Contribución
 <div align="center">
 
+⭐️ **¡Gracias por su interés!** ⭐️
+
 [![](https://img.shields.io/badge/Issues-Informar_Bug-red?style=for-the-badge&logo=github)](https://github.com/Rc-W024/VitalSense2024/issues)
 
 [![](https://img.shields.io/github/stars/Rc-W024/VitalSense2024?style=social)](https://github.com/Rc-W024/VitalSense2024/stargazers)
