@@ -101,6 +101,8 @@ Radar de detección de constantes vitales con cadena de procesamiento de señale
 
 - En el futuro, la información biométrica adquirida podrá integrarse con tecnologías criptográficas para generar claves seguras destinadas a comunicaciones cifradas, asegurando así la seguridad y la privacidad del proceso de intercambio de datos entre las partes comunicantes. Además, es viable estudiar y desarrollar sistemas de autenticación de identidad basados en radar que sean adecuados para escenarios sensibles a la seguridad, como la vigilancia de áreas de acceso restringido.
 
+---
+
 ### Flujo de trabajo
 **1. Preprocesamiento de la Señal**
 - Obtención de la señal vital $s_{vital}$ mediante desenvolvimiento de fase
@@ -127,15 +129,21 @@ Radar de detección de constantes vitales con cadena de procesamiento de señale
 
 ![separation](https://github.com/Rc-W024/VitalSense2024/assets/97808991/99f80104-2506-492c-bf97-6378139acfd9)
 
+---
+
 ### Diseño de RWAMF
 - Calcular la forma de onda promedio basada en la señal cardíaca extraída para usarla como la señal de plantilla del filtro
 
 ![RWAMF](https://github.com/Rc-W024/VitalSense2024/assets/97808991/770a43d4-da7e-4ea4-8777-4c2f2db7d3a0)
 
+---
+
 ### Reconocimiento de pulso cardíaco
 - Función principal: [*findpeaks*](https://es.mathworks.com/help/signal/ref/findpeaks.html) en MATLAB
 
 ![recognition](https://github.com/Rc-W024/VitalSense2024/assets/97808991/c6ea274f-4217-4cae-b98d-9dc7fd058da4)
+
+---
 
 ### Extracción de la forma de onda de la presión arterial
 ![BPW](https://github.com/user-attachments/assets/6348f9dc-ab2a-432a-b5db-986f3ebb9278)
@@ -145,6 +153,8 @@ Radar de detección de constantes vitales con cadena de procesamiento de señale
 ![resRW](https://github.com/Rc-W024/VitalSense2024/assets/97808991/a2a44f71-5296-4cbf-9087-9ff5fb01cbea)
 
 ![resText1](https://github.com/Rc-W024/VitalSense2024/assets/97808991/f34fafae-a686-434a-b56d-eab5f2407198)
+
+---
 
 ### Caso 2: con señales de ECG
 ![resECG](https://github.com/Rc-W024/VitalSense2024/assets/97808991/be2ec882-2bf9-4d91-b165-e9b1a48230a1)
@@ -166,3 +176,14 @@ Radar de detección de constantes vitales con cadena de procesamiento de señale
 }
 ```
 
+---
+
+### Contribución
+<div align="center">
+
+[![](https://img.shields.io/badge/Issues-Informar_Bug-red?style=for-the-badge&logo=github)](https://github.com/Rc-W024/VitalSense2024/issues)
+
+[![](https://img.shields.io/github/stars/Rc-W024/VitalSense2024?style=social)](https://github.com/Rc-W024/VitalSense2024/stargazers)
+[![](https://img.shields.io/github/forks/Rc-W024/VitalSense2024?style=social)](https://github.com/Rc-W024/VitalSense2024/network/members)
+
+</div>
