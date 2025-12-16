@@ -68,8 +68,6 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 > [!IMPORTANT]
 > 雷达带宽可编程扩展至4 GHz。在我们的实验中，雷达带宽配置为3 GHz。
 
----
-
 ### 硬件文件...
 **雷达测量任务：** `AlazarTech`
 
