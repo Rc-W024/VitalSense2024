@@ -138,15 +138,15 @@ Vital sensing radar with intelligent adaptive multi-phase signal processing chai
 
 ---
 
-### Cardiac pulse recognition
+### Cardiac pulse identification
 - Main function: [*findpeaks*](https://www.mathworks.com/help/signal/ref/findpeaks.html) in MATLAB
 
 ![recognition](https://github.com/Rc-W024/VitalSense2024/assets/97808991/c6ea274f-4217-4cae-b98d-9dc7fd058da4)
 
 ---
 
-### Blood pressure waveform extraction
-![BPW](https://github.com/user-attachments/assets/6348f9dc-ab2a-432a-b5db-986f3ebb9278)
+### Blood pressure waveform reproduction
+![BPW](https://github.com/user-attachments/assets/33a864c5-07d2-4cc0-b2d7-383cf9f3cea6)
 
 ## Overall Result
 ### Case 1: with oximeter
