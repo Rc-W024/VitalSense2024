@@ -145,8 +145,8 @@ Radar de detección de constantes vitales con cadena de procesamiento de señale
 
 ---
 
-### Extracción de la forma de onda de la presión arterial
-![BPW](https://github.com/user-attachments/assets/6348f9dc-ab2a-432a-b5db-986f3ebb9278)
+### Reproducción de la forma de onda de la presión arterial
+![BPW](https://github.com/user-attachments/assets/33a864c5-07d2-4cc0-b2d7-383cf9f3cea6)
 
 ## Resultado General
 ### Caso 1: con oxímetro
