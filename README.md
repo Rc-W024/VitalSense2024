@@ -2,7 +2,7 @@
 <img src="https://github.com/user-attachments/assets/e60cada1-b487-44fa-8247-cfc7b7e7df9e" alt="VitalSense2024"/>
 
 # VitalSense - mmWave Radios-Based Biometric Sensing
-[**Robust Biometric Information Sensing With mmWave Radar System-on-Chip**](https://doi.org/10.1109/TMC.2025.3640267)
+[**Robust Biometric Information Sensing With mmWave Radar System-on-Chip**](https://doi.org/10.1109/TMC.2025.3640267) *(Awaiting proof version)*
 
 ![](https://skillicons.dev/icons?i=matlab)
 
