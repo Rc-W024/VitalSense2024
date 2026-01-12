@@ -3,6 +3,7 @@
 
 # VitalSense - Detección Biométrica Basada en Radios de Onda Milimétrica
 [**Robust Biometric Information Sensing With mmWave Radar System-on-Chip**](https://doi.org/10.1109/TMC.2025.3640267) *(Awaiting proof version)*
+
 ![](https://skillicons.dev/icons?i=matlab)
 
 ![](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=flat-square&color=BC4E99)
