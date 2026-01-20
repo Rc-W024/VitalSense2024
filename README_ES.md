@@ -2,9 +2,10 @@
 <img src="https://github.com/user-attachments/assets/e60cada1-b487-44fa-8247-cfc7b7e7df9e" alt="VitalSense2024"/>
 
 # VitalSense - Detección Biométrica Basada en Radios de Onda Milimétrica
-[**Robust Biometric Information Sensing With mmWave Radar System-on-Chip**](https://doi.org/10.1109/TMC.2025.3640267) *(Awaiting proof version)*
+[**Robust Biometric Information Sensing With mmWave Radar System-on-Chip**](https://doi.org/10.1109/TMC.2025.3640267)
 
-![](https://skillicons.dev/icons?i=matlab)
+![](https://skillicons.dev/icons?i=matlab) &nbsp; &nbsp; &nbsp;
+[![](https://github.com/user-attachments/assets/6698ee9e-baaf-4a71-a6d4-0b8a85f8f42c)](https://hdl.handle.net/2117/450720)
 
 ![](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=flat-square&color=BC4E99)
 ![](https://img.shields.io/github/license/Rc-W024/VitalSense2024?style=flat-square)
