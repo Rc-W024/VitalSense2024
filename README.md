@@ -1,4 +1,4 @@
-![igtp-logo-cap-ca](https://github.com/user-attachments/assets/4e575ba0-fe79-42c2-85ac-47d3ce6f56dc)<div align="center">
+<div align="center">
 <img src="https://github.com/user-attachments/assets/e60cada1-b487-44fa-8247-cfc7b7e7df9e" alt="VitalSense2024"/>
 
 # VitalSense - mmWave Radios-Based Biometric Sensing
@@ -18,7 +18,7 @@
 [Laura Miro](https://futur.upc.edu/37088913)
 <img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="UPC" height="15"/>,
 <img src="https://github.com/user-attachments/assets/f4d75b89-1ad1-4081-a95a-a768955ab762" alt="HUGTiP" height="15"/>
-<img src="https://github.com/user-attachments/assets/e3f310ad-796d-4a41-9522-3d7b629cc888" alt="IGTP" height="15"/> &nbsp; &nbsp;
+<img src="https://www.germanstrias.org/media/img/igtp-logo-cap-es.svg" alt="IGTP" height="15"/> &nbsp; &nbsp;
 [Albert Aguasca](https://futur.upc.edu/179522)
 <img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="UPC" height="15"/>
 <img src="https://github.com/user-attachments/assets/42faadef-7999-4130-a4fc-84a467b37e95" alt="CommSensLab" height="15"/>
