@@ -101,7 +101,7 @@ Radar de detección de constantes vitales con cadena de procesamiento de señale
 
 - La detección robusta y la alineación temporal precisa de los pulsos cardíacos permiten medir con exactitud la frecuencia cardíaca y detectar anomalías, lo que se traduce en parámetros biométricos más precisos.
 
-- En el futuro, la información biométrica adquirida podrá integrarse con tecnologías criptográficas para generar claves seguras destinadas a comunicaciones cifradas, asegurando así la seguridad y la privacidad del proceso de intercambio de datos entre las partes comunicantes. Además, es viable estudiar y desarrollar sistemas de autenticación de identidad basados en radar que sean adecuados para escenarios sensibles a la seguridad, como la vigilancia de áreas de acceso restringido.
+- La novedosa técnica de "caja blanca" desarrollada reemplaza a los modelos de caja negra de IA que requieren grandes cantidades de datos, logrando así una detección inalámbrica que preserva la privacidad. Este avance permite una obtención biométrica segura y robusta directamente en el chip, estableciendo las bases para la próxima generación de computación de borde confidencial en el Internet de las Cosas Médicas.
 
 ---
 
