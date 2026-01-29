@@ -101,7 +101,7 @@ Vital sensing radar with intelligent adaptive multi-phase signal processing chai
 
 - The robust detection and precise temporal alignment of the cardiac pulses allowing to accurately measure heart-rate and to detect anomalies, resulting in more precise biometric parameters.
 
-- In the future, the acquired biometric information can be integrated with cryptographic technologies to generate secure keys for encrypted communications, thereby ensuring the safety and privacy of the data exchange process between the communicating parties. Moreover, it is feasible to study and develop radar-based identity authentication system suitable for security-sensitive scenarios such as surveillance of confidential areas.
+- The developed novel "white-box" technique replaces data-hungry AI black-box models to achieve the privacy-preserving wireless sensing. This breakthrough enables secure and robust biometric sensing directly on-chip, establishing a foundation for next-generation confidential edge computing in IoMT.
 
 ---
 
