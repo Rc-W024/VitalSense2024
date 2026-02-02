@@ -60,7 +60,7 @@ El radar no comercial utilizado ha sido concebido, diseñado y construido en nue
 | Parámetro                                           | Valor                                                                |
 | :----------:                                        | :---------------:                                                    |
 | Frecuencia Central ($f_{0}$)                        | 122.5 GHz                                                            |
-| Ancho de Banda de Radar ($B$)                       | 1 GHz (en las [bandas ISM](https://es.wikipedia.org/wiki/Banda_ISM)) |
+| Ancho de Banda Nominal de Radar ($B$)               | 1 GHz (en las [bandas ISM](https://es.wikipedia.org/wiki/Banda_ISM)) |
 | Ancho de Haz de la Antena ($\theta_{\text{3dB}}$)   | $2^{\circ}$                                                          |
 | Resolución de Alcance de Radar ($\Delta r$)         | $\frac{c}{2B}=$ 150 mm                                               |
 | Longitud de Onda ($\lambda$)                        | $\frac{c}{f_{0}}=$ 2.449 mm                                          |
