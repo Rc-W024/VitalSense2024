@@ -60,7 +60,7 @@ The used non-commercial RADAR has been conceived, designed and built in our labo
 | Parameter                                    | Value                                                                   |
 | :----------:                                 | :---------------:                                                       |
 | Center Frequency ($f_{0}$)                   | 122.5 GHz                                                               |
-| Radar Bandwidth ($B$)                        | 1 GHz (in the [ISM band](https://en.wikipedia.org/wiki/ISM_radio_band)) |
+| Radar Nominal Bandwidth ($B$)                | 1 GHz (in the [ISM band](https://en.wikipedia.org/wiki/ISM_radio_band)) |
 | Antenna Beamwidth ($\theta_{\text{3dB}}$)    | $2^{\circ}$                                                             |
 | Radar Range Resolution ($\Delta r$)          | $\frac{c}{2B}=$ 150 mm                                                  |
 | Wavelength ($\lambda$)                       | $\frac{c}{f_{0}}=$ 2.449 mm                                             |
