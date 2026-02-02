@@ -60,7 +60,7 @@ https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27
 | 参数                               | 数值                                                                              |
 | :----------:                       | :---------------:                                                                 |
 | 中心频率 $f_{0}$                   | 122.5 GHz                                                                         |
-| 雷达带宽 $B$                       | 1 GHz（在[ISM频段](https://baike.baidu.com/item/ISM%E9%A2%91%E6%AE%B5/2114556)内）|
+| 雷达标称带宽 $B$                   | 1 GHz（在[ISM频段](https://baike.baidu.com/item/ISM%E9%A2%91%E6%AE%B5/2114556)内）|
 | 天线波束宽度 $\theta_{\text{3dB}}$ | $2^{\circ}$                                                                       |
 | 雷达距离分辨率 $\Delta r$          | $\frac{c}{2B}=$ 150 mm                                                            |
 | 波长 $\lambda$                     | $\frac{c}{f_{0}}=$ 2.449 mm                                                       |
