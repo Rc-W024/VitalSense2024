@@ -12,7 +12,7 @@
 ![](https://img.shields.io/badge/GitHub-Rc--W024%2FVitalSense2024-24292F?logo=github&style=flat-square)
 ![](https://img.shields.io/github/stars/Rc-W024/VitalSense2024?logo=github&label=Stars&color=F2C94C&style=flat-square)
 
-[**Ruochen Wu**](https://futur.upc.edu/32247005) <sup>✉</sup>
+[**Ruochen Wu (吴若晨)**](https://futur.upc.edu/32247005) <sup>✉</sup>
 <img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="UPC" height="15"/>
 <img src="https://github.com/user-attachments/assets/42faadef-7999-4130-a4fc-84a467b37e95" alt="CommSensLab" height="15"/> &nbsp; &nbsp;
 [Laura Miro](https://futur.upc.edu/37088913)
