@@ -33,9 +33,11 @@
 <img width="400" alt="MICIU" src="https://github.com/user-attachments/assets/4d84b669-d7b8-443b-8c18-0168e14cce47"/>
 
 [English](README.md) | [中文](README_CN.md) | Español
-</div>
 
 ---
+
+![vitalsense2024](https://github.com/user-attachments/assets/e6f1ffa0-6ef5-48bf-93f2-69c65f6b2afc)
+</div>
 
 Solución de teledetección por radar y detección de mmWave basada en un Sistema en Chip de Radar (RSoC) de Onda Continua Modulada en Frecuencia (FMCW) de 120 GHz para la monitorización sanitaria inteligente, el Internet de las Cosas Médicas (IoMT) y la extracción biométrica.
 
@@ -101,7 +103,7 @@ Radar de detección de constantes vitales con cadena de procesamiento de señale
 
 - La detección robusta y la alineación temporal precisa de los pulsos cardíacos permiten medir con exactitud la frecuencia cardíaca y detectar anomalías, lo que se traduce en parámetros biométricos más precisos.
 
-- La novedosa técnica de "caja blanca" desarrollada reemplaza a los modelos de caja negra de IA que requieren grandes cantidades de datos, logrando así una detección inalámbrica que preserva la privacidad. Este avance permite una obtención biométrica segura y robusta directamente en el chip, estableciendo las bases para la próxima generación de computación de borde confidencial en el Internet de las Cosas Médicas.
+- La novedosa técnica de 'caja blanca' desarrollada sustituye a los modelos de caja negra, IA, ávidos de datos para lograr una detección inalámbrica que preserve la privacidad. Este avance permite la identificación segura y robusta de información biométrica en el borde, estableciendo las bases para la seguridad endógena y la computación confidencial de próxima generación en el IoMT.
 
 ---
 
