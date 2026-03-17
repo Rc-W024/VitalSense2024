@@ -34,9 +34,11 @@
 <img width="400" alt="MICIU" src="https://github.com/user-attachments/assets/4d84b669-d7b8-443b-8c18-0168e14cce47"/>
 
 English | [中文](README_CN.md) | [Español](README_ES.md)
-</div>
 
 ---
+
+![vitalsense2024](https://github.com/user-attachments/assets/e6f1ffa0-6ef5-48bf-93f2-69c65f6b2afc)
+</div>
 
 Radio remote sensing and millimeter-wave (mmWave) sensing solution based on 120 GHz Frequency-Modulated Continuous Wave (FMCW) Radar System-on-Chip (RSoC) for smart healthcare monitoring, Internet of Medical Things (IoMT), and biometric extraction.
 
