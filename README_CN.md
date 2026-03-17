@@ -33,9 +33,11 @@
 <img width="400" alt="MICIU" src="https://github.com/user-attachments/assets/4d84b669-d7b8-443b-8c18-0168e14cce47"/>
 
 [English](README.md) | 中文 | [Español](README_ES.md)
-</div>
 
 ---
+
+![vitalsense2024](https://github.com/user-attachments/assets/e6f1ffa0-6ef5-48bf-93f2-69c65f6b2afc)
+</div>
 
 用于智慧医学监测、医疗物联网（IoMT）和生物特征提取的120 GHz调频连续波（FMCW）片上雷达（RSoC）无线电遥感与毫米波感知解决方案。
 
