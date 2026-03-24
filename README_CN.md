@@ -1,7 +1,7 @@
 <div align="center">
 <img src="https://github.com/user-attachments/assets/e60cada1-b487-44fa-8247-cfc7b7e7df9e" alt="VitalSense2024"/>
 
-# VitalSense - 毫米波无线电生物特征感知
+# VitalSense - 基于毫米波无线电的可信生物特征情报效能验证
 [**Robust Biometric Information Sensing With mmWave Radar System-on-Chip**](https://doi.org/10.1109/TMC.2025.3640267)
 
 ![](https://skillicons.dev/icons?i=matlab) &nbsp; &nbsp; &nbsp;
