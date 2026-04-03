@@ -172,15 +172,14 @@ Vital sensing radar with intelligent adaptive multi-phase signal processing chai
 @ARTICLE{wu2025vs,
   author={Wu, Ruochen and Miro, Laura and Aguasca, Albert and Najar, Montse and Broquetas, Antoni},
   journal={IEEE Transactions on Mobile Computing}, 
-  title={Robust Biometric Information Sensing With Mmwave Radar System-on-Chip}, 
+  title={Robust Biometric Information Sensing With mmWave Radar System-on-Chip}, 
   year={2025},
-  volume={},
-  number={},
-  pages={1-15},
+  volume={25},
+  number={5},
+  pages={6914-6928},
   doi={10.1109/TMC.2025.3640267}
 }
 ```
-
 ---
 
 ### Contribution
