@@ -33,6 +33,9 @@
 
 <img width="400" alt="MICIU" src="https://github.com/user-attachments/assets/4d84b669-d7b8-443b-8c18-0168e14cce47"/>
 
+> [!IMPORTANT]
+> *The study has been approved by the ethics committee of the Universitat Politècnica de Catalunya · BarcelonaTech (Identification code: 2024-028). All subjects provided their informed consent to voluntarily participate in this study.*
+
 English | [中文](README_CN.md) | [Español](README_ES.md)
 
 ---
@@ -70,7 +73,7 @@ The used non-commercial RADAR has been conceived, designed and built in our labo
 | Pulse Repetition Period ($T_{\text{frame}}$) | 3 ms                                                                    |
 | Chirp Slope Time ($T$)                       | 1.5 ms                                                                  |
 
-> [!IMPORTANT]
+> [!WARNING]
 > The radar bandwidth can be programmed up to 4 GHz. In our experimental setup, a radar bandwidth of 3 GHz was configured.
 
 ### Files for hardware...
