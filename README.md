@@ -30,11 +30,14 @@
 [Antoni Broquetas](https://futur.upc.edu/178234) <sup>✉</sup>
 <img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="UPC" height="15"/>
 <img src="https://github.com/user-attachments/assets/42faadef-7999-4130-a4fc-84a467b37e95" alt="CommSensLab" height="15"/>
+</div>
 
+*\* The CommSensLab-UPC and the Signal Processing and Communications Group are recognized consolidated research groups (**GRC-01415** and **2021 SGR 01033**) by the Generalitat de Catalunya.*
+
+*\*\* This work has been supported by the Spanish Ministry of Science, Innovation and Universities MICIU/ AEI/10.13039/501100011033 and the European Regional Development Fund FEDER, UE, with projects PID2020-117303GB-C21, PID2022-138648OB-I00, and PID2024-161188OB-C21, the China Scholarship Council (CSC) under Grant 202208390068, and the Industrial Doctorates Plan of the Department of Research and Universities of the Generalitat de Catalunya.*
+
+<div align="center">
 <img width="400" alt="MICIU" src="https://github.com/user-attachments/assets/4d84b669-d7b8-443b-8c18-0168e14cce47"/>
-
-> [!IMPORTANT]
-> *The study has been approved by the ethics committee of the Universitat Politècnica de Catalunya · BarcelonaTech (Identification code: 2024-028). All subjects provided their informed consent to voluntarily participate in this study.*
 
 English | [中文](README_CN.md) | [Español](README_ES.md)
 
@@ -53,6 +56,9 @@ Radio remote sensing and millimeter-wave (mmWave) sensing solution based on 120 
 https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27b-ba11a036f8c3
 
 </details>
+
+> [!IMPORTANT]
+> *The study has been approved by the ethics committee of the Universitat Politècnica de Catalunya · BarcelonaTech (Identification code: 2024-028). All subjects provided their informed consent to voluntarily participate in this study.*
 
 ## RSoC for Wireless Sensing
 ### mmWave Radar Sensor Prototype
