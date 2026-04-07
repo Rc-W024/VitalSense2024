@@ -30,6 +30,13 @@
 <img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="UPC" height="15"/>
 <img src="https://github.com/user-attachments/assets/42faadef-7999-4130-a4fc-84a467b37e95" alt="CommSensLab" height="15"/>
 
+</div>
+
+*\* El CommSensLab-UPC y el Grupo de Procesado de Señal y Comunicaciones son grupos de investigación consolidados reconocidos (**GRC-01415** y **2021 SGR 01033**) por la Generalitat de Catalunya.*
+
+*\*\* Este trabajo ha sido financiado por el Ministerio de Ciencia, Innovación y Universidades MICIU/ AEI/10.13039/501100011033 y el Fondo Europeo de Desarrollo Regional FEDER, UE, a través de los proyectos PID2020-117303GB-C21, PID2022-138648OB-I00 y PID2024-161188OB-C21; por el China Scholarship Council (CSC) 202208390068; y por el Plan de Doctorados Industriales del Departamento de Investigación y Universidades de la Generalitat de Catalunya.*
+
+<div align="center">
 <img width="400" alt="MICIU" src="https://github.com/user-attachments/assets/4d84b669-d7b8-443b-8c18-0168e14cce47"/>
 
 [English](README.md) | [中文](README_CN.md) | Español
@@ -49,6 +56,9 @@ Solución de teledetección por radar y detección de mmWave basada en un Sistem
 https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27b-ba11a036f8c3
 
 </details>
+
+> [!IMPORTANT]
+> *Este estudio ha sido aprobado por el comité de ética de la Universitat Politècnica de Catalunya · BarcelonaTech (Código de identificación: 2024-028). Todos los sujetos otorgaron su consentimiento informado para participar voluntariamente en este estudio.*
 
 ## RSoC para Detección Inalámbrica
 ### Prototipo de sensor de radar mmWave
