@@ -29,7 +29,13 @@
 [Antoni Broquetas](https://futur.upc.edu/178234) <sup>✉</sup>
 <img src="https://github.com/user-attachments/assets/cacf370a-b89f-454b-a7b8-55c6d49d3ce8" alt="UPC" height="15"/>
 <img src="https://github.com/user-attachments/assets/42faadef-7999-4130-a4fc-84a467b37e95" alt="CommSensLab" height="15"/>
+</div>
 
+*\* CommSensLab-UPC和信号处理与通信组均为加泰罗尼亚自治区政府认定的综合研究组（**GRC-01415**及**2021 SGR 01033**）。*
+
+*\*\* 该工作受以下机构的支持与资助：西班牙科学、创新和大学部（MICIU/AEI/10.13039/501100011033）及欧盟欧洲区域发展基金（FEDER, UE）项目（PID2020-117303GB-C21、PID2022-138648OB-I00、PID2024-161188OB-C21）；中国国家留学基金管理委员会（202208390068）；加泰罗尼亚自治区政府研究与大学部工业博士计划。*
+
+<div align="center">
 <img width="400" alt="MICIU" src="https://github.com/user-attachments/assets/4d84b669-d7b8-443b-8c18-0168e14cce47"/>
 
 [English](README.md) | 中文 | [Español](README_ES.md)
@@ -49,6 +55,9 @@
 https://github.com/Rc-W024/VitalSense2024/assets/97808991/8e9a442d-c9d5-4b0a-b27b-ba11a036f8c3
 
 </details>
+
+> [!IMPORTANT]
+> *本研究已获得加泰罗尼亚理工大学伦理委员会的批准（批号：2024-028）。所有受试者均已签署知情同意书，自愿参与本研究。*
 
 ## 基于RSoC的无线感知
 ### 毫米波雷达传感器原型
