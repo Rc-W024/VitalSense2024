@@ -32,9 +32,9 @@
 
 </div>
 
-*\* El CommSensLab-UPC y el Grupo de Procesado de Señal y Comunicaciones son grupos de investigación consolidados reconocidos (**GRC-01415** y **2021 SGR 01033**) por la Generalitat de Catalunya.*
-
-*\*\* Este trabajo ha sido financiado por el Ministerio de Ciencia, Innovación y Universidades MICIU/ AEI/10.13039/501100011033 y el Fondo Europeo de Desarrollo Regional FEDER, UE, a través de los proyectos PID2020-117303GB-C21, PID2022-138648OB-I00 y PID2024-161188OB-C21; por el China Scholarship Council (CSC) 202208390068; y por el Plan de Doctorados Industriales del Departamento de Investigación y Universidades de la Generalitat de Catalunya.*
+> *\* El CommSensLab-UPC y el Grupo de Procesado de Señal y Comunicaciones son grupos de investigación consolidados reconocidos (**GRC-01415** y **2021 SGR 01033**) por la Generalitat de Catalunya.*
+> 
+> *\*\* Este trabajo ha sido financiado por el Ministerio de Ciencia, Innovación y Universidades MICIU/ AEI/10.13039/501100011033 y el Fondo Europeo de Desarrollo Regional FEDER, UE, a través de los proyectos PID2020-117303GB-C21, PID2022-138648OB-I00 y PID2024-161188OB-C21; por el China Scholarship Council (CSC) 202208390068; y por el Plan de Doctorados Industriales del Departamento de Investigación y Universidades de la Generalitat de Catalunya.*
 
 <div align="center">
 <img width="400" alt="MICIU" src="https://github.com/user-attachments/assets/4d84b669-d7b8-443b-8c18-0168e14cce47"/>
