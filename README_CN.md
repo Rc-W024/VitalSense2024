@@ -31,9 +31,9 @@
 <img src="https://github.com/user-attachments/assets/42faadef-7999-4130-a4fc-84a467b37e95" alt="CommSensLab" height="15"/>
 </div>
 
-*\* CommSensLab-UPC和信号处理与通信组均为加泰罗尼亚自治区政府认定的综合研究组（**GRC-01415**及**2021 SGR 01033**）。*
-
-*\*\* 该研究由西班牙科学、创新和大学部（MICIU/AEI/10.13039/501100011033），欧盟欧洲区域发展基金（FEDER, UE）项目（PID2020-117303GB-C21、PID2022-138648OB-I00、PID2024-161188OB-C21）；中国国家留学基金管理委员会（202208390068）和加泰罗尼亚自治区政府研究与大学部工业博士计划支持和资助。*
+> *\* CommSensLab-UPC和信号处理与通信组均为加泰罗尼亚自治区政府认定的综合研究组（**GRC-01415**及**2021 SGR 01033**）。*
+> 
+> *\*\* 该研究由西班牙科学、创新和大学部（MICIU/AEI/10.13039/501100011033），欧盟欧洲区域发展基金（FEDER, UE）项目（PID2020-117303GB-C21、PID2022-138648OB-I00、PID2024-161188OB-C21）；中国国家留学基金管理委员会（202208390068）和加泰罗尼亚自治区政府研究与大学部工业博士计划支持和资助。*
 
 <div align="center">
 <img width="400" alt="MICIU" src="https://github.com/user-attachments/assets/4d84b669-d7b8-443b-8c18-0168e14cce47"/>
