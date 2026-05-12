@@ -113,7 +113,7 @@ Radar de detección de constantes vitales con cadena de procesamiento de señale
 
 - La detección robusta y la alineación temporal precisa de los pulsos cardíacos permiten medir con exactitud la frecuencia cardíaca y detectar anomalías, lo que se traduce en parámetros biométricos más precisos.
 
-- La novedosa técnica de 'caja blanca' desarrollada sustituye a los modelos de caja negra, IA, ávidos de datos para lograr una detección inalámbrica que preserve la privacidad. Este avance permite la identificación segura y robusta de información biométrica en el borde, estableciendo las bases para la seguridad endógena y la computación confidencial de próxima generación en el IoMT.
+- La técnica propuesta constituye una alternativa interpretable a los modelos de aprendizaje profundo con alta demanda de datos y no requiere datos de usuario para su entrenamiento. Se ejecuta en tiempo real en el edge y sienta las bases para su integración con marcos de preservación de la privacidad y de computación confidencial en el IoMT.
 
 ---
 
