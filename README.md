@@ -113,7 +113,7 @@ Vital sensing radar with intelligent adaptive multi-phase signal processing chai
 
 - The robust detection and precise temporal alignment of the cardiac pulses allowing to accurately measure heart-rate and to detect anomalies, resulting in more precise biometric parameters.
 
-- The developed novel "white-box" technique replaces data-hungry AI black-box models to achieve the privacy-preserving wireless sensing. This breakthrough enables secure and robust biometric information identification at the edge, establishing a foundation for endogenous safety and security and next-generation confidential computing in IoMT.
+- The proposed technique is an interpretable alternative to data-hungry deep-learning models, requiring no user data for training and running in real time at the edge, and provides a foundation for integration with privacy-preserving and confidential-computing frameworks in IoMT.
 
 ---
 
