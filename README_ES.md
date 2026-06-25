@@ -69,15 +69,15 @@ El radar no comercial utilizado ha sido concebido, diseñado y construido en nue
 <img src="https://github.com/Rc-W024/VitalSense2024/assets/97808991/ca2eb4d2-b0ea-477c-aa1b-ac01321f8663" width=320 />
 </p>
 
-| Parámetro                                           | Valor                                                                |
-| :----------:                                        | :---------------:                                                    |
-| Frecuencia Central ($f_{0}$)                        | 122.5 GHz                                                            |
-| Ancho de Banda Nominal de Radar ($B$)               | 1 GHz (en las [bandas ISM](https://es.wikipedia.org/wiki/Banda_ISM)) |
-| Ancho de Haz de la Antena ($\theta_{\text{3dB}}$)   | $2^{\circ}$                                                          |
-| Resolución de Alcance de Radar ($\Delta r$)         | $\frac{c}{2B}=$ 150 mm                                               |
-| Longitud de Onda ($\lambda$)                        | $\frac{c}{f_{0}}=$ 2.449 mm                                          |
-| Período de Repetición de Pulso ($T_{\text{frame}}$) | 3 ms                                                                 |
-| Tiempo de la Pendiente de Frecuencia ($T$)          | 1.5 ms                                                               |
+| Parámetro                                           | Valor                                                        |
+| :----------:                                        | :---------------:                                            |
+| Frecuencia Central ($f_{0}$)                        | 122.5 GHz                                                    |
+| Ancho de Banda Nominal de Radar ($B$)               | 1 GHz ([banda ISM](https://es.wikipedia.org/wiki/Banda_ISM)) |
+| Ancho de Haz de la Antena ($\theta_{\text{3dB}}$)   | $2^{\circ}$                                                  |
+| Resolución de Alcance de Radar ($\Delta r$)         | $\frac{c}{2B}=$ 150 mm                                       |
+| Longitud de Onda ($\lambda$)                        | $\frac{c}{f_{0}}=$ 2.449 mm                                  |
+| Período de Repetición de Pulso ($T_{\text{frame}}$) | 3 ms                                                         |
+| Tiempo de la Pendiente de Frecuencia ($T$)          | 1.5 ms                                                       |
 
 > [!IMPORTANT]
 > El ancho de banda del radar puede programarse hasta 4 GHz. En nuestra configuración experimental, se ajustó un ancho de banda del radar de 3 GHz.
