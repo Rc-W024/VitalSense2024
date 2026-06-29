@@ -1,7 +1,7 @@
 <div align="center">
 <img src="https://github.com/user-attachments/assets/e60cada1-b487-44fa-8247-cfc7b7e7df9e" alt="VitalSense2024"/>
 
-# VitalSense - Avaluació experimental del monitoratge sense contacte de la funció cardiorespiratòria mitjançant tècniques radar en bandes mil·limètriques <br> *Validación del Rendimiento de la Detección de Inteligencia biométrica Confiable Basada en Radios de Ondas Milimétricas*
+# VitalSense - Avaluació experimental del monitoratge sense contacte de la funció cardiorespiratòria mitjançant tècniques radar en bandes mil·limètriques <br> *Validación del rendimiento de la detección de inteligencia biométrica confiable basada en radios de ondas milimétricas*
 [**Robust Biometric Information Sensing With mmWave Radar System-on-Chip**](https://doi.org/10.1109/TMC.2025.3640267)
 
 ![](https://skillicons.dev/icons?i=matlab) &nbsp; &nbsp; &nbsp;
